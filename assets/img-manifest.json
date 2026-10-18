@@ -1,0 +1,1720 @@
+{
+  "assets/img/portrait-640.webp": {
+    "w": 640,
+    "h": 853,
+    "bytes": 54662
+  },
+  "assets/img/portrait-1100.webp": {
+    "w": 1100,
+    "h": 1466,
+    "bytes": 198658
+  },
+  "assets/img/ops/selfie/account-01-760.webp": {
+    "w": 760,
+    "h": 1651,
+    "bytes": 124078
+  },
+  "assets/img/ops/selfie/account-02-760.webp": {
+    "w": 760,
+    "h": 1651,
+    "bytes": 129516
+  },
+  "assets/img/ops/selfie/account-03-760.webp": {
+    "w": 760,
+    "h": 1651,
+    "bytes": 116258
+  },
+  "assets/img/ops/selfie/account-04-760.webp": {
+    "w": 760,
+    "h": 1651,
+    "bytes": 91454
+  },
+  "assets/img/ops/selfie/note-01-1200.webp": {
+    "w": 1200,
+    "h": 942,
+    "bytes": 125608
+  },
+  "assets/img/ops/selfie/note-01-600.webp": {
+    "w": 600,
+    "h": 471,
+    "bytes": 41432
+  },
+  "assets/img/ops/selfie/note-02-1200.webp": {
+    "w": 1200,
+    "h": 922,
+    "bytes": 96312
+  },
+  "assets/img/ops/selfie/note-02-600.webp": {
+    "w": 600,
+    "h": 461,
+    "bytes": 34426
+  },
+  "assets/img/ops/selfie/note-03-1200.webp": {
+    "w": 1200,
+    "h": 904,
+    "bytes": 179158
+  },
+  "assets/img/ops/selfie/note-03-600.webp": {
+    "w": 600,
+    "h": 452,
+    "bytes": 55384
+  },
+  "assets/img/ops/selfie/note-04-1200.webp": {
+    "w": 1200,
+    "h": 917,
+    "bytes": 103114
+  },
+  "assets/img/ops/selfie/note-04-600.webp": {
+    "w": 600,
+    "h": 459,
+    "bytes": 37504
+  },
+  "assets/img/ops/selfie/note-05-1200.webp": {
+    "w": 1200,
+    "h": 921,
+    "bytes": 132022
+  },
+  "assets/img/ops/selfie/note-05-600.webp": {
+    "w": 600,
+    "h": 461,
+    "bytes": 45572
+  },
+  "assets/img/ops/selfie/note-06-1200.webp": {
+    "w": 1200,
+    "h": 900,
+    "bytes": 90282
+  },
+  "assets/img/ops/selfie/note-06-600.webp": {
+    "w": 600,
+    "h": 450,
+    "bytes": 32914
+  },
+  "assets/img/ops/selfie/note-07-1200.webp": {
+    "w": 1200,
+    "h": 914,
+    "bytes": 144024
+  },
+  "assets/img/ops/selfie/note-07-600.webp": {
+    "w": 600,
+    "h": 457,
+    "bytes": 46056
+  },
+  "assets/img/ops/selfie/note-08-1200.webp": {
+    "w": 1200,
+    "h": 914,
+    "bytes": 105702
+  },
+  "assets/img/ops/selfie/note-08-600.webp": {
+    "w": 600,
+    "h": 457,
+    "bytes": 35676
+  },
+  "assets/img/ops/selfie/note-09-1200.webp": {
+    "w": 1200,
+    "h": 921,
+    "bytes": 136866
+  },
+  "assets/img/ops/selfie/note-09-600.webp": {
+    "w": 600,
+    "h": 460,
+    "bytes": 42042
+  },
+  "assets/img/ops/selfie/note-10-1200.webp": {
+    "w": 1200,
+    "h": 896,
+    "bytes": 199632
+  },
+  "assets/img/ops/selfie/note-10-600.webp": {
+    "w": 600,
+    "h": 448,
+    "bytes": 58968
+  },
+  "assets/img/ops/selfie/note-11-1200.webp": {
+    "w": 1200,
+    "h": 932,
+    "bytes": 148050
+  },
+  "assets/img/ops/selfie/note-11-600.webp": {
+    "w": 600,
+    "h": 466,
+    "bytes": 43810
+  },
+  "assets/img/ops/selfie/note-12-1200.webp": {
+    "w": 1200,
+    "h": 924,
+    "bytes": 107312
+  },
+  "assets/img/ops/selfie/note-12-600.webp": {
+    "w": 600,
+    "h": 462,
+    "bytes": 34924
+  },
+  "assets/img/ops/selfie/note-13-1200.webp": {
+    "w": 1200,
+    "h": 914,
+    "bytes": 150424
+  },
+  "assets/img/ops/selfie/note-13-600.webp": {
+    "w": 600,
+    "h": 457,
+    "bytes": 47722
+  },
+  "assets/img/ops/selfie/note-14-1200.webp": {
+    "w": 1200,
+    "h": 919,
+    "bytes": 113406
+  },
+  "assets/img/ops/selfie/note-14-600.webp": {
+    "w": 600,
+    "h": 460,
+    "bytes": 41074
+  },
+  "assets/img/ops/selfie/data-01-1800.webp": {
+    "w": 1800,
+    "h": 1042,
+    "bytes": 74320
+  },
+  "assets/img/ops/selfie/data-02-1800.webp": {
+    "w": 1800,
+    "h": 1080,
+    "bytes": 75326
+  },
+  "assets/img/ops/selfie/douyin-home-760.webp": {
+    "w": 760,
+    "h": 1651,
+    "bytes": 175058
+  },
+  "assets/img/ops/selfie/douyin-store-760.webp": {
+    "w": 760,
+    "h": 1651,
+    "bytes": 108562
+  },
+  "assets/img/ops/selfie/product-01-700.webp": {
+    "w": 700,
+    "h": 933,
+    "bytes": 36798
+  },
+  "assets/img/ops/selfie/product-02-700.webp": {
+    "w": 700,
+    "h": 933,
+    "bytes": 65640
+  },
+  "assets/img/ops/selfie/product-03-700.webp": {
+    "w": 700,
+    "h": 933,
+    "bytes": 34892
+  },
+  "assets/img/ops/selfie/product-04-700.webp": {
+    "w": 700,
+    "h": 933,
+    "bytes": 34488
+  },
+  "assets/img/ops/selfie/product-05-700.webp": {
+    "w": 700,
+    "h": 933,
+    "bytes": 30722
+  },
+  "assets/img/ops/selfie/product-06-700.webp": {
+    "w": 700,
+    "h": 933,
+    "bytes": 25276
+  },
+  "assets/img/ops/selfie/product-07-700.webp": {
+    "w": 700,
+    "h": 933,
+    "bytes": 42474
+  },
+  "assets/img/ops/selfie/product-08-700.webp": {
+    "w": 700,
+    "h": 933,
+    "bytes": 42426
+  },
+  "assets/img/ops/selfie/detail-01-620.webp": {
+    "w": 620,
+    "h": 827,
+    "bytes": 54822
+  },
+  "assets/img/ops/selfie/detail-02-620.webp": {
+    "w": 620,
+    "h": 4123,
+    "bytes": 103870
+  },
+  "assets/img/ops/selfie/detail-03-620.webp": {
+    "w": 620,
+    "h": 4133,
+    "bytes": 124408
+  },
+  "assets/img/ops/selfie/detail-04-620.webp": {
+    "w": 620,
+    "h": 3302,
+    "bytes": 111754
+  },
+  "assets/img/ops/lazy/account-home-760.webp": {
+    "w": 760,
+    "h": 1651,
+    "bytes": 166152
+  },
+  "assets/img/ops/lazy/case-board-2000.webp": {
+    "w": 2000,
+    "h": 1125,
+    "bytes": 234426
+  },
+  "assets/img/ops/lazy/case-board-1000.webp": {
+    "w": 1000,
+    "h": 562,
+    "bytes": 76966
+  },
+  "assets/img/ops/lazy/note-01-700.webp": {
+    "w": 700,
+    "h": 1439,
+    "bytes": 103828
+  },
+  "assets/img/ops/lazy/note-02-700.webp": {
+    "w": 700,
+    "h": 1422,
+    "bytes": 104552
+  },
+  "assets/img/ops/lazy/note-03-700.webp": {
+    "w": 700,
+    "h": 1417,
+    "bytes": 72104
+  },
+  "assets/img/ops/lazy/note-04-700.webp": {
+    "w": 700,
+    "h": 1417,
+    "bytes": 64646
+  },
+  "assets/img/ops/lazy/note-05-700.webp": {
+    "w": 700,
+    "h": 1428,
+    "bytes": 82508
+  },
+  "assets/img/ops/lazy/note-06-700.webp": {
+    "w": 700,
+    "h": 1538,
+    "bytes": 68426
+  },
+  "assets/img/design/harbin/board-01-640.webp": {
+    "w": 640,
+    "h": 963,
+    "bytes": 130646
+  },
+  "assets/img/design/harbin/board-01-715.webp": {
+    "w": 715,
+    "h": 1076,
+    "bytes": 157622
+  },
+  "assets/img/design/harbin/board-02-640.webp": {
+    "w": 640,
+    "h": 962,
+    "bytes": 152084
+  },
+  "assets/img/design/harbin/board-02-659.webp": {
+    "w": 659,
+    "h": 991,
+    "bytes": 160372
+  },
+  "assets/img/design/harbin/board-03-640.webp": {
+    "w": 640,
+    "h": 963,
+    "bytes": 153990
+  },
+  "assets/img/design/harbin/board-03-717.webp": {
+    "w": 717,
+    "h": 1079,
+    "bytes": 186702
+  },
+  "project:harbin": {
+    "boards": [
+      {
+        "source": "哈尔滨-夏日文化使者IP形象设计-1.png",
+        "w": 715,
+        "h": 1076,
+        "variants": {
+          "640": "assets/img/design/harbin/board-01-640.webp",
+          "715": "assets/img/design/harbin/board-01-715.webp"
+        }
+      },
+      {
+        "source": "哈尔滨-夏日文化使者IP形象设计-2.png",
+        "w": 659,
+        "h": 991,
+        "variants": {
+          "640": "assets/img/design/harbin/board-02-640.webp",
+          "659": "assets/img/design/harbin/board-02-659.webp"
+        }
+      },
+      {
+        "source": "哈尔滨-夏日文化使者IP形象设计-3.png",
+        "w": 717,
+        "h": 1079,
+        "variants": {
+          "640": "assets/img/design/harbin/board-03-640.webp",
+          "717": "assets/img/design/harbin/board-03-717.webp"
+        }
+      }
+    ]
+  },
+  "assets/img/design/gengong/board-01-640.webp": {
+    "w": 640,
+    "h": 360,
+    "bytes": 39982
+  },
+  "assets/img/design/gengong/board-01-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 149112
+  },
+  "assets/img/design/gengong/board-01-2200.webp": {
+    "w": 2200,
+    "h": 1238,
+    "bytes": 236046
+  },
+  "assets/img/design/gengong/board-02-640.webp": {
+    "w": 640,
+    "h": 360,
+    "bytes": 18726
+  },
+  "assets/img/design/gengong/board-02-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 71922
+  },
+  "assets/img/design/gengong/board-02-2200.webp": {
+    "w": 2200,
+    "h": 1238,
+    "bytes": 112028
+  },
+  "assets/img/design/gengong/board-03-640.webp": {
+    "w": 640,
+    "h": 360,
+    "bytes": 41064
+  },
+  "assets/img/design/gengong/board-03-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 173204
+  },
+  "assets/img/design/gengong/board-03-2200.webp": {
+    "w": 2200,
+    "h": 1238,
+    "bytes": 269674
+  },
+  "assets/img/design/gengong/board-04-640.webp": {
+    "w": 640,
+    "h": 360,
+    "bytes": 38200
+  },
+  "assets/img/design/gengong/board-04-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 168334
+  },
+  "assets/img/design/gengong/board-04-2200.webp": {
+    "w": 2200,
+    "h": 1238,
+    "bytes": 263378
+  },
+  "assets/img/design/gengong/board-05-640.webp": {
+    "w": 640,
+    "h": 360,
+    "bytes": 32954
+  },
+  "assets/img/design/gengong/board-05-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 142506
+  },
+  "assets/img/design/gengong/board-05-2200.webp": {
+    "w": 2200,
+    "h": 1238,
+    "bytes": 228394
+  },
+  "assets/img/design/gengong/board-06-640.webp": {
+    "w": 640,
+    "h": 360,
+    "bytes": 45326
+  },
+  "assets/img/design/gengong/board-06-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 180090
+  },
+  "assets/img/design/gengong/board-06-2200.webp": {
+    "w": 2200,
+    "h": 1238,
+    "bytes": 279838
+  },
+  "assets/img/design/gengong/board-07-640.webp": {
+    "w": 640,
+    "h": 360,
+    "bytes": 46396
+  },
+  "assets/img/design/gengong/board-07-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 197628
+  },
+  "assets/img/design/gengong/board-07-2200.webp": {
+    "w": 2200,
+    "h": 1238,
+    "bytes": 303400
+  },
+  "assets/img/design/gengong/board-08-640.webp": {
+    "w": 640,
+    "h": 360,
+    "bytes": 25998
+  },
+  "assets/img/design/gengong/board-08-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 80858
+  },
+  "assets/img/design/gengong/board-08-2200.webp": {
+    "w": 2200,
+    "h": 1238,
+    "bytes": 114672
+  },
+  "assets/img/design/gengong/board-09-640.webp": {
+    "w": 640,
+    "h": 360,
+    "bytes": 40114
+  },
+  "assets/img/design/gengong/board-09-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 153596
+  },
+  "assets/img/design/gengong/board-09-2200.webp": {
+    "w": 2200,
+    "h": 1238,
+    "bytes": 235796
+  },
+  "assets/img/design/gengong/board-10-640.webp": {
+    "w": 640,
+    "h": 360,
+    "bytes": 40008
+  },
+  "assets/img/design/gengong/board-10-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 143568
+  },
+  "assets/img/design/gengong/board-10-2200.webp": {
+    "w": 2200,
+    "h": 1238,
+    "bytes": 222510
+  },
+  "assets/img/design/gengong/board-11-640.webp": {
+    "w": 640,
+    "h": 360,
+    "bytes": 35228
+  },
+  "assets/img/design/gengong/board-11-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 187970
+  },
+  "assets/img/design/gengong/board-11-2200.webp": {
+    "w": 2200,
+    "h": 1238,
+    "bytes": 360974
+  },
+  "assets/img/design/gengong/board-12-640.webp": {
+    "w": 640,
+    "h": 360,
+    "bytes": 31992
+  },
+  "assets/img/design/gengong/board-12-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 136072
+  },
+  "assets/img/design/gengong/board-12-2200.webp": {
+    "w": 2200,
+    "h": 1238,
+    "bytes": 212904
+  },
+  "assets/img/design/gengong/board-13-640.webp": {
+    "w": 640,
+    "h": 360,
+    "bytes": 71870
+  },
+  "assets/img/design/gengong/board-13-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 304522
+  },
+  "assets/img/design/gengong/board-13-2200.webp": {
+    "w": 2200,
+    "h": 1238,
+    "bytes": 489108
+  },
+  "assets/img/design/gengong/board-14-640.webp": {
+    "w": 640,
+    "h": 360,
+    "bytes": 35792
+  },
+  "assets/img/design/gengong/board-14-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 141932
+  },
+  "assets/img/design/gengong/board-14-2200.webp": {
+    "w": 2200,
+    "h": 1238,
+    "bytes": 231590
+  },
+  "assets/img/design/gengong/board-15-640.webp": {
+    "w": 640,
+    "h": 360,
+    "bytes": 68726
+  },
+  "assets/img/design/gengong/board-15-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 283278
+  },
+  "assets/img/design/gengong/board-15-2200.webp": {
+    "w": 2200,
+    "h": 1238,
+    "bytes": 429530
+  },
+  "project:gengong": {
+    "boards": [
+      {
+        "source": "根宫佛国文创设计- 1.jpg",
+        "w": 8000,
+        "h": 4500,
+        "variants": {
+          "640": "assets/img/design/gengong/board-01-640.webp",
+          "1600": "assets/img/design/gengong/board-01-1600.webp",
+          "2200": "assets/img/design/gengong/board-01-2200.webp"
+        }
+      },
+      {
+        "source": "根宫佛国文创设计- 2.jpg",
+        "w": 8000,
+        "h": 4500,
+        "variants": {
+          "640": "assets/img/design/gengong/board-02-640.webp",
+          "1600": "assets/img/design/gengong/board-02-1600.webp",
+          "2200": "assets/img/design/gengong/board-02-2200.webp"
+        }
+      },
+      {
+        "source": "根宫佛国文创设计- 3.jpg",
+        "w": 8000,
+        "h": 4500,
+        "variants": {
+          "640": "assets/img/design/gengong/board-03-640.webp",
+          "1600": "assets/img/design/gengong/board-03-1600.webp",
+          "2200": "assets/img/design/gengong/board-03-2200.webp"
+        }
+      },
+      {
+        "source": "根宫佛国文创设计- 4.jpg",
+        "w": 8000,
+        "h": 4500,
+        "variants": {
+          "640": "assets/img/design/gengong/board-04-640.webp",
+          "1600": "assets/img/design/gengong/board-04-1600.webp",
+          "2200": "assets/img/design/gengong/board-04-2200.webp"
+        }
+      },
+      {
+        "source": "根宫佛国文创设计- 5.jpg",
+        "w": 8000,
+        "h": 4500,
+        "variants": {
+          "640": "assets/img/design/gengong/board-05-640.webp",
+          "1600": "assets/img/design/gengong/board-05-1600.webp",
+          "2200": "assets/img/design/gengong/board-05-2200.webp"
+        }
+      },
+      {
+        "source": "根宫佛国文创设计- 6.jpg",
+        "w": 8000,
+        "h": 4500,
+        "variants": {
+          "640": "assets/img/design/gengong/board-06-640.webp",
+          "1600": "assets/img/design/gengong/board-06-1600.webp",
+          "2200": "assets/img/design/gengong/board-06-2200.webp"
+        }
+      },
+      {
+        "source": "根宫佛国文创设计- 7.jpg",
+        "w": 8000,
+        "h": 4500,
+        "variants": {
+          "640": "assets/img/design/gengong/board-07-640.webp",
+          "1600": "assets/img/design/gengong/board-07-1600.webp",
+          "2200": "assets/img/design/gengong/board-07-2200.webp"
+        }
+      },
+      {
+        "source": "根宫佛国文创设计- 8.jpg",
+        "w": 8000,
+        "h": 4500,
+        "variants": {
+          "640": "assets/img/design/gengong/board-08-640.webp",
+          "1600": "assets/img/design/gengong/board-08-1600.webp",
+          "2200": "assets/img/design/gengong/board-08-2200.webp"
+        }
+      },
+      {
+        "source": "根宫佛国文创设计- 9.jpg",
+        "w": 8000,
+        "h": 4500,
+        "variants": {
+          "640": "assets/img/design/gengong/board-09-640.webp",
+          "1600": "assets/img/design/gengong/board-09-1600.webp",
+          "2200": "assets/img/design/gengong/board-09-2200.webp"
+        }
+      },
+      {
+        "source": "根宫佛国文创设计- 10.jpg",
+        "w": 8000,
+        "h": 4500,
+        "variants": {
+          "640": "assets/img/design/gengong/board-10-640.webp",
+          "1600": "assets/img/design/gengong/board-10-1600.webp",
+          "2200": "assets/img/design/gengong/board-10-2200.webp"
+        }
+      },
+      {
+        "source": "根宫佛国文创设计- 11.jpg",
+        "w": 8000,
+        "h": 4500,
+        "variants": {
+          "640": "assets/img/design/gengong/board-11-640.webp",
+          "1600": "assets/img/design/gengong/board-11-1600.webp",
+          "2200": "assets/img/design/gengong/board-11-2200.webp"
+        }
+      },
+      {
+        "source": "根宫佛国文创设计- 12.jpg",
+        "w": 8000,
+        "h": 4500,
+        "variants": {
+          "640": "assets/img/design/gengong/board-12-640.webp",
+          "1600": "assets/img/design/gengong/board-12-1600.webp",
+          "2200": "assets/img/design/gengong/board-12-2200.webp"
+        }
+      },
+      {
+        "source": "根宫佛国文创设计- 13.jpg",
+        "w": 8000,
+        "h": 4500,
+        "variants": {
+          "640": "assets/img/design/gengong/board-13-640.webp",
+          "1600": "assets/img/design/gengong/board-13-1600.webp",
+          "2200": "assets/img/design/gengong/board-13-2200.webp"
+        }
+      },
+      {
+        "source": "根宫佛国文创设计- 14.jpg",
+        "w": 8000,
+        "h": 4500,
+        "variants": {
+          "640": "assets/img/design/gengong/board-14-640.webp",
+          "1600": "assets/img/design/gengong/board-14-1600.webp",
+          "2200": "assets/img/design/gengong/board-14-2200.webp"
+        }
+      },
+      {
+        "source": "根宫佛国文创设计- 15.jpg",
+        "w": 8000,
+        "h": 4500,
+        "variants": {
+          "640": "assets/img/design/gengong/board-15-640.webp",
+          "1600": "assets/img/design/gengong/board-15-1600.webp",
+          "2200": "assets/img/design/gengong/board-15-2200.webp"
+        }
+      }
+    ]
+  },
+  "assets/img/design/lingyin/board-01-640.webp": {
+    "w": 640,
+    "h": 325,
+    "bytes": 67346
+  },
+  "assets/img/design/lingyin/board-01-1600.webp": {
+    "w": 1600,
+    "h": 813,
+    "bytes": 230344
+  },
+  "assets/img/design/lingyin/board-01-2200.webp": {
+    "w": 2200,
+    "h": 1118,
+    "bytes": 347888
+  },
+  "assets/img/design/lingyin/board-02-640.webp": {
+    "w": 640,
+    "h": 351,
+    "bytes": 42026
+  },
+  "assets/img/design/lingyin/board-02-1600.webp": {
+    "w": 1600,
+    "h": 878,
+    "bytes": 151316
+  },
+  "assets/img/design/lingyin/board-02-2200.webp": {
+    "w": 2200,
+    "h": 1207,
+    "bytes": 220266
+  },
+  "assets/img/design/lingyin/board-03-640.webp": {
+    "w": 640,
+    "h": 425,
+    "bytes": 79412
+  },
+  "assets/img/design/lingyin/board-03-1600.webp": {
+    "w": 1600,
+    "h": 1062,
+    "bytes": 330908
+  },
+  "assets/img/design/lingyin/board-03-2200.webp": {
+    "w": 2200,
+    "h": 1460,
+    "bytes": 501188
+  },
+  "assets/img/design/lingyin/board-04-640.webp": {
+    "w": 640,
+    "h": 360,
+    "bytes": 31480
+  },
+  "assets/img/design/lingyin/board-04-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 141568
+  },
+  "assets/img/design/lingyin/board-04-2200.webp": {
+    "w": 2200,
+    "h": 1238,
+    "bytes": 235680
+  },
+  "assets/img/design/lingyin/board-05-640.webp": {
+    "w": 640,
+    "h": 360,
+    "bytes": 54652
+  },
+  "assets/img/design/lingyin/board-05-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 249904
+  },
+  "assets/img/design/lingyin/board-05-2200.webp": {
+    "w": 2200,
+    "h": 1238,
+    "bytes": 407056
+  },
+  "project:lingyin": {
+    "boards": [
+      {
+        "source": "灵隐IP文创设计- 1.jpg",
+        "w": 8000,
+        "h": 4065,
+        "variants": {
+          "640": "assets/img/design/lingyin/board-01-640.webp",
+          "1600": "assets/img/design/lingyin/board-01-1600.webp",
+          "2200": "assets/img/design/lingyin/board-01-2200.webp"
+        }
+      },
+      {
+        "source": "灵隐IP文创设计- 2.jpg",
+        "w": 8000,
+        "h": 4388,
+        "variants": {
+          "640": "assets/img/design/lingyin/board-02-640.webp",
+          "1600": "assets/img/design/lingyin/board-02-1600.webp",
+          "2200": "assets/img/design/lingyin/board-02-2200.webp"
+        }
+      },
+      {
+        "source": "灵隐IP文创设计- 3.jpg",
+        "w": 8000,
+        "h": 5310,
+        "variants": {
+          "640": "assets/img/design/lingyin/board-03-640.webp",
+          "1600": "assets/img/design/lingyin/board-03-1600.webp",
+          "2200": "assets/img/design/lingyin/board-03-2200.webp"
+        }
+      },
+      {
+        "source": "灵隐IP文创设计- 4.jpg",
+        "w": 8000,
+        "h": 4500,
+        "variants": {
+          "640": "assets/img/design/lingyin/board-04-640.webp",
+          "1600": "assets/img/design/lingyin/board-04-1600.webp",
+          "2200": "assets/img/design/lingyin/board-04-2200.webp"
+        }
+      },
+      {
+        "source": "灵隐IP文创设计- 5.jpg",
+        "w": 8000,
+        "h": 4500,
+        "variants": {
+          "640": "assets/img/design/lingyin/board-05-640.webp",
+          "1600": "assets/img/design/lingyin/board-05-1600.webp",
+          "2200": "assets/img/design/lingyin/board-05-2200.webp"
+        }
+      }
+    ]
+  },
+  "assets/img/design/liangzhu/board-01-640.webp": {
+    "w": 640,
+    "h": 360,
+    "bytes": 32626
+  },
+  "assets/img/design/liangzhu/board-01-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 104434
+  },
+  "assets/img/design/liangzhu/board-01-2200.webp": {
+    "w": 2200,
+    "h": 1238,
+    "bytes": 153134
+  },
+  "assets/img/design/liangzhu/board-02-640.webp": {
+    "w": 640,
+    "h": 360,
+    "bytes": 47294
+  },
+  "assets/img/design/liangzhu/board-02-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 186794
+  },
+  "assets/img/design/liangzhu/board-02-2200.webp": {
+    "w": 2200,
+    "h": 1238,
+    "bytes": 304282
+  },
+  "assets/img/design/liangzhu/board-03-640.webp": {
+    "w": 640,
+    "h": 360,
+    "bytes": 35148
+  },
+  "assets/img/design/liangzhu/board-03-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 130048
+  },
+  "assets/img/design/liangzhu/board-03-2200.webp": {
+    "w": 2200,
+    "h": 1238,
+    "bytes": 208742
+  },
+  "assets/img/design/liangzhu/board-04-640.webp": {
+    "w": 640,
+    "h": 360,
+    "bytes": 32144
+  },
+  "assets/img/design/liangzhu/board-04-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 111526
+  },
+  "assets/img/design/liangzhu/board-04-2200.webp": {
+    "w": 2200,
+    "h": 1238,
+    "bytes": 172032
+  },
+  "assets/img/design/liangzhu/board-05-640.webp": {
+    "w": 640,
+    "h": 360,
+    "bytes": 47650
+  },
+  "assets/img/design/liangzhu/board-05-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 194514
+  },
+  "assets/img/design/liangzhu/board-05-2200.webp": {
+    "w": 2200,
+    "h": 1238,
+    "bytes": 319102
+  },
+  "assets/img/design/liangzhu/board-06-640.webp": {
+    "w": 640,
+    "h": 360,
+    "bytes": 35256
+  },
+  "assets/img/design/liangzhu/board-06-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 128416
+  },
+  "assets/img/design/liangzhu/board-06-2200.webp": {
+    "w": 2200,
+    "h": 1238,
+    "bytes": 208396
+  },
+  "assets/img/design/liangzhu/board-07-640.webp": {
+    "w": 640,
+    "h": 360,
+    "bytes": 32182
+  },
+  "assets/img/design/liangzhu/board-07-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 103330
+  },
+  "assets/img/design/liangzhu/board-07-2200.webp": {
+    "w": 2200,
+    "h": 1238,
+    "bytes": 165080
+  },
+  "assets/img/design/liangzhu/board-08-640.webp": {
+    "w": 640,
+    "h": 360,
+    "bytes": 45250
+  },
+  "assets/img/design/liangzhu/board-08-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 186734
+  },
+  "assets/img/design/liangzhu/board-08-2200.webp": {
+    "w": 2200,
+    "h": 1238,
+    "bytes": 312600
+  },
+  "assets/img/design/liangzhu/board-09-640.webp": {
+    "w": 640,
+    "h": 360,
+    "bytes": 28384
+  },
+  "assets/img/design/liangzhu/board-09-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 92694
+  },
+  "assets/img/design/liangzhu/board-09-2200.webp": {
+    "w": 2200,
+    "h": 1238,
+    "bytes": 147602
+  },
+  "assets/img/design/liangzhu/board-10-640.webp": {
+    "w": 640,
+    "h": 360,
+    "bytes": 26838
+  },
+  "assets/img/design/liangzhu/board-10-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 89842
+  },
+  "assets/img/design/liangzhu/board-10-2200.webp": {
+    "w": 2200,
+    "h": 1238,
+    "bytes": 143880
+  },
+  "assets/img/design/liangzhu/board-11-640.webp": {
+    "w": 640,
+    "h": 360,
+    "bytes": 41346
+  },
+  "assets/img/design/liangzhu/board-11-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 152794
+  },
+  "assets/img/design/liangzhu/board-11-2200.webp": {
+    "w": 2200,
+    "h": 1238,
+    "bytes": 239592
+  },
+  "assets/img/design/liangzhu/board-12-640.webp": {
+    "w": 640,
+    "h": 360,
+    "bytes": 34988
+  },
+  "assets/img/design/liangzhu/board-12-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 136260
+  },
+  "assets/img/design/liangzhu/board-12-2200.webp": {
+    "w": 2200,
+    "h": 1238,
+    "bytes": 224970
+  },
+  "assets/img/design/liangzhu/board-13-640.webp": {
+    "w": 640,
+    "h": 360,
+    "bytes": 41828
+  },
+  "assets/img/design/liangzhu/board-13-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 149100
+  },
+  "assets/img/design/liangzhu/board-13-2200.webp": {
+    "w": 2200,
+    "h": 1238,
+    "bytes": 233198
+  },
+  "assets/img/design/liangzhu/board-14-640.webp": {
+    "w": 640,
+    "h": 360,
+    "bytes": 29000
+  },
+  "assets/img/design/liangzhu/board-14-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 103536
+  },
+  "assets/img/design/liangzhu/board-14-2200.webp": {
+    "w": 2200,
+    "h": 1238,
+    "bytes": 171354
+  },
+  "assets/img/design/liangzhu/board-15-640.webp": {
+    "w": 640,
+    "h": 360,
+    "bytes": 30760
+  },
+  "assets/img/design/liangzhu/board-15-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 132684
+  },
+  "assets/img/design/liangzhu/board-15-2200.webp": {
+    "w": 2200,
+    "h": 1238,
+    "bytes": 224392
+  },
+  "assets/img/design/liangzhu/board-16-640.webp": {
+    "w": 640,
+    "h": 360,
+    "bytes": 41376
+  },
+  "assets/img/design/liangzhu/board-16-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 163978
+  },
+  "assets/img/design/liangzhu/board-16-2200.webp": {
+    "w": 2200,
+    "h": 1238,
+    "bytes": 272428
+  },
+  "assets/img/design/liangzhu/board-17-640.webp": {
+    "w": 640,
+    "h": 360,
+    "bytes": 40168
+  },
+  "assets/img/design/liangzhu/board-17-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 145920
+  },
+  "assets/img/design/liangzhu/board-17-2200.webp": {
+    "w": 2200,
+    "h": 1238,
+    "bytes": 225716
+  },
+  "assets/img/design/liangzhu/board-18-640.webp": {
+    "w": 640,
+    "h": 360,
+    "bytes": 23702
+  },
+  "assets/img/design/liangzhu/board-18-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 91976
+  },
+  "assets/img/design/liangzhu/board-18-2200.webp": {
+    "w": 2200,
+    "h": 1238,
+    "bytes": 152030
+  },
+  "assets/img/design/liangzhu/board-19-640.webp": {
+    "w": 640,
+    "h": 360,
+    "bytes": 39874
+  },
+  "assets/img/design/liangzhu/board-19-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 131108
+  },
+  "assets/img/design/liangzhu/board-19-2200.webp": {
+    "w": 2200,
+    "h": 1238,
+    "bytes": 188660
+  },
+  "assets/img/design/liangzhu/board-20-640.webp": {
+    "w": 640,
+    "h": 360,
+    "bytes": 30084
+  },
+  "assets/img/design/liangzhu/board-20-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 172874
+  },
+  "assets/img/design/liangzhu/board-20-2200.webp": {
+    "w": 2200,
+    "h": 1238,
+    "bytes": 330136
+  },
+  "assets/img/design/liangzhu/board-21-640.webp": {
+    "w": 640,
+    "h": 360,
+    "bytes": 18630
+  },
+  "assets/img/design/liangzhu/board-21-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 84202
+  },
+  "assets/img/design/liangzhu/board-21-2200.webp": {
+    "w": 2200,
+    "h": 1238,
+    "bytes": 166640
+  },
+  "assets/img/design/liangzhu/board-22-640.webp": {
+    "w": 640,
+    "h": 360,
+    "bytes": 34414
+  },
+  "assets/img/design/liangzhu/board-22-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 137560
+  },
+  "assets/img/design/liangzhu/board-22-2200.webp": {
+    "w": 2200,
+    "h": 1238,
+    "bytes": 227044
+  },
+  "project:liangzhu": {
+    "boards": [
+      {
+        "source": "良渚博物院IP文创设计- 1.jpg",
+        "w": 8000,
+        "h": 4500,
+        "variants": {
+          "640": "assets/img/design/liangzhu/board-01-640.webp",
+          "1600": "assets/img/design/liangzhu/board-01-1600.webp",
+          "2200": "assets/img/design/liangzhu/board-01-2200.webp"
+        }
+      },
+      {
+        "source": "良渚博物院IP文创设计- 2.jpg",
+        "w": 8000,
+        "h": 4500,
+        "variants": {
+          "640": "assets/img/design/liangzhu/board-02-640.webp",
+          "1600": "assets/img/design/liangzhu/board-02-1600.webp",
+          "2200": "assets/img/design/liangzhu/board-02-2200.webp"
+        }
+      },
+      {
+        "source": "良渚博物院IP文创设计- 3.jpg",
+        "w": 8000,
+        "h": 4500,
+        "variants": {
+          "640": "assets/img/design/liangzhu/board-03-640.webp",
+          "1600": "assets/img/design/liangzhu/board-03-1600.webp",
+          "2200": "assets/img/design/liangzhu/board-03-2200.webp"
+        }
+      },
+      {
+        "source": "良渚博物院IP文创设计- 4.jpg",
+        "w": 8000,
+        "h": 4500,
+        "variants": {
+          "640": "assets/img/design/liangzhu/board-04-640.webp",
+          "1600": "assets/img/design/liangzhu/board-04-1600.webp",
+          "2200": "assets/img/design/liangzhu/board-04-2200.webp"
+        }
+      },
+      {
+        "source": "良渚博物院IP文创设计- 5.jpg",
+        "w": 8000,
+        "h": 4500,
+        "variants": {
+          "640": "assets/img/design/liangzhu/board-05-640.webp",
+          "1600": "assets/img/design/liangzhu/board-05-1600.webp",
+          "2200": "assets/img/design/liangzhu/board-05-2200.webp"
+        }
+      },
+      {
+        "source": "良渚博物院IP文创设计- 6.jpg",
+        "w": 8000,
+        "h": 4500,
+        "variants": {
+          "640": "assets/img/design/liangzhu/board-06-640.webp",
+          "1600": "assets/img/design/liangzhu/board-06-1600.webp",
+          "2200": "assets/img/design/liangzhu/board-06-2200.webp"
+        }
+      },
+      {
+        "source": "良渚博物院IP文创设计- 7.jpg",
+        "w": 8000,
+        "h": 4500,
+        "variants": {
+          "640": "assets/img/design/liangzhu/board-07-640.webp",
+          "1600": "assets/img/design/liangzhu/board-07-1600.webp",
+          "2200": "assets/img/design/liangzhu/board-07-2200.webp"
+        }
+      },
+      {
+        "source": "良渚博物院IP文创设计- 8.jpg",
+        "w": 8000,
+        "h": 4500,
+        "variants": {
+          "640": "assets/img/design/liangzhu/board-08-640.webp",
+          "1600": "assets/img/design/liangzhu/board-08-1600.webp",
+          "2200": "assets/img/design/liangzhu/board-08-2200.webp"
+        }
+      },
+      {
+        "source": "良渚博物院IP文创设计- 9.jpg",
+        "w": 8000,
+        "h": 4500,
+        "variants": {
+          "640": "assets/img/design/liangzhu/board-09-640.webp",
+          "1600": "assets/img/design/liangzhu/board-09-1600.webp",
+          "2200": "assets/img/design/liangzhu/board-09-2200.webp"
+        }
+      },
+      {
+        "source": "良渚博物院IP文创设计- 10.jpg",
+        "w": 8000,
+        "h": 4500,
+        "variants": {
+          "640": "assets/img/design/liangzhu/board-10-640.webp",
+          "1600": "assets/img/design/liangzhu/board-10-1600.webp",
+          "2200": "assets/img/design/liangzhu/board-10-2200.webp"
+        }
+      },
+      {
+        "source": "良渚博物院IP文创设计- 11.jpg",
+        "w": 8000,
+        "h": 4500,
+        "variants": {
+          "640": "assets/img/design/liangzhu/board-11-640.webp",
+          "1600": "assets/img/design/liangzhu/board-11-1600.webp",
+          "2200": "assets/img/design/liangzhu/board-11-2200.webp"
+        }
+      },
+      {
+        "source": "良渚博物院IP文创设计- 12.jpg",
+        "w": 8000,
+        "h": 4500,
+        "variants": {
+          "640": "assets/img/design/liangzhu/board-12-640.webp",
+          "1600": "assets/img/design/liangzhu/board-12-1600.webp",
+          "2200": "assets/img/design/liangzhu/board-12-2200.webp"
+        }
+      },
+      {
+        "source": "良渚博物院IP文创设计- 13.jpg",
+        "w": 8000,
+        "h": 4500,
+        "variants": {
+          "640": "assets/img/design/liangzhu/board-13-640.webp",
+          "1600": "assets/img/design/liangzhu/board-13-1600.webp",
+          "2200": "assets/img/design/liangzhu/board-13-2200.webp"
+        }
+      },
+      {
+        "source": "良渚博物院IP文创设计- 14.jpg",
+        "w": 8000,
+        "h": 4500,
+        "variants": {
+          "640": "assets/img/design/liangzhu/board-14-640.webp",
+          "1600": "assets/img/design/liangzhu/board-14-1600.webp",
+          "2200": "assets/img/design/liangzhu/board-14-2200.webp"
+        }
+      },
+      {
+        "source": "良渚博物院IP文创设计- 15.jpg",
+        "w": 8000,
+        "h": 4500,
+        "variants": {
+          "640": "assets/img/design/liangzhu/board-15-640.webp",
+          "1600": "assets/img/design/liangzhu/board-15-1600.webp",
+          "2200": "assets/img/design/liangzhu/board-15-2200.webp"
+        }
+      },
+      {
+        "source": "良渚博物院IP文创设计- 16.jpg",
+        "w": 8000,
+        "h": 4500,
+        "variants": {
+          "640": "assets/img/design/liangzhu/board-16-640.webp",
+          "1600": "assets/img/design/liangzhu/board-16-1600.webp",
+          "2200": "assets/img/design/liangzhu/board-16-2200.webp"
+        }
+      },
+      {
+        "source": "良渚博物院IP文创设计- 17.jpg",
+        "w": 8000,
+        "h": 4500,
+        "variants": {
+          "640": "assets/img/design/liangzhu/board-17-640.webp",
+          "1600": "assets/img/design/liangzhu/board-17-1600.webp",
+          "2200": "assets/img/design/liangzhu/board-17-2200.webp"
+        }
+      },
+      {
+        "source": "良渚博物院IP文创设计- 18.jpg",
+        "w": 8000,
+        "h": 4500,
+        "variants": {
+          "640": "assets/img/design/liangzhu/board-18-640.webp",
+          "1600": "assets/img/design/liangzhu/board-18-1600.webp",
+          "2200": "assets/img/design/liangzhu/board-18-2200.webp"
+        }
+      },
+      {
+        "source": "良渚博物院IP文创设计- 19.jpg",
+        "w": 8000,
+        "h": 4500,
+        "variants": {
+          "640": "assets/img/design/liangzhu/board-19-640.webp",
+          "1600": "assets/img/design/liangzhu/board-19-1600.webp",
+          "2200": "assets/img/design/liangzhu/board-19-2200.webp"
+        }
+      },
+      {
+        "source": "良渚博物院IP文创设计- 20.jpg",
+        "w": 8000,
+        "h": 4500,
+        "variants": {
+          "640": "assets/img/design/liangzhu/board-20-640.webp",
+          "1600": "assets/img/design/liangzhu/board-20-1600.webp",
+          "2200": "assets/img/design/liangzhu/board-20-2200.webp"
+        }
+      },
+      {
+        "source": "良渚博物院IP文创设计- 21.jpg",
+        "w": 8000,
+        "h": 4500,
+        "variants": {
+          "640": "assets/img/design/liangzhu/board-21-640.webp",
+          "1600": "assets/img/design/liangzhu/board-21-1600.webp",
+          "2200": "assets/img/design/liangzhu/board-21-2200.webp"
+        }
+      },
+      {
+        "source": "良渚博物院IP文创设计- 22.jpg",
+        "w": 8000,
+        "h": 4500,
+        "variants": {
+          "640": "assets/img/design/liangzhu/board-22-640.webp",
+          "1600": "assets/img/design/liangzhu/board-22-1600.webp",
+          "2200": "assets/img/design/liangzhu/board-22-2200.webp"
+        }
+      }
+    ]
+  },
+  "assets/img/slides/slide-01-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 20306
+  },
+  "assets/img/slides/slide-01-480.webp": {
+    "w": 480,
+    "h": 270,
+    "bytes": 5380
+  },
+  "assets/img/slides/slide-02-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 53142
+  },
+  "assets/img/slides/slide-02-480.webp": {
+    "w": 480,
+    "h": 270,
+    "bytes": 11160
+  },
+  "assets/img/slides/slide-03-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 25916
+  },
+  "assets/img/slides/slide-03-480.webp": {
+    "w": 480,
+    "h": 270,
+    "bytes": 5710
+  },
+  "assets/img/slides/slide-04-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 170014
+  },
+  "assets/img/slides/slide-04-480.webp": {
+    "w": 480,
+    "h": 270,
+    "bytes": 29070
+  },
+  "assets/img/slides/slide-05-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 132072
+  },
+  "assets/img/slides/slide-05-480.webp": {
+    "w": 480,
+    "h": 270,
+    "bytes": 22330
+  },
+  "assets/img/slides/slide-06-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 163334
+  },
+  "assets/img/slides/slide-06-480.webp": {
+    "w": 480,
+    "h": 270,
+    "bytes": 27024
+  },
+  "assets/img/slides/slide-07-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 97934
+  },
+  "assets/img/slides/slide-07-480.webp": {
+    "w": 480,
+    "h": 270,
+    "bytes": 17462
+  },
+  "assets/img/slides/slide-08-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 116262
+  },
+  "assets/img/slides/slide-08-480.webp": {
+    "w": 480,
+    "h": 270,
+    "bytes": 19716
+  },
+  "assets/img/slides/slide-09-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 112366
+  },
+  "assets/img/slides/slide-09-480.webp": {
+    "w": 480,
+    "h": 270,
+    "bytes": 20148
+  },
+  "assets/img/slides/slide-10-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 111268
+  },
+  "assets/img/slides/slide-10-480.webp": {
+    "w": 480,
+    "h": 270,
+    "bytes": 19072
+  },
+  "assets/img/slides/slide-11-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 118630
+  },
+  "assets/img/slides/slide-11-480.webp": {
+    "w": 480,
+    "h": 270,
+    "bytes": 20988
+  },
+  "assets/img/slides/slide-12-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 99016
+  },
+  "assets/img/slides/slide-12-480.webp": {
+    "w": 480,
+    "h": 270,
+    "bytes": 15206
+  },
+  "assets/img/slides/slide-13-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 118562
+  },
+  "assets/img/slides/slide-13-480.webp": {
+    "w": 480,
+    "h": 270,
+    "bytes": 19392
+  },
+  "assets/img/slides/slide-14-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 93058
+  },
+  "assets/img/slides/slide-14-480.webp": {
+    "w": 480,
+    "h": 270,
+    "bytes": 15604
+  },
+  "assets/img/slides/slide-15-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 86746
+  },
+  "assets/img/slides/slide-15-480.webp": {
+    "w": 480,
+    "h": 270,
+    "bytes": 14232
+  },
+  "assets/img/slides/slide-16-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 108538
+  },
+  "assets/img/slides/slide-16-480.webp": {
+    "w": 480,
+    "h": 270,
+    "bytes": 18420
+  },
+  "assets/img/slides/slide-17-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 89520
+  },
+  "assets/img/slides/slide-17-480.webp": {
+    "w": 480,
+    "h": 270,
+    "bytes": 15672
+  },
+  "assets/img/slides/slide-18-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 73626
+  },
+  "assets/img/slides/slide-18-480.webp": {
+    "w": 480,
+    "h": 270,
+    "bytes": 12596
+  },
+  "assets/img/slides/slide-19-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 129474
+  },
+  "assets/img/slides/slide-19-480.webp": {
+    "w": 480,
+    "h": 270,
+    "bytes": 19402
+  },
+  "assets/img/slides/slide-20-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 18502
+  },
+  "assets/img/slides/slide-20-480.webp": {
+    "w": 480,
+    "h": 270,
+    "bytes": 4522
+  },
+  "assets/img/slides/slide-21-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 92998
+  },
+  "assets/img/slides/slide-21-480.webp": {
+    "w": 480,
+    "h": 270,
+    "bytes": 15792
+  },
+  "assets/img/slides/slide-22-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 47324
+  },
+  "assets/img/slides/slide-22-480.webp": {
+    "w": 480,
+    "h": 270,
+    "bytes": 8520
+  },
+  "assets/img/slides/slide-23-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 103130
+  },
+  "assets/img/slides/slide-23-480.webp": {
+    "w": 480,
+    "h": 270,
+    "bytes": 16618
+  },
+  "assets/img/slides/slide-24-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 115408
+  },
+  "assets/img/slides/slide-24-480.webp": {
+    "w": 480,
+    "h": 270,
+    "bytes": 20246
+  },
+  "assets/img/slides/slide-25-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 32312
+  },
+  "assets/img/slides/slide-25-480.webp": {
+    "w": 480,
+    "h": 270,
+    "bytes": 7060
+  },
+  "assets/img/slides/slide-26-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 84298
+  },
+  "assets/img/slides/slide-26-480.webp": {
+    "w": 480,
+    "h": 270,
+    "bytes": 14366
+  },
+  "assets/img/slides/slide-27-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 148814
+  },
+  "assets/img/slides/slide-27-480.webp": {
+    "w": 480,
+    "h": 270,
+    "bytes": 20886
+  },
+  "assets/img/slides/slide-28-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 100188
+  },
+  "assets/img/slides/slide-28-480.webp": {
+    "w": 480,
+    "h": 270,
+    "bytes": 14276
+  },
+  "assets/img/slides/slide-29-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 109872
+  },
+  "assets/img/slides/slide-29-480.webp": {
+    "w": 480,
+    "h": 270,
+    "bytes": 18048
+  },
+  "assets/img/slides/slide-30-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 62942
+  },
+  "assets/img/slides/slide-30-480.webp": {
+    "w": 480,
+    "h": 270,
+    "bytes": 13034
+  }
+}
