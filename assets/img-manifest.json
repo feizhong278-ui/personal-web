@@ -1726,5 +1726,15 @@
     "w": 900,
     "h": 1199,
     "bytes": 95338
+  },
+  "assets/img/design/harbin/harbin-card-cover-800.webp": {
+    "w": 800,
+    "h": 407,
+    "bytes": 64610
+  },
+  "assets/img/design/harbin/harbin-card-cover-1600.webp": {
+    "w": 1600,
+    "h": 814,
+    "bytes": 186186
   }
 }

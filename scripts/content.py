@@ -33,6 +33,15 @@ PROJECTS = [
         "award": "第三届中国研究生「美丽中国」创新设计大赛 · 全国二等奖",
         "award_short": "全国二等奖",
         "cover": 1,
+        "card_cover": {
+            "src": "assets/img/design/harbin/harbin-card-cover-800.webp",
+            "srcset": [
+                ("assets/img/design/harbin/harbin-card-cover-800.webp", 800),
+                ("assets/img/design/harbin/harbin-card-cover-1600.webp", 1600),
+            ],
+            "w": 800,
+            "h": 407,
+        },
         "feature": 1,
         "summary": "把哈尔滨的夏日、冰雪记忆与城市性格，变成一个可以走进海报、文创与线下场景的角色。",
         "intro": "以哈尔滨夏日城市文化为起点，用 AIGC 辅助文化元素提炼与角色方向探索，再用 Photoshop、Illustrator 完成形象优化和应用延展。项目获得第三届中国研究生「美丽中国」创新设计大赛全国二等奖。",

@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import json
 import sys
+from html import escape
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -10,6 +11,12 @@ from content import SITE, PROJECTS, SELFIE_ACCOUNTS, SELFIE_NOTE_COUNT, SELFIE_P
     SELFIE_DETAIL_COUNT, LAZY_POSTS, SLIDE_FEATURES, CASE_NAV
 from layout import page, section_head, stat, cta_link, image, design_picture, lightbox_button, \
     MANIFEST, SITE_URL
+
+# Display order for the four design cards and project reader navigation.
+DISPLAY_ORDER = ["gengong", "lingyin", "liangzhu", "harbin"]
+PROJECTS.sort(key=lambda project: DISPLAY_ORDER.index(project["slug"]))
+for _i, _project in enumerate(PROJECTS, 1):
+    _project["index"] = f"{_i:02d}"
 
 # Attach board metadata
 for project in PROJECTS:
@@ -35,6 +42,18 @@ def board_srcset(project, n, base=""):
     board = next(b for b in project["_board_data"] if b["n"] == n)
     widths = sorted(int(x) for x in board["variants"])
     return ", ".join(f'{base}{board["variants"][str(w)]} {w}w' for w in widths)
+
+
+def card_cover_picture(project, alt, sizes, base="", loading="lazy"):
+    """Use a dedicated overview cover when provided, otherwise the first board."""
+    cover = project.get("card_cover")
+    if not cover:
+        return design_picture(project, project["cover"], alt, base=base, sizes=sizes, loading=loading)
+    srcset = ", ".join(f'{base}{url} {w}w' for url, w in cover["srcset"])
+    return (f'<img src="{base}{cover["src"]}" srcset="{srcset}" '
+            f'sizes="{escape(sizes, quote=True)}" alt="{escape(alt, quote=True)}" '
+            f'width="{cover["w"]}" height="{cover["h"]}" '
+            f'loading="{loading}" decoding="async">')
 
 
 def home_deck(project):
@@ -346,7 +365,7 @@ def new_index_page():
         design_cards += f'''
         <a class="p-design-card" href="design/{p['slug']}.html" data-cursor="OPEN">
           <div class="p-design-card__img">
-            {design_picture(p, p['cover'], p['title'] + "项目封面", sizes="(max-width: 700px) 100vw, 28vw", loading="lazy")}
+            {card_cover_picture(p, p['title'] + "项目封面", sizes="(max-width: 700px) 100vw, 28vw", loading="lazy")}
             <span>{p['index']} / 04</span>
           </div>
           <div class="p-design-card__body">
@@ -1025,13 +1044,10 @@ def operations_page():
 def design_page():
     cards = ""
     for project in PROJECTS:
-        cover_n = project["cover"]
-        board = next(b for b in project["_board_data"] if b["n"] == cover_n)
-        cls = " design-card--portrait" if project["slug"] == "harbin" else ""
         cards += f'''
-        <a class="design-card{cls}" href="design/{project['slug']}.html" data-cursor="OPEN">
+        <a class="design-card" href="design/{project['slug']}.html" data-cursor="OPEN">
           <div class="design-card__media">
-            <img src="{board_path(project, cover_n, 640)}" srcset="{board_srcset(project, cover_n)}" sizes="(max-width: 800px) 90vw, 48vw" alt="{project['title']}项目封面" width="{board['w']}" height="{board['h']}" loading="lazy" decoding="async">
+            {card_cover_picture(project, project['title'] + "项目封面", sizes="(max-width: 800px) 90vw, 48vw", loading="lazy")}
             <span class="design-card__index">{project['index']} / 04</span>
             <span class="design-card__open">打开项目档案 <b>↗</b></span>
           </div>
@@ -1162,8 +1178,16 @@ def project_page(project):
           {page_button}
         </article>'''
 
-    next_cover = board_path(next_project, next_project["cover"], 640)
-    next_srcset = board_srcset(next_project, next_project["cover"], base="../")
+    if next_project.get("card_cover"):
+        next_card = next_project["card_cover"]
+        next_cover = next_card["src"]
+        next_srcset = ", ".join(f'../{url} {w}w' for url, w in next_card["srcset"])
+        next_w, next_h = next_card["w"], next_card["h"]
+    else:
+        next_cover = board_path(next_project, next_project["cover"], 640)
+        next_srcset = board_srcset(next_project, next_project["cover"], base="../")
+        next_board = next_project["_board_data"][next_project["cover"] - 1]
+        next_w, next_h = next_board["w"], next_board["h"]
     if project["award"]:
         award_label = "AWARD / 奖项"
         award_value = f'<span class="project-award">{project["award"]}</span>'
@@ -1216,7 +1240,7 @@ def project_page(project):
             <span class="project-next__title">{next_project['title']}</span>
             <span class="project-next__cta">继续浏览 <b>↗</b></span>
           </div>
-          <div class="project-next__media"><img src="../{next_cover}" srcset="{next_srcset}" sizes="34vw" alt="{next_project['title']}项目封面" width="{next_project['_board_data'][next_project['cover']-1]['w']}" height="{next_project['_board_data'][next_project['cover']-1]['h']}" loading="lazy" decoding="async"></div>
+          <div class="project-next__media"><img src="../{next_cover}" srcset="{next_srcset}" sizes="34vw" alt="{next_project['title']}项目封面" width="{next_w}" height="{next_h}" loading="lazy" decoding="async"></div>
         </a>
       </nav>
     </article>

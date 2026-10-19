@@ -643,7 +643,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
 .p-design-card { display: flex; flex-direction: column; padding: 8px 8px 15px; border: 1px solid var(--p-border); border-radius: 26px; color: var(--p-ink); background: rgba(255, 255, 255, 0.58); box-shadow: 0 12px 30px rgba(98, 75, 57, 0.05); text-decoration: none; transition: transform 0.35s var(--ease), box-shadow 0.35s, background 0.3s; }
 .p-design-card:hover { transform: translateY(-5px); background: rgba(255, 255, 255, 0.8); box-shadow: 0 20px 38px rgba(98, 75, 57, 0.1); }
 .p-design-card__img { position: relative; overflow: hidden; border-radius: 19px; background: #fff; }
-.p-design-card__img img { width: 100%; aspect-ratio: 4 / 3; object-fit: contain; background: #fff; padding: 4px; transition: transform 0.5s var(--ease); }
+.p-design-card__img img { width: 100%; aspect-ratio: 16 / 9; object-fit: contain; background: #fff; transition: transform 0.5s var(--ease); }
 .p-design-card:hover .p-design-card__img img { transform: scale(1.035); }
 .p-design-card__img > span { position: absolute; top: 8px; left: 8px; padding: 4px 6px; border-radius: 999px; color: #6c5a4c; background: rgba(255, 255, 255, 0.84); font-family: var(--mono); font-size: 6px; }
 .p-design-card__body { padding: 13px 8px 0; }
@@ -1298,8 +1298,8 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
 .design-card:nth-child(2) .design-card__media,
 .design-card:nth-child(3) .design-card__media,
 .design-card:nth-child(4) .design-card__media {
-  aspect-ratio: 4 / 3;
-  padding: 5px;
+  aspect-ratio: 16 / 9;
+  padding: 0;
   border: 0;
   border-radius: 22px;
   background: #fff;
