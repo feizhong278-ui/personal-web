@@ -126,14 +126,15 @@ HOME_EXPERIENCE = [
         "num": "01",
         "tone": "mint",
         "period": "2026.07 — 至今",
-        "company": "萤石网络",
-        "company_note": "海康威视旗下",
+        "company": "海康威视",
+        "company_note": "",
         "role": "AI 搜索内容运营（GEO）",
         "now": True,
         "bullets": [
             "负责豆包、千问、DeepSeek、元宝等 AI 平台的 GEO 内容策略与执行，跟踪内容抓取、引用与推荐表现。",
-            "搭建并运营覆盖 50+ 个账号的内容矩阵，沉淀素材库、问答库、选题库、Prompt 模板与内容 SOP。",
-            "围绕 36 个核心提示词产出 800+ 篇结构化内容，260+ 篇被 AI 平台召回，累计召回 2,000+ 次。",
+            "搭建并运营覆盖 50+ 个账号的内容矩阵，沉淀 GEO 素材库、问答库、选题库、Prompt 模板及内容生产 SOP。",
+            "围绕 36 个核心提示词产出 800+ 篇结构化内容；按项目统计口径，260+ 篇被 AI 平台召回，累计召回 2,000+ 次，核心提示词覆盖率达 90%。",
+            "豆包平台品牌提及率由 44.53% 提升至 63.46%，品牌推荐率由 25.36% 提升至 46.15%。",
         ],
         "tags": ["50+ 矩阵账号", "800+ 结构化内容", "2,000+ 次召回", "90% 提示词覆盖"],
     },
@@ -146,29 +147,14 @@ HOME_EXPERIENCE = [
         "role": "内容与店铺运营",
         "now": False,
         "bullets": [
-            "独立搭建并运营小红书矩阵及抖音账号「自拍杆小圆子」，负责账号定位、选题、图文、视频拍剪与日常维护。",
-            "参与 4 家 3C 数码店铺的商品上架、主图与详情页维护、笔记加热及推广素材优化。",
-            "累计产出 30+ 篇爆文，平均单篇获赞 1,000+；任职期间累计成交 3 万+ 单，最高月 GMV 27.4 万+。",
+            "独立搭建并运营小红书矩阵及抖音账号「自拍杆小圆子」，负责账号定位、选题策划、图文制作、视频拍摄剪辑与日常维护。",
+            "负责 4 家 3C 数码类店铺的商品上架、主图与详情页维护，参与笔记加热及付费推广，跟踪曝光、点击、进店与成交表现。",
+            "累计产出 30+ 篇爆文笔记，平均单篇获赞 1,000+，单篇最高阅读量 10 万+、赞藏 6,000+。",
+            "任职期间累计成交 3 万+ 单，其中 3 个月成交 5,000+ 单；最高月成交 GMV 27 万+。",
         ],
         "tags": ["30+ 爆文", "4 家店铺", "3万+ 订单", "最高月 GMV 27.4万"],
     },
-    {
-        "num": "03",
-        "tone": "lilac",
-        "period": "2023.05 — 2024.05",
-        "company": "懒羊羊素材库",
-        "company_note": "设计内容账号",
-        "role": "主理人",
-        "now": False,
-        "bullets": [
-            "从 0 到 1 搭建设计素材账号，聚焦平面设计、IP 设计、包装设计与品牌视觉。",
-            "独立负责选题、图文排版、封面标题、发布与数据复盘，探索内容到店铺的引流闭环。",
-            "账号累计获赞与收藏 3 万+，6 篇爆款合计赞藏 1.7 万+，单篇最高获赞 3,645。",
-        ],
-        "tags": ["3万+ 累计赞藏", "6 篇爆款", "单篇最高赞 3,645"],
-    },
 ]
-
 HOME_SKILLS = [
     {
         "icon": "🚀",
@@ -409,7 +395,7 @@ def new_index_page():
           <div class="p-exp-marker">{item['num']}</div>
           <div class="p-exp-card">
             <div class="p-exp-card__top"><span class="p-date">{item['period']}</span>{now}</div>
-            <h3>{item['company']} {f'<small>{item["company_note"]}</small>' if item["company_note"] else ""}</h3>
+            <h3>{item['company']}{f' <small>{item["company_note"]}</small>' if item["company_note"] else ""}</h3>
             <p class="p-role">{item['role']}</p>
             <ul>{bullets}</ul>
             <div class="p-chip-row">{tags}</div>
@@ -455,7 +441,7 @@ def new_index_page():
             <span class="p-chip">GEO 内容</span><span class="p-chip">小红书 / 抖音</span><span class="p-chip">电商运营</span><span class="p-chip">数据分析</span><span class="p-chip">视觉表达</span>
           </div>
           <div class="p-hero__actions">
-            <a class="p-btn p-btn--dark" href="assets/docs/zhongfei-resume.pdf" download>下载简历 <span>↗</span></a>
+            <a class="p-btn p-btn--dark" href="assets/docs/zhongfei-resume.pdf?v=20261019i" download>下载简历 <span>↗</span></a>
             <a class="p-btn p-btn--ghost" href="#contact">联系我 <span>↓</span></a>
           </div>
         </div>
@@ -523,10 +509,10 @@ def new_index_page():
         <div class="p-section-head">
           <p class="p-kicker">03 / THE PRACTITIONER</p>
           <h2 id="experience-title">我在过往职场<br>做过什么。</h2>
-          <p>从 AI 搜索到电商内容，再到设计内容账号。每一段经历，都同时包含策略、执行与复盘。</p>
+          <p>从 AI 搜索到电商内容。两段实习经历，都同时包含策略、执行与复盘。</p>
         </div>
         <div class="p-timeline">{experience_cards}</div>
-        <div class="p-center-link"><a class="p-inline-link" href="assets/docs/zhongfei-resume.pdf" download>下载完整简历 PDF <span>↓</span></a></div>
+        <div class="p-center-link"><a class="p-inline-link" href="assets/docs/zhongfei-resume.pdf?v=20261019i" download>下载完整简历 PDF <span>↓</span></a></div>
       </div>
     </section>
 
@@ -585,7 +571,7 @@ def new_index_page():
           <div class="p-contact-actions">
             <a class="p-btn p-btn--dark" href="mailto:Aria.zhong@outlook.com">Aria.zhong@outlook.com <span>↗</span></a>
             <button class="p-btn p-btn--ghost" type="button" data-copy-email="Aria.zhong@outlook.com"><span class="email-copy__action">复制邮箱</span></button>
-            <a class="p-inline-link" href="assets/docs/zhongfei-resume.pdf" download>下载简历 PDF <span>↓</span></a>
+            <a class="p-inline-link" href="assets/docs/zhongfei-resume.pdf?v=20261019i" download>下载简历 PDF <span>↓</span></a>
           </div>
           <div class="p-contact-meta"><span><i></i> OPEN TO WORK</span><span>HANGZHOU / CN</span><span>2027</span></div>
         </div>
@@ -749,7 +735,7 @@ def operations_page():
           <div class="case-intro__side">
             <p>当用户把问题交给 AI，品牌竞争的对象不再只是搜索结果页，而是答案里的那一句话。</p>
             <dl class="role-list">
-              <div><dt>公司</dt><dd>萤石网络（海康威视旗下）</dd></div>
+              <div><dt>公司</dt><dd>海康威视</dd></div>
               <div><dt>角色</dt><dd>AI 搜索内容运营（GEO）</dd></div>
               <div><dt>范围</dt><dd>策略 / 矩阵 / 生产 / 复盘</dd></div>
             </dl>
@@ -1262,15 +1248,12 @@ def project_page(project):
 
 def about_page():
     experience = [
-        ("2026.07—至今", "萤石网络（海康威视旗下）", "AI 搜索内容运营（GEO）",
-         "负责豆包、千问、DeepSeek、元宝等 AI 平台的 GEO 内容策略与执行；搭建 50+ 账号内容矩阵，沉淀素材库、问答库、选题库、Prompt 模板与内容 SOP；围绕 36 个核心提示词产出 800+ 篇结构化内容，跟踪 AI 引用与推荐表现持续迭代。",
+        ("2026.07—至今", "海康威视", "AI 搜索内容运营（GEO）",
+         "负责豆包、千问、DeepSeek、元宝等 AI 平台的 GEO 内容策略与执行；搭建并运营 50+ 账号矩阵，沉淀 GEO 素材库、问答库、选题库、Prompt 模板与生产 SOP；围绕 36 个核心提示词产出 800+ 篇结构化内容，按项目统计口径 260+ 篇被 AI 平台召回、累计召回 2,000+ 次，核心提示词覆盖率达 90%。",
          ["50+ 矩阵账号", "800+ 结构化内容", "2,000+ 次 AI 召回"]),
         ("2024.12—2026.06", "杭州红商电子商务有限公司", "内容与店铺运营",
-         "独立搭建并运营小红书矩阵及抖音账号「自拍杆小圆子」，负责账号定位、选题、图文、视频拍剪与日常维护；参与 4 家 3C 数码店铺的商品上架、主图与详情页维护、笔记加热及推广优化。",
+         "独立搭建并运营小红书矩阵及抖音账号「自拍杆小圆子」，负责账号定位、选题、图文、视频拍剪与日常维护；负责 4 家 3C 数码店铺商品上架、主图与详情页维护、笔记加热及推广优化，跟踪曝光、点击、进店与成交表现。",
          ["30+ 篇爆文", "3万+ 累计订单", "最高月 GMV 27.4万"]),
-        ("2023.05—2024.05", "懒羊羊素材库", "设计内容账号主理人",
-         "从 0 到 1 搭建设计素材账号，聚焦平面设计、IP 设计、包装设计与品牌视觉；独立负责选题、图文排版、封面标题、发布与数据复盘，探索内容到店铺的引流闭环。",
-         ["3万+ 累计赞藏", "6 篇爆款", "单篇最高赞 3,645"]),
     ]
     exp_html = "".join(f'''
         <article class="timeline-item">
@@ -1320,7 +1303,7 @@ def about_page():
           <p class="about-hero-page__lead">我是钟菲，设计学硕士，2027 届。正在寻找内容运营、GEO 内容运营与 AI 内容运营的机会。</p>
           <div class="about-hero-page__actions">
             {cta_link('mailto:Aria.zhong@outlook.com', '发一封邮件', 'btn btn--dark', '↗')}
-            <a class="text-link" href="assets/docs/zhongfei-resume.pdf" download>下载简历 PDF <span>↓</span></a>
+            <a class="text-link" href="assets/docs/zhongfei-resume.pdf?v=20261019i" download>下载简历 PDF <span>↓</span></a>
           </div>
           <div class="about-now">
             <p class="micro-label">NOW / 现在</p>
@@ -1357,7 +1340,7 @@ def about_page():
 
     <section class="experience-section" aria-labelledby="experience-title">
       <div class="container">
-        {section_head('02', 'EXPERIENCE', '做过的事，<br>都留下了数字。', '从 AI 搜索到电商内容，再到设计内容账号。每一段经历都同时包含策略、执行与复盘。')}
+        {section_head('02', 'EXPERIENCE', '做过的事，<br>都留下了数字。', '从 AI 搜索到电商内容，两段实习经历都同时包含策略、执行与复盘。')}
         <div class="timeline">{exp_html}</div>
       </div>
     </section>
@@ -1407,7 +1390,7 @@ def about_page():
           <div class="contact__actions">
             <button class="email-copy" type="button" data-copy-email="Aria.zhong@outlook.com"><span>Aria.zhong@outlook.com</span><span class="email-copy__action">复制邮箱</span></button>
             <a class="contact__mailto" href="mailto:Aria.zhong@outlook.com">或直接写信 ↗</a>
-            <a class="contact__resume" href="assets/docs/zhongfei-resume.pdf" download>下载简历 PDF <span>↓</span></a>
+            <a class="contact__resume" href="assets/docs/zhongfei-resume.pdf?v=20261019i" download>下载简历 PDF <span>↓</span></a>
           </div>
         </div>
         <div class="contact__stamp" aria-hidden="true"><span>AVAILABLE FOR WORK</span><b>2027</b><span>HANGZHOU · CN</span></div>
