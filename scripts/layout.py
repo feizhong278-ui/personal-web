@@ -5,7 +5,7 @@ from html import escape
 
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST = json.loads((ROOT / "assets/img-manifest.json").read_text())
-ASSET_VERSION = "20261019c"
+ASSET_VERSION = "20261019g"
 SITE_URL = "https://feizhong278-ui.github.io/personal-web/"
 
 NAV_ITEMS = [

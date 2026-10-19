@@ -1131,42 +1131,36 @@ def design_page():
 def project_page(project):
     idx = PROJECTS.index(project)
     next_project = PROJECTS[(idx + 1) % len(PROJECTS)]
-    cover_n = project["cover"]
-    cover_board = next(b for b in project["_board_data"] if b["n"] == cover_n)
-    cover_cls = " project-cover--portrait" if project["slug"] == "harbin" else ""
-    cover = design_picture(project, cover_n, f"{project['title']}项目封面", base="../",
-                           sizes="(max-width: 900px) 100vw, 1200px", loading="eager",
-                           cls="", fetchpriority="high")
+    total = len(project["_board_data"])
 
-    chapters_html = ""
-    for chapter in project["chapters"]:
-        boards = [n for n in chapter["boards"] if n != cover_n]
-        if not boards:
-            continue
-        layout_cls = " board-grid--portrait" if chapter.get("layout") == "portrait" else ""
-        buttons = ""
-        for n in boards:
-            board = next(b for b in project["_board_data"] if b["n"] == n)
-            pic = design_picture(project, n, f"{project['title']}项目板 {n:02d}", base="../",
-                                 sizes="(max-width: 900px) 100vw, 1400px", loading="lazy")
-            full = board["variants"][str(max(int(w) for w in board["variants"]))]
-            buttons += lightbox_button(
-                f'<span class="board-frame__pic">{pic}</span><span class="board-frame__meta"><span>BOARD {n:02d}</span><b>放大查看 ↗</b></span>',
-                f"project-{project['slug']}",
-                "../" + full,
-                f"{project['title']} / 项目板 {n:02d}",
-                f"{project['title']}项目板 {n:02d}",
-                cls="board-frame",
-                extra=f'id="board-{n:02d}" data-cursor="OPEN"',
-            )
-        chapters_html += f'''
-        <div class="project-chapter">
-          <div class="project-chapter__head">
-            <p class="micro-label">{chapter['title']}</p>
-            <p>{chapter['desc']}</p>
-          </div>
-          <div class="board-grid{layout_cls}">{buttons}</div>
-        </div>'''
+    pages_html = ""
+    for n in range(1, total + 1):
+        board = next(b for b in project["_board_data"] if b["n"] == n)
+        is_cover = n == project["cover"]
+        is_portrait = board["h"] > board["w"]
+        page_cls = " pdf-page--portrait" if is_portrait else ""
+        sizes = "(max-width: 900px) 100vw, 715px" if is_portrait else "(max-width: 900px) 100vw, 1080px"
+        pic = design_picture(
+            project, n, f"{project['title']}项目板 {n:02d}", base="../",
+            sizes=sizes, loading="eager" if n == 1 else "lazy",
+            cls="pdf-page__img", fetchpriority="high" if n == 1 else None,
+        )
+        full = "../" + board["variants"][str(max(int(w) for w in board["variants"]))]
+        page_button = lightbox_button(
+            f'<span class="pdf-page__frame">{pic}</span>',
+            f"project-{project['slug']}",
+            full,
+            f"{project['title']} / 项目板 {n:02d}",
+            f"{project['title']}项目板 {n:02d}",
+            cls="pdf-page__open",
+        )
+        page_label = "COVER / 封面" if is_cover else "BOARD / 项目板"
+        pages_html += f'''
+        <article class="pdf-page{page_cls}" id="board-{n:02d}">
+          <h2 class="visually-hidden">PAGE {n:02d} / {total:02d} · {page_label}</h2>
+          <div class="pdf-page__bar"><span>PAGE {n:02d} / {total:02d}</span><span>{page_label}</span></div>
+          {page_button}
+        </article>'''
 
     next_cover = board_path(next_project, next_project["cover"], 640)
     next_srcset = board_srcset(next_project, next_project["cover"], base="../")
@@ -1176,7 +1170,6 @@ def project_page(project):
     else:
         award_label = "PROJECT / 类型"
         award_value = f'<span class="project-award project-award--type">{project["type"]}</span>'
-
 
     content = f'''
     <article class="project-page">
@@ -1191,41 +1184,28 @@ def project_page(project):
             <p class="eyebrow">{project['title_en']}</p>
             <h1>{project['title']}</h1>
             <p class="project-summary">{project['summary']}</p>
+            <p class="project-intro-text">{project['intro']}</p>
+            <div class="project-tags"><span>{project['discipline']}</span><span>{project['type']}</span><span>{project['award_short']}</span></div>
           </div>
-          <figure class="project-cover{cover_cls}">
-            {cover}
-            <figcaption><span>COVER BOARD / {cover_n:02d}</span><span>{project['discipline']}</span></figcaption>
-          </figure>
           <div class="project-meta">
             <div class="project-meta__award"><span class="micro-label">{award_label}</span>{award_value}</div>
             <dl>
               <div><dt>年份</dt><dd>{project['year']}</dd></div>
               <div><dt>角色</dt><dd>{project['role']}</dd></div>
               <div><dt>类型</dt><dd>{project['type']}</dd></div>
-              <div><dt>项目板</dt><dd>{len(project['_board_data'])} 张</dd></div>
+              <div><dt>页数</dt><dd>{total} 页</dd></div>
             </dl>
           </div>
         </div>
       </header>
 
-      <div class="project-intro">
-        <div class="container project-intro__grid">
-          <p class="micro-label">PROJECT NOTE</p>
-          <div>
-            <p>{project['intro']}</p>
-            <div class="project-tags"><span>{project['discipline']}</span><span>{project['type']}</span><span>{project['award_short']}</span></div>
-          </div>
-        </div>
-      </div>
-
-      <section class="project-gallery" aria-label="完整项目板">
+      <section class="project-reader" aria-label="完整项目板">
         <div class="container">
-          <div class="project-gallery__head">
-            <p class="micro-label">FULL ARCHIVE / {len(project['_board_data']):02d} BOARDS</p>
-            <h2>完整项目板</h2>
-            <p>点击任意一张放大查看。项目板保持原始顺序，呈现从调研、推演到落地的完整过程。</p>
+          <div class="project-reader__head">
+            <p class="micro-label">PROJECT DOCUMENT / {total:02d} PAGES</p>
+            <p>按原始顺序浏览 · 点击任意页放大</p>
           </div>
-          {chapters_html}
+          <div class="pdf-stack">{pages_html}</div>
         </div>
       </section>
 
