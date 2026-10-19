@@ -4,7 +4,7 @@
   <meta charset="utf-8">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f3efe5">
+  <meta name="theme-color" content="#fbf7f2">
   <meta name="author" content="钟菲">
   <title>钟菲｜内容运营 · GEO 内容增长 · 设计作品集</title>
   <meta name="description" content="钟菲的作品集：内容运营、GEO 内容增长与视觉设计。用策略、数据与视觉，让内容留下痕迹。">
@@ -22,13 +22,14 @@
   <meta name="twitter:title" content="钟菲｜内容运营 · GEO 内容增长 · 设计作品集">
   <meta name="twitter:description" content="钟菲的作品集：内容运营、GEO 内容增长与视觉设计。用策略、数据与视觉，让内容留下痕迹。">
   <meta name="twitter:image" content="https://feizhong278-ui.github.io/personal-web/assets/img/og-cover.jpg">
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon.png" type="image/png" sizes="64x64">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
-  <link rel="preload" href="assets/fonts/source-han-serif-sc-light.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/alibaba-puhuiti-heavy.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/source-han-sans-sc-regular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/css/site.css">
+  <link rel="stylesheet" href="assets/css/site.css?v=20261019c">
+  <link rel="stylesheet" href="assets/css/pastel.css?v=20261019c">
   <script>document.documentElement.classList.add('js');</script>
-  <script src="assets/js/site.js" defer></script>
+  <script src="assets/js/site.js?v=20261019c" defer></script>
 
 
 </head>
@@ -36,21 +37,22 @@
   <a class="skip-link" href="#main">跳到主要内容</a>
 
   <header class="site-header" data-header>
-    <div class="container header-inner">
+    <div class="nav-shell">
       <a class="brand" href="index.html" aria-label="钟菲作品集首页">
-        <span class="brand-mark">ZF</span>
-        <span class="brand-type"><strong>钟菲</strong><small>ZHONG FEI / PORTFOLIO</small></span>
+        <span class="brand-avatar"><img src="assets/img/portrait-160.webp" alt="" width="160" height="213" decoding="async"></span>
+        <span class="brand-word">PORTFOLIO<small>钟菲 / 2027</small></span>
       </a>
       <nav class="desktop-nav" aria-label="主导航">
-          <a href="index.html" aria-current="page">首页</a>
-          <a href="operations.html">运营案例</a>
-          <a href="design.html">设计作品</a>
-          <a href="about.html">关于我</a>
+          <a href="index.html#about" data-nav-section="about" class="is-active" aria-current="location">关于我</a>
+          <a href="index.html#projects" data-nav-section="projects">项目展示</a>
+          <a href="index.html#experience" data-nav-section="experience">工作经历</a>
+          <a href="index.html#education" data-nav-section="education">教育背景</a>
+          <a href="index.html#skills" data-nav-section="skills">技能特长</a>
+          <a href="index.html#interests" data-nav-section="interests">兴趣爱好</a>
       </nav>
       <div class="header-tools">
-        <span class="availability"><i aria-hidden="true"></i> OPEN TO WORK</span>
-        <a class="resume-link" href="assets/docs/zhongfei-resume.pdf" download>简历 <span aria-hidden="true">↓</span></a>
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" data-menu-toggle>
+        <a class="resume-link" href="assets/docs/zhongfei-resume.pdf" download>简历.pdf <span aria-hidden="true">↗</span></a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="打开菜单" data-menu-toggle>
           <span class="menu-toggle__label">菜单</span>
           <span class="menu-toggle__lines" aria-hidden="true"><i></i><i></i></span>
         </button>
@@ -59,13 +61,15 @@
     <div class="scroll-progress" data-scroll-progress aria-hidden="true"></div>
   </header>
   <div class="mobile-menu" id="mobile-menu" data-mobile-menu aria-hidden="true">
-    <div class="mobile-menu__inner">
-      <p class="mobile-menu__kicker">INDEX / 2027</p>
+    <div class="mobile-menu__sheet">
+      <div class="mobile-menu__top"><span>INDEX / 2027</span><span>HANGZHOU, CN</span></div>
       <nav class="mobile-nav" aria-label="移动端主导航">
-        <a href="index.html"><span>01</span>首页</a>
-        <a href="operations.html"><span>02</span>运营案例</a>
-        <a href="design.html"><span>03</span>设计作品</a>
-        <a href="about.html"><span>04</span>关于我</a>
+        <a href="index.html#about" class="is-active"><span>01</span>关于我<b>↗</b></a>
+        <a href="index.html#projects"><span>02</span>项目展示<b>↗</b></a>
+        <a href="index.html#experience"><span>03</span>工作经历<b>↗</b></a>
+        <a href="index.html#education"><span>04</span>教育背景<b>↗</b></a>
+        <a href="index.html#skills"><span>05</span>技能特长<b>↗</b></a>
+        <a href="index.html#interests"><span>06</span>兴趣爱好<b>↗</b></a>
       </nav>
       <div class="mobile-menu__foot">
         <a href="mailto:Aria.zhong@outlook.com">Aria.zhong@outlook.com</a>
@@ -76,378 +80,424 @@
   </div>
   <main id="main">
 
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="container">
-        <div class="hero-topline">
-          <p class="micro-label">PORTFOLIO / 2027</p>
-          <p class="hero-topline__role">CONTENT OPERATIONS · GEO · VISUAL DESIGN</p>
-          <p class="micro-label">HANGZHOU, CN</p>
+    <section class="p-hero" id="about" aria-labelledby="hero-title">
+      <div class="container p-hero__grid">
+        <div class="p-hero__copy">
+          <p class="hello-pill"><i aria-hidden="true"></i> HELLO / 你好</p>
+          <div class="p-hero__title-wrap">
+            <h1 id="hero-title">Hi,<br><span>我是钟菲</span></h1>
+
+<svg class="p-sticker" viewBox="0 0 160 160" aria-hidden="true">
+  <defs>
+    <linearGradient id="pStickerGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d8f3ff"></stop>
+      <stop offset=".52" stop-color="#d8d1ff"></stop>
+      <stop offset="1" stop-color="#ffd8e6"></stop>
+    </linearGradient>
+    <filter id="pStickerShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#6b5a7a" flood-opacity=".18"></feDropShadow>
+    </filter>
+  </defs>
+  <g filter="url(#pStickerShadow)" transform="rotate(-8 80 80)">
+    <ellipse cx="80" cy="40" rx="23" ry="30" fill="url(#pStickerGrad)" stroke="#fff" stroke-width="3"></ellipse>
+    <ellipse cx="80" cy="40" rx="23" ry="30" fill="url(#pStickerGrad)" stroke="#fff" stroke-width="3" transform="rotate(60 80 80)"></ellipse>
+    <ellipse cx="80" cy="40" rx="23" ry="30" fill="url(#pStickerGrad)" stroke="#fff" stroke-width="3" transform="rotate(120 80 80)"></ellipse>
+    <ellipse cx="80" cy="40" rx="23" ry="30" fill="url(#pStickerGrad)" stroke="#fff" stroke-width="3" transform="rotate(180 80 80)"></ellipse>
+    <ellipse cx="80" cy="40" rx="23" ry="30" fill="url(#pStickerGrad)" stroke="#fff" stroke-width="3" transform="rotate(240 80 80)"></ellipse>
+    <ellipse cx="80" cy="40" rx="23" ry="30" fill="url(#pStickerGrad)" stroke="#fff" stroke-width="3" transform="rotate(300 80 80)"></ellipse>
+    <circle cx="80" cy="80" r="31" fill="#fff9fd" stroke="#fff" stroke-width="3"></circle>
+    <circle cx="70" cy="76" r="3.4" fill="#39332f"></circle>
+    <circle cx="90" cy="76" r="3.4" fill="#39332f"></circle>
+    <path d="M70 88 Q80 96 90 88" fill="none" stroke="#39332f" stroke-width="3" stroke-linecap="round"></path>
+    <ellipse cx="63" cy="86" rx="6" ry="3" fill="#ffafc4" opacity=".55"></ellipse>
+    <ellipse cx="97" cy="86" rx="6" ry="3" fill="#ffafc4" opacity=".55"></ellipse>
+  </g>
+  <path d="M31 28 l3 8 8 3 -8 3 -3 8 -3 -8 -8 -3 8 -3Z" fill="#fff" opacity=".9"></path>
+  <path d="M132 118 l2 6 6 2 -6 2 -2 6 -2 -6 -6 -2 6 -2Z" fill="#fff" opacity=".8"></path>
+</svg>
+          </div>
+          <p class="p-hero__role">内容运营 / GEO 内容运营 / 视觉设计</p>
+          <div class="p-philosophy">
+            <span>个人理念 /</span>
+            <p>让内容有审美的形状，<br>也有可被验证的结果。</p>
+          </div>
+          <p class="p-hero__bio">设计学硕士，7 年设计训练。做过 AI 搜索内容矩阵、电商内容与店铺运营、设计内容账号；擅长把洞察拆成内容结构，用数据复盘，也具备视觉与拍剪能力。</p>
+          <div class="p-chip-row">
+            <span class="p-chip">GEO 内容</span><span class="p-chip">小红书 / 抖音</span><span class="p-chip">电商运营</span><span class="p-chip">数据分析</span><span class="p-chip">视觉表达</span>
+          </div>
+          <div class="p-hero__actions">
+            <a class="p-btn p-btn--dark" href="assets/docs/zhongfei-resume.pdf" download>下载简历 <span>↗</span></a>
+            <a class="p-btn p-btn--ghost" href="#contact">联系我 <span>↓</span></a>
+          </div>
         </div>
-        <div class="hero-main">
-          <div class="hero-copy">
-            <p class="eyebrow">设计学硕士 / 内容运营</p>
-            <h1 id="hero-title">
-              <span class="hero-line">让内容</span>
-              <span class="hero-line">留下<span class="accent">痕迹</span><span class="hero-period">。</span></span>
-            </h1>
-            <p class="hero-lede">我是钟菲。擅长把品牌洞察变成内容系统，也把审美直觉变成可衡量的结果。</p>
-            <div class="hero-actions">
-              <a class="btn btn--dark" href="#work" ><span>浏览作品</span><span class="btn__arrow" aria-hidden="true">↓</span></a>
-              <a class="text-link" href="assets/docs/zhongfei-resume.pdf" download>下载简历 PDF <span>↗</span></a>
+        <div class="p-hero__visual">
+          <div class="p-hero__halo" aria-hidden="true"></div>
+          <figure class="p-portrait" data-tilt-portrait>
+            <div class="p-portrait__img">
+              <img src="assets/img/portrait-900.webp" srcset="assets/img/portrait-480.webp 480w, assets/img/portrait-720.webp 720w, assets/img/portrait-900.webp 900w" sizes="(max-width: 700px) 92vw, 440px" alt="钟菲的职业肖像" width="900" height="1199" loading="eager" fetchpriority="high" decoding="async">
             </div>
-            <div class="hero-personal">
-              <span><i></i> 2027 届 · 求职中</span>
-              <span>杭州 / 可接受江浙沪机会</span>
-            </div>
+            <figcaption><span>ZHONG FEI / PORTRAIT 2026</span></figcaption>
+          </figure>
+          <div class="p-now">
+            <span class="p-now__label"><i aria-hidden="true"></i> NOW</span>
+            <strong>2027 届 · 求职中</strong>
+            <small>杭州 / 可接受江浙沪</small>
           </div>
-
-      <div class="hero-deck" data-tilt aria-hidden="true">
-        <div class="deck-card deck-console">
-          <div class="deck-console__top"><span><i></i> GEO / VISIBILITY</span><span>01—03</span></div>
-          <p class="deck-console__kicker">AI SEARCH / CONTENT MATRIX</p>
-          <p class="deck-console__title">让品牌<br>被 AI 推荐。</p>
-          <div class="deck-meter">
-            <div><span>品牌提及率</span><b>63.46<small>%</small></b></div>
-            <div class="deck-meter__bar"><i style="--w:63.46%"></i><em>44.53 → 63.46</em></div>
-          </div>
-          <div class="deck-meter">
-            <div><span>品牌推荐率</span><b>46.15<small>%</small></b></div>
-            <div class="deck-meter__bar deck-meter__bar--lime"><i style="--w:46.15%"></i><em>25.36 → 46.15</em></div>
-          </div>
-          <div class="deck-console__foot"><span>50+ ACCOUNTS</span><span>800+ POSTS</span><span>90% COVERAGE</span></div>
-        </div>
-
-        <figure class="deck-card deck-note">
-          <img src="assets/img/ops/selfie/note-04-600.webp" alt="" width="600" height="465" decoding="async">
-          <figcaption><span>XIAOHONGSHU / 01</span><span>爆款笔记</span></figcaption>
-        </figure>
-
-        <figure class="deck-card deck-design">
-          <img src="assets/img/design/gengong/board-14-640.webp" alt="" width="640" height="360" decoding="async">
-          <figcaption><span>IP / CULTURAL CREATIVE</span><span>根宫佛国</span></figcaption>
-        </figure>
-
-        <div class="deck-sticker">
-          <svg viewBox="0 0 120 120" role="presentation">
-            <defs><path id="deckCircle" d="M60,60 m-41,0 a41,41 0 1,1 82,0 a41,41 0 1,1 -82,0"/></defs>
-            <circle cx="60" cy="60" r="57" fill="none" stroke="currentColor" stroke-width="1"/>
-            <text><textPath href="#deckCircle" startOffset="0">OPEN TO WORK · CONTENT OPERATIONS · 2027 · </textPath></text>
-          </svg>
-          <span class="deck-sticker__star">✳</span>
+          <span class="p-floating p-floating--a">OPEN TO WORK</span>
         </div>
       </div>
-        </div>
-        <div class="hero-foot">
-          <p>CONTENT THAT LEAVES A TRACE.</p>
-          <a href="#work">向下滚动 <span>↓</span></a>
-          <p>45 PROJECT BOARDS / 14 NOTES / 30 SLIDES</p>
+      <a class="p-scroll-hint" href="#projects">继续下滑，探索更多 <span>↓</span></a>
+    </section>
+
+    <section class="p-section p-about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="p-about-card">
+          <div class="p-about-card__copy">
+            <p class="p-kicker">01 / ABOUT ME</p>
+            <h2 id="about-title">把审美变成方法，<br>把内容做成结果。</h2>
+            <p>我在中国计量大学读了七年设计，从视觉传达走到设计学。设计训练给我的不只是审美，更是一套观察、拆解、表达、验证问题的方法。</p>
+            <p>现在，我把这套方法用在内容增长上：既关心一条内容有没有被看见，也关心它有没有带来下一步行动。</p>
+            <div class="p-chip-row"><span class="p-chip">设计学硕士</span><span class="p-chip">GPA 3.93 / 4.0</span><span class="p-chip">专业前 3%</span></div>
+            <a class="p-inline-link" href="about.html">更多关于我 <span>↗</span></a>
+          </div>
+          <div class="p-stat-grid">
+
+      <div class="p-stat p-stat--mint">
+        <div class="p-stat__value"><span class="count-value" data-count="50">50</span><sup>+</sup></div>
+        <p>GEO 内容矩阵账号</p>
+        <small>AI SEARCH / 2026</small>
+      </div>
+
+      <div class="p-stat p-stat--peach">
+        <div class="p-stat__value"><span class="count-value" data-count="800">800</span><sup>+</sup></div>
+        <p>结构化内容</p>
+        <small>围绕 36 个核心提示词</small>
+      </div>
+
+      <div class="p-stat p-stat--lilac">
+        <div class="p-stat__value"><span class="count-value" data-count="2000">2000</span><sup>+</sup></div>
+        <p>AI 平台累计召回</p>
+        <small>260+ 篇内容被召回</small>
+      </div>
+
+      <div class="p-stat p-stat--blue">
+        <div class="p-stat__value"><span class="count-value" data-count="3">3</span><sup>万+</sup></div>
+        <p>累计成交订单</p>
+        <small>最高月 GMV 27.4万</small>
+      </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <div class="marquee" aria-hidden="true">
-      <div class="marquee__track"><span>CONTENT STRATEGY</span><i aria-hidden="true">✳</i><span>GEO</span><i aria-hidden="true">✳</i><span>XIAOHONGSHU</span><i aria-hidden="true">✳</i><span>DOUYIN</span><i aria-hidden="true">✳</i><span>IP DESIGN</span><i aria-hidden="true">✳</i><span>DATA REVIEW</span><i aria-hidden="true">✳</i><span>AI CONTENT</span><i aria-hidden="true">✳</i><span>VISUAL STORYTELLING</span><i aria-hidden="true">✳</i><span>CONTENT STRATEGY</span><i aria-hidden="true">✳</i><span>GEO</span><i aria-hidden="true">✳</i><span>XIAOHONGSHU</span><i aria-hidden="true">✳</i><span>DOUYIN</span><i aria-hidden="true">✳</i><span>IP DESIGN</span><i aria-hidden="true">✳</i><span>DATA REVIEW</span><i aria-hidden="true">✳</i><span>AI CONTENT</span><i aria-hidden="true">✳</i><span>VISUAL STORYTELLING</span><i aria-hidden="true">✳</i></div>
-    </div>
-
-    <section class="proof" aria-labelledby="proof-title">
+    <section class="p-section p-projects" id="projects" aria-labelledby="projects-title">
       <div class="container">
-        <div class="proof-head">
-          <div>
-            <p class="micro-label">SELECTED NUMBERS / 2024—2026</p>
-            <h2 id="proof-title">一份可以快速扫读的<br>工作成绩单。</h2>
+        <div class="p-section-head">
+          <p class="p-kicker">02 / SELECTED WORK</p>
+          <h2 id="projects-title">我把内容，<br>做成了什么。</h2>
+          <p>三个运营项目，四组设计作品。每一个都从真实问题出发，也都有可以被查看的过程与结果。</p>
+        </div>
+        <div class="p-project-list">
+      <a class="p-project-row p-project-row--mint" href="case-geo.html" data-cursor="OPEN">
+        <div class="p-project-row__aside">
+          <span class="p-project-row__num">01</span>
+          <span class="p-project-row__label">GEO / AI SEARCH</span>
+        </div>
+        <div class="p-project-row__body">
+          <div class="p-chip-row"><span class="p-chip">GEO 策略</span><span class="p-chip">内容矩阵</span><span class="p-chip">AI 搜索</span></div>
+          <h3>让品牌，<br>进入 AI 的答案。</h3>
+          <p>从 36 个核心提示词出发，搭建 50+ 账号内容矩阵，让品牌在生成式搜索中被看见、被引用、被推荐。</p>
+          <div class="p-project-row__metrics"><span><b>50+</b>账号</span><span><b>800+</b>内容</span><span><b>2,000+</b>召回</span><span><b>90%</b>覆盖</span></div>
+          <span class="p-project-row__cta">查看完整案例 <b>↗</b></span>
+        </div>
+        <div class="p-project-row__visual">
+      <div class="p-geo-visual">
+        <div class="p-geo-visual__head"><span><i></i> GEO / VISIBILITY</span><span>2026.10</span></div>
+        <p class="p-geo-visual__title">让品牌<br>被 AI 推荐。</p>
+        <div class="p-geo-metric">
+          <div><span>品牌提及率</span><b>63.46<small>%</small></b></div>
+          <div class="p-bar"><i style="--w:63.46%"></i></div>
+          <small>44.53 → 63.46</small>
+        </div>
+        <div class="p-geo-metric">
+          <div><span>品牌推荐率</span><b>46.15<small>%</small></b></div>
+          <div class="p-bar p-bar--coral"><i style="--w:46.15%"></i></div>
+          <small>25.36 → 46.15</small>
+        </div>
+        <div class="p-geo-visual__foot"><span>50+ 账号</span><span>800+ 内容</span><span>90% 覆盖</span></div>
+      </div></div>
+      </a>
+      <a class="p-project-row p-project-row--peach" href="case-selfie.html" data-cursor="OPEN">
+        <div class="p-project-row__aside">
+          <span class="p-project-row__num">02</span>
+          <span class="p-project-row__label">COMMERCE CONTENT</span>
+        </div>
+        <div class="p-project-row__body">
+          <div class="p-chip-row"><span class="p-chip">小红书</span><span class="p-chip">抖音</span><span class="p-chip">电商转化</span></div>
+          <h3>把种草，<br>做成生意。</h3>
+          <p>从账号定位、拍剪、标题封面，到商品页与成交复盘，跑通一条内容到生意的完整链路。</p>
+          <div class="p-project-row__metrics"><span><b>30+</b>爆文</span><span><b>3万+</b>订单</span><span><b>27.4万</b>最高月 GMV</span></div>
+          <span class="p-project-row__cta">查看完整案例 <b>↗</b></span>
+        </div>
+        <div class="p-project-row__visual">
+      <div class="p-note-stack" aria-hidden="true">
+        <img src="assets/img/ops/selfie/note-09-600.webp" alt="" width="600" height="460" loading="lazy" decoding="async">
+        <img src="assets/img/ops/selfie/note-04-600.webp" alt="" width="600" height="459" loading="lazy" decoding="async">
+        <img src="assets/img/ops/selfie/note-10-600.webp" alt="" width="600" height="448" loading="lazy" decoding="async">
+        <span>14 NOTES / 4 ACCOUNTS</span>
+      </div></div>
+      </a>
+      <a class="p-project-row p-project-row--lilac" href="case-lazy.html" data-cursor="OPEN">
+        <div class="p-project-row__aside">
+          <span class="p-project-row__num">03</span>
+          <span class="p-project-row__label">DESIGN CONTENT</span>
+        </div>
+        <div class="p-project-row__body">
+          <div class="p-chip-row"><span class="p-chip">设计内容</span><span class="p-chip">0 → 1</span><span class="p-chip">内容账号</span></div>
+          <h3>让审美，<br>成为流量。</h3>
+          <p>从 0 到 1 搭建「懒羊羊素材库」，用设计案例内容连接审美、收藏与店铺转化。</p>
+          <div class="p-project-row__metrics"><span><b>3万+</b>赞藏</span><span><b>6</b>篇爆款</span><span><b>3,645</b>单篇最高赞</span></div>
+          <span class="p-project-row__cta">查看完整案例 <b>↗</b></span>
+        </div>
+        <div class="p-project-row__visual">
+      <div class="p-board-visual">
+        <img src="assets/img/ops/lazy/case-board-1000.webp" alt="懒羊羊素材库内容案例板" width="1000" height="562" loading="lazy" decoding="async">
+        <span>CASE BOARD / 6 POSTS</span>
+      </div></div>
+      </a></div>
+        <div class="p-project-more"><a class="p-btn p-btn--ghost" href="operations.html">查看全部运营案例 <span>↗</span></a></div>
+
+        <div class="p-design-head">
+          <div><p class="p-kicker">DESIGN ARCHIVE / 04</p><h2>设计，是另一种表达。</h2></div>
+          <p>45 张项目板，从城市 IP、景区文创、寺院视觉到博物馆角色设计。</p>
+        </div>
+        <div class="p-design-grid">
+        <a class="p-design-card" href="design/harbin.html" data-cursor="OPEN">
+          <div class="p-design-card__img">
+            <img src="assets/img/design/harbin/board-01-715.webp" srcset="assets/img/design/harbin/board-01-640.webp 640w, assets/img/design/harbin/board-01-715.webp 715w" sizes="(max-width: 700px) 100vw, 28vw" alt="哈尔滨夏日文化使者项目封面" width="715" height="1076" decoding="async" loading="lazy">
+            <span>01 / 04</span>
           </div>
-          <p>数据来自个人工作复盘；统计口径与时间范围见各案例页。这里不放无法解释的数字。</p>
-        </div>
-        <div class="proof-grid">
-          <div class="stat">
-          <p class="stat__value"><span class="count-value" data-count="50">50</span><sup>+</sup></p>
-          <p class="stat__label">搭建并运营的 GEO 内容矩阵账号</p>
-          <span class="stat__note">AI SEARCH / 2026</span>
-        </div>
-          <div class="stat">
-          <p class="stat__value"><span class="count-value" data-count="800">800</span><sup>+</sup></p>
-          <p class="stat__label">围绕 36 个核心提示词产出的结构化内容</p>
-          <span class="stat__note">CONTENT MATRIX</span>
-        </div>
-          <div class="stat">
-          <p class="stat__value"><span class="count-value" data-count="2000">2000</span><sup>+</sup></p>
-          <p class="stat__label">内容被 AI 平台累计召回次数</p>
-          <span class="stat__note">260+ 篇被召回</span>
-        </div>
-          <div class="stat">
-          <p class="stat__value"><span class="count-value" data-count="3">3</span><sup>万+</sup></p>
-          <p class="stat__label">内容与店铺运营期间累计成交订单</p>
-          <span class="stat__note">MAX GMV ¥27.4万</span>
-        </div>
-        </div>
-        <p class="proof-foot"><span>注</span> 数据区间：GEO 项目为 2026.08—2026.10；电商项目为 2024.12—2026.06。</p>
+          <div class="p-design-card__body">
+            <div class="p-chip-row"><span class="p-chip p-chip--soft">城市 IP</span><span class="p-chip p-chip--soft">2025.07—2025.10</span><span class="p-chip p-chip--soft">全国二等奖</span></div>
+            <h3>哈尔滨夏日文化使者</h3>
+            <p>把哈尔滨的夏日、冰雪记忆与城市性格，变成一个可以走进海报、文创与线下场景的角色。</p>
+            <span class="p-design-card__cta">查看项目 <b>↗</b></span>
+          </div>
+        </a>
+        <a class="p-design-card" href="design/gengong.html" data-cursor="OPEN">
+          <div class="p-design-card__img">
+            <img src="assets/img/design/gengong/board-01-1600.webp" srcset="assets/img/design/gengong/board-01-640.webp 640w, assets/img/design/gengong/board-01-1600.webp 1600w, assets/img/design/gengong/board-01-2200.webp 2200w" sizes="(max-width: 700px) 100vw, 28vw" alt="根宫佛国「无念熊」项目封面" width="1600" height="900" decoding="async" loading="lazy">
+            <span>02 / 04</span>
+          </div>
+          <div class="p-design-card__body">
+            <div class="p-chip-row"><span class="p-chip p-chip--soft">景区 IP</span><span class="p-chip p-chip--soft">2024.09—2024.12</span><span class="p-chip p-chip--soft">全国三等奖 · 省级一等奖</span></div>
+            <h3>根宫佛国「无念熊」</h3>
+            <p>为开化根宫佛国景区做一个有亲和力的「无念熊」，让传统文化从展柜里走到日常物件上。</p>
+            <span class="p-design-card__cta">查看项目 <b>↗</b></span>
+          </div>
+        </a>
+        <a class="p-design-card" href="design/lingyin.html" data-cursor="OPEN">
+          <div class="p-design-card__img">
+            <img src="assets/img/design/lingyin/board-01-1600.webp" srcset="assets/img/design/lingyin/board-01-640.webp 640w, assets/img/design/lingyin/board-01-1600.webp 1600w, assets/img/design/lingyin/board-01-2200.webp 2200w" sizes="(max-width: 700px) 100vw, 28vw" alt="灵隐万象集项目封面" width="1600" height="813" decoding="async" loading="lazy">
+            <span>03 / 04</span>
+          </div>
+          <div class="p-design-card__body">
+            <div class="p-chip-row"><span class="p-chip p-chip--soft">文化视觉</span><span class="p-chip p-chip--soft">2024</span></div>
+            <h3>灵隐万象集</h3>
+            <p>把灵隐文化里的角色与符号，翻译成一套更年轻、更有亲近感的视觉语言。</p>
+            <span class="p-design-card__cta">查看项目 <b>↗</b></span>
+          </div>
+        </a>
+        <a class="p-design-card" href="design/liangzhu.html" data-cursor="OPEN">
+          <div class="p-design-card__img">
+            <img src="assets/img/design/liangzhu/board-01-1600.webp" srcset="assets/img/design/liangzhu/board-01-640.webp 640w, assets/img/design/liangzhu/board-01-1600.webp 1600w, assets/img/design/liangzhu/board-01-2200.webp 2200w" sizes="(max-width: 700px) 100vw, 28vw" alt="良渚博物院 IP 文创项目封面" width="1600" height="900" decoding="async" loading="lazy">
+            <span>04 / 04</span>
+          </div>
+          <div class="p-design-card__body">
+            <div class="p-chip-row"><span class="p-chip p-chip--soft">博物馆 IP</span><span class="p-chip p-chip--soft">2024</span></div>
+            <h3>良渚博物院 IP 文创</h3>
+            <p>把玉琮、神人兽面纹与陶器，变成三个可以走进年轻人日常的良渚角色。</p>
+            <span class="p-design-card__cta">查看项目 <b>↗</b></span>
+          </div>
+        </a></div>
+        <div class="p-project-more"><a class="p-btn p-btn--ghost" href="design.html">打开完整设计档案 <span>↗</span></a></div>
       </div>
     </section>
 
-    <section class="section work-section" id="work" aria-labelledby="work-title">
+    <section class="p-section p-experience" id="experience" aria-labelledby="experience-title">
       <div class="container">
-        <div class="section-head ">
-        <div class="section-head__meta"><span>01</span><p>SELECTED WORK</p></div>
-        <div class="section-head__main">
-          <h2>不是灵感合集，<br>是增长过程。</h2>
-          <p class="section-head__copy">三个项目，三种能力：在 AI 答案里建立品牌可见度，在电商内容里完成成交，在设计分享里从 0 到 1。</p>
+        <div class="p-section-head">
+          <p class="p-kicker">03 / THE PRACTITIONER</p>
+          <h2 id="experience-title">我在过往职场<br>做过什么。</h2>
+          <p>从 AI 搜索到电商内容，再到设计内容账号。每一段经历，都同时包含策略、执行与复盘。</p>
         </div>
-      </div>
-
-        <div class="work-grid">
-          <a class="case-card case-card--geo" href="case-geo.html" data-cursor="CASE 01">
-            <div class="case-card__top">
-              <span class="case-card__index">CASE 01 / GEO</span>
-              <span class="case-card__arrow">↗</span>
-            </div>
-            <div class="case-card__copy">
-              <p class="micro-label">AI SEARCH / CONTENT MATRIX</p>
-              <h3>让品牌，<br>进入 AI 的答案。</h3>
-              <p>从 36 个核心提示词出发，搭建 50+ 账号内容矩阵，让品牌在生成式搜索中被看见、被引用、被推荐。</p>
-            </div>
-            <div class="mini-console">
-              <div class="mini-console__head"><span><i></i> GEO / SIGNAL</span><span>2026.10</span></div>
-              <div class="mini-console__row">
-                <div><span>品牌提及率</span><b>44.53 <em>→</em> 63.46<small>%</small></b></div>
-                <div class="mini-bars"><i style="--w:44.53%"></i><i style="--w:63.46%"></i></div>
-              </div>
-              <div class="mini-console__row">
-                <div><span>品牌推荐率</span><b>25.36 <em>→</em> 46.15<small>%</small></b></div>
-                <div class="mini-bars mini-bars--lime"><i style="--w:25.36%"></i><i style="--w:46.15%"></i></div>
-              </div>
-              <div class="mini-console__foot"><span>800+ 内容</span><span>260+ 召回</span><span>90% 覆盖</span></div>
-            </div>
-          </a>
-
-          <a class="case-card case-card--selfie" href="case-selfie.html" data-cursor="CASE 02">
-            <div class="case-photo-stack" aria-hidden="true">
-              <img src="assets/img/ops/selfie/note-09-600.webp" alt="" width="600" height="460" loading="lazy" decoding="async">
-              <img src="assets/img/ops/selfie/note-04-600.webp" alt="" width="600" height="459" loading="lazy" decoding="async">
-              <img src="assets/img/ops/selfie/note-10-600.webp" alt="" width="600" height="448" loading="lazy" decoding="async">
-              <span class="case-photo-stack__tag">30+ 篇爆文<br>3万+ 店铺订单</span>
-            </div>
-            <div class="case-card__copy">
-              <div class="case-card__top"><span class="case-card__index">CASE 02 / COMMERCE</span><span class="case-card__arrow">↗</span></div>
-              <p class="micro-label">XIAOHONGSHU × DOUYIN / 3C</p>
-              <h3>把种草，<br>做成生意。</h3>
-              <p>从账号定位、拍剪、标题封面，到商品页与成交复盘，跑通一条内容到生意的完整链路。</p>
-              <span class="case-card__cta">查看完整案例 <b>→</b></span>
-            </div>
-          </a>
-
-          <a class="case-card case-card--lazy" href="case-lazy.html" data-cursor="CASE 03">
-            <div class="case-card__image">
-              <img src="assets/img/ops/lazy/case-board-1000.webp" alt="懒羊羊素材库小红书账号的内容案例板" width="1000" height="562" loading="lazy" decoding="async">
-            </div>
-            <div class="case-card__copy">
-              <div class="case-card__top"><span class="case-card__index">CASE 03 / DESIGN CONTENT</span><span class="case-card__arrow">↗</span></div>
-              <p class="micro-label">XIAOHONGSHU / 0 TO 1</p>
-              <h3>让审美，<br>成为流量。</h3>
-              <p>从 0 到 1 搭建设计素材账号，6 篇爆款笔记合计赞藏 1.7 万+。</p>
-              <div class="case-card__micro-stats">
-                <span><b>3万+</b> 累计赞藏</span><span><b>6</b> 篇爆款</span><span><b>3645</b> 单篇最高赞</span>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div class="work-foot">
-          <p>还想看过程、数据与完整素材？</p>
-          <a class="text-link" href="operations.html">进入运营案例 <span>→</span></a>
-        </div>
-      </div>
-    </section>
-
-    <section class="design-band" aria-labelledby="design-title">
-      <div class="container">
-        <div class="design-band__head">
-          <div class="section-head ">
-        <div class="section-head__meta"><span>02</span><p>DESIGN ARCHIVE</p></div>
-        <div class="section-head__main">
-          <h2>设计的训练，<br>让内容有了形状。</h2>
-          <p class="section-head__copy">四组 IP 与文创项目，45 张项目板。从城市文化、景区、寺院到博物馆，看调研如何变成角色，角色如何变成可以被带走的东西。</p>
-        </div>
-      </div>
-          <div class="rail-controls" role="group" aria-label="设计档案滑动控制">
-            <button type="button" data-rail-prev aria-label="向左滚动">←</button>
-            <button type="button" data-rail-next aria-label="向右滚动">→</button>
-          </div>
-        </div>
-        <div class="archive-rail" data-rail tabindex="0" role="region" aria-label="设计项目档案，可横向滚动">
-
-        <a class="archive-card is-portrait" href="design/harbin.html" data-cursor="OPEN">
-          <div class="archive-card__media">
-            <img src="assets/img/design/harbin/board-01-640.webp"
-                 srcset="assets/img/design/harbin/board-01-640.webp 640w, assets/img/design/harbin/board-01-715.webp 715w"
-                 sizes="(max-width: 700px) 76vw, (max-width: 1100px) 42vw, 29vw"
-                 alt="哈尔滨夏日文化使者项目封面" width="715" height="1076" loading="lazy" decoding="async">
-            <span class="archive-card__index">01</span>
-            <span class="archive-card__open">打开项目档案 <b>↗</b></span>
-          </div>
-          <div class="archive-card__meta">
-            <div><span>2025.07—2025.10 / 城市 IP / 角色设计 / 应用延展</span><h3>哈尔滨夏日文化使者</h3></div>
-            <span class="archive-card__award">全国二等奖</span>
-          </div>
-        </a>
-        <a class="archive-card" href="design/gengong.html" data-cursor="OPEN">
-          <div class="archive-card__media">
-            <img src="assets/img/design/gengong/board-01-640.webp"
-                 srcset="assets/img/design/gengong/board-01-640.webp 640w, assets/img/design/gengong/board-01-1600.webp 1600w, assets/img/design/gengong/board-01-2200.webp 2200w"
-                 sizes="(max-width: 700px) 76vw, (max-width: 1100px) 42vw, 29vw"
-                 alt="根宫佛国「无念熊」项目封面" width="8000" height="4500" loading="lazy" decoding="async">
-            <span class="archive-card__index">02</span>
-            <span class="archive-card__open">打开项目档案 <b>↗</b></span>
-          </div>
-          <div class="archive-card__meta">
-            <div><span>2024.09—2024.12 / 景区 IP / 文创产品 / 空间应用</span><h3>根宫佛国「无念熊」</h3></div>
-            <span class="archive-card__award">全国三等奖 · 省级一等奖</span>
-          </div>
-        </a>
-        <a class="archive-card" href="design/lingyin.html" data-cursor="OPEN">
-          <div class="archive-card__media">
-            <img src="assets/img/design/lingyin/board-01-640.webp"
-                 srcset="assets/img/design/lingyin/board-01-640.webp 640w, assets/img/design/lingyin/board-01-1600.webp 1600w, assets/img/design/lingyin/board-01-2200.webp 2200w"
-                 sizes="(max-width: 700px) 76vw, (max-width: 1100px) 42vw, 29vw"
-                 alt="灵隐万象集项目封面" width="8000" height="4065" loading="lazy" decoding="async">
-            <span class="archive-card__index">03</span>
-            <span class="archive-card__open">打开项目档案 <b>↗</b></span>
-          </div>
-          <div class="archive-card__meta">
-            <div><span>2024 / 文化视觉 / 角色设计 / 文创延展</span><h3>灵隐万象集</h3></div>
-            <span class="archive-card__award">文化视觉</span>
-          </div>
-        </a>
-        <a class="archive-card" href="design/liangzhu.html" data-cursor="OPEN">
-          <div class="archive-card__media">
-            <img src="assets/img/design/liangzhu/board-01-640.webp"
-                 srcset="assets/img/design/liangzhu/board-01-640.webp 640w, assets/img/design/liangzhu/board-01-1600.webp 1600w, assets/img/design/liangzhu/board-01-2200.webp 2200w"
-                 sizes="(max-width: 700px) 76vw, (max-width: 1100px) 42vw, 29vw"
-                 alt="良渚博物院 IP 文创项目封面" width="8000" height="4500" loading="lazy" decoding="async">
-            <span class="archive-card__index">04</span>
-            <span class="archive-card__open">打开项目档案 <b>↗</b></span>
-          </div>
-          <div class="archive-card__meta">
-            <div><span>2024 / 博物馆 IP / 角色设计 / 文创系统</span><h3>良渚博物院 IP 文创</h3></div>
-            <span class="archive-card__award">博物馆 IP</span>
-          </div>
-        </a>
-        </div>
-        <div class="rail-progress"><span data-rail-progress></span></div>
-        <div class="design-band__foot">
-          <p><span>45</span> 张项目板 / 4 组项目 / 2 项全国奖项</p>
-          <a class="btn btn--light" href="design.html" ><span>浏览完整设计档案</span><span class="btn__arrow" aria-hidden="true">↗</span></a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section method" aria-labelledby="method-title">
-      <div class="container">
-        <div class="section-head ">
-        <div class="section-head__meta"><span>03</span><p>METHOD</p></div>
-        <div class="section-head__main">
-          <h2>从一条洞察，<br>到一套系统。</h2>
-          <p class="section-head__copy">我习惯把模糊的传播问题，拆成可以执行、可以验证的四个动作。</p>
-        </div>
-      </div>
-        <div class="method-layout">
-          <div class="method-aside">
-            <p class="micro-label">HOW I WORK</p>
-            <p class="method-aside__quote">内容运营不是发更多，<br>而是让每一次发布<br>都留下可复用的资产。</p>
-            <div class="method-system">
-              <span>MY CONTENT SYSTEM</span>
-              <ul><li>素材库</li><li>问答库</li><li>选题库</li><li>Prompt</li><li>SOP</li></ul>
-            </div>
-          </div>
-          <div class="method-steps">
-        <article class="method-step">
-          <div class="method-step__num">01</div>
-          <div class="method-step__body">
-            <p class="micro-label">INSIGHT</p>
-            <h3>看见</h3>
-            <p>先理解用户真正的问题。看搜索词、评论、竞品与平台语境，而不是从「我想说什么」开始。</p>
-            <ul class="tag-list"><li>问题地图</li><li>受众洞察</li><li>内容机会</li></ul>
+        <div class="p-timeline">
+        <article class="p-exp-item p-exp-item--mint">
+          <div class="p-exp-marker">01</div>
+          <div class="p-exp-card">
+            <div class="p-exp-card__top"><span class="p-date">2026.07 — 至今</span><span class="p-now-badge"><i></i>NOW</span></div>
+            <h3>萤石网络 <small>海康威视旗下</small></h3>
+            <p class="p-role">AI 搜索内容运营（GEO）</p>
+            <ul><li>负责豆包、千问、DeepSeek、元宝等 AI 平台的 GEO 内容策略与执行，跟踪内容抓取、引用与推荐表现。</li><li>搭建并运营覆盖 50+ 个账号的内容矩阵，沉淀素材库、问答库、选题库、Prompt 模板与内容 SOP。</li><li>围绕 36 个核心提示词产出 800+ 篇结构化内容，260+ 篇被 AI 平台召回，累计召回 2,000+ 次。</li></ul>
+            <div class="p-chip-row"><span class="p-chip p-chip--soft">50+ 矩阵账号</span><span class="p-chip p-chip--soft">800+ 结构化内容</span><span class="p-chip p-chip--soft">2,000+ 次召回</span><span class="p-chip p-chip--soft">90% 提示词覆盖</span></div>
           </div>
         </article>
-        <article class="method-step">
-          <div class="method-step__num">02</div>
-          <div class="method-step__body">
-            <p class="micro-label">STRUCTURE</p>
-            <h3>拆解</h3>
-            <p>把问题变成内容结构。标题、封面、叙事、关键词、账号矩阵与转化路径，各自承担明确任务。</p>
-            <ul class="tag-list"><li>选题库</li><li>内容模板</li><li>账号矩阵</li></ul>
+        <article class="p-exp-item p-exp-item--peach">
+          <div class="p-exp-marker">02</div>
+          <div class="p-exp-card">
+            <div class="p-exp-card__top"><span class="p-date">2024.12 — 2026.06</span></div>
+            <h3>杭州红商电子商务有限公司 </h3>
+            <p class="p-role">内容与店铺运营</p>
+            <ul><li>独立搭建并运营小红书矩阵及抖音账号「自拍杆小圆子」，负责账号定位、选题、图文、视频拍剪与日常维护。</li><li>参与 4 家 3C 数码店铺的商品上架、主图与详情页维护、笔记加热及推广素材优化。</li><li>累计产出 30+ 篇爆文，平均单篇获赞 1,000+；任职期间累计成交 3 万+ 单，最高月 GMV 27.4 万+。</li></ul>
+            <div class="p-chip-row"><span class="p-chip p-chip--soft">30+ 爆文</span><span class="p-chip p-chip--soft">4 家店铺</span><span class="p-chip p-chip--soft">3万+ 订单</span><span class="p-chip p-chip--soft">最高月 GMV 27.4万</span></div>
           </div>
         </article>
-        <article class="method-step">
-          <div class="method-step__num">03</div>
-          <div class="method-step__body">
-            <p class="micro-label">MAKE</p>
-            <h3>生产</h3>
-            <p>用设计和 AI 提高产能，但不把判断外包给工具。能写、能拍、能剪、能排，也能建立 SOP。</p>
-            <ul class="tag-list"><li>图文</li><li>短视频</li><li>视觉系统</li></ul>
-          </div>
-        </article>
-        <article class="method-step">
-          <div class="method-step__num">04</div>
-          <div class="method-step__body">
-            <p class="micro-label">MEASURE</p>
-            <h3>复盘</h3>
-            <p>看曝光，也看进店和成交；看阅读，也看 AI 是否引用。用数据决定下一轮做什么。</p>
-            <ul class="tag-list"><li>数据看板</li><li>复盘文档</li><li>迭代清单</li></ul>
+        <article class="p-exp-item p-exp-item--lilac">
+          <div class="p-exp-marker">03</div>
+          <div class="p-exp-card">
+            <div class="p-exp-card__top"><span class="p-date">2023.05 — 2024.05</span></div>
+            <h3>懒羊羊素材库 <small>设计内容账号</small></h3>
+            <p class="p-role">主理人</p>
+            <ul><li>从 0 到 1 搭建设计素材账号，聚焦平面设计、IP 设计、包装设计与品牌视觉。</li><li>独立负责选题、图文排版、封面标题、发布与数据复盘，探索内容到店铺的引流闭环。</li><li>账号累计获赞与收藏 3 万+，6 篇爆款合计赞藏 1.7 万+，单篇最高获赞 3,645。</li></ul>
+            <div class="p-chip-row"><span class="p-chip p-chip--soft">3万+ 累计赞藏</span><span class="p-chip p-chip--soft">6 篇爆款</span><span class="p-chip p-chip--soft">单篇最高赞 3,645</span></div>
           </div>
         </article></div>
-        </div>
-        <div class="method-quote">
-          <p>“好内容不是一次爆发，是一次次可复用的积累。”</p>
-          <span>WORKING PRINCIPLE / 01</span>
-        </div>
+        <div class="p-center-link"><a class="p-inline-link" href="assets/docs/zhongfei-resume.pdf" download>下载完整简历 PDF <span>↓</span></a></div>
       </div>
     </section>
 
-    <section class="about-teaser" aria-labelledby="about-title">
-      <div class="container about-teaser__grid">
-        <div class="about-portrait">
-          <span class="about-portrait__big" aria-hidden="true">07</span>
-          <figure>
-            <img src="assets/img/portrait-640.webp" alt="钟菲的职业肖像" width="640" height="853" loading="lazy" decoding="async">
-            <figcaption><span>ZHONG FEI</span><span>HANGZHOU / 2026</span></figcaption>
-          </figure>
-          <span class="about-portrait__stamp">DESIGN<br>×<br>CONTENT</span>
+    <section class="p-section p-education" id="education" aria-labelledby="education-title">
+      <div class="container">
+        <div class="p-section-head">
+          <p class="p-kicker">04 / EDUCATION</p>
+          <h2 id="education-title">我的学习轨迹</h2>
+          <p>从视觉传达到设计学，从本科到硕士。设计训练一直是我理解内容的方式。</p>
         </div>
-        <div class="about-teaser__copy">
-          <p class="micro-label">04 / ABOUT</p>
-          <h2 id="about-title">设计学的底子，<br>内容运营的现在。</h2>
-          <p class="about-teaser__lead">我在中国计量大学读了七年设计，从视觉传达走到设计学。设计训练给我的，不只是软件和审美，更是一套观察、拆解、表达、验证问题的方法。</p>
-          <p>现在，我把这套方法用在内容增长上：既关心一条内容有没有被看见，也关心它有没有带来下一步行动。</p>
-          <dl class="about-facts">
-            <div><dt>教育</dt><dd>设计学硕士 · 2027 届</dd></div>
-            <div><dt>成绩</dt><dd>GPA 3.93 / 4.0 · 专业前 3%</dd></div>
-            <div><dt>方向</dt><dd>内容运营 / GEO / AI 内容</dd></div>
-            <div><dt>地点</dt><dd>杭州 · 江浙沪</dd></div>
-          </dl>
-          <a class="btn btn--dark" href="about.html" ><span>更多关于我</span><span class="btn__arrow" aria-hidden="true">↗</span></a>
-        </div>
-      </div>
-    </section>
+        <div class="p-school-grid">
 
-    <section class="contact" id="contact" aria-labelledby="contact-title">
-      <div class="container contact__inner">
-        <div class="contact__meta">
-          <p class="micro-label">05 / CONTACT</p>
-          <p>OPEN FOR CONVERSATION</p>
-        </div>
-        <h2 id="contact-title">一起做点<br><em>有回声</em>的内容。</h2>
-        <div class="contact__bottom">
-          <p>如果你正在找一位懂内容、也懂视觉的内容运营，欢迎直接把机会发给我。</p>
-          <div class="contact__actions">
-            <button class="email-copy" type="button" data-copy-email="Aria.zhong@outlook.com">
-              <span>Aria.zhong@outlook.com</span><span class="email-copy__action">复制邮箱</span>
-            </button>
-            <a class="contact__mailto" href="mailto:Aria.zhong@outlook.com">或直接写信 ↗</a>
-            <a class="contact__resume" href="assets/docs/zhongfei-resume.pdf" download>下载简历 PDF <span>↓</span></a>
+        <article class="p-school p-school--peach">
+          <div class="p-school__art">
+            <span class="p-school__watermark">CJLU</span>
+            <span class="p-school__badge">硕士</span>
+            <span class="p-school__label">MDes / 2024—2027</span>
+            <span class="p-school__emoji" aria-hidden="true">🎓</span>
           </div>
+          <div class="p-school__body">
+            <p class="p-date">2024.09 — 2027.06</p>
+            <h3>中国计量大学</h3>
+            <p class="p-school__degree">设计学 · 硕士（全日制）</p>
+            <p class="p-school__gpa">GPA 3.93 / 4.0 · 专业前 3%</p>
+            <p class="p-school__desc">从视觉传达走到设计学，继续研究文化、视觉与内容之间的关系。</p>
+            <div class="p-chip-row"><span class="p-chip p-chip--soft">ICCC 全国二等奖</span><span class="p-chip p-chip--soft">两岸青年非遗一等奖</span><span class="p-chip p-chip--soft">优秀班干部</span></div>
+          </div>
+        </article>
+        <article class="p-school p-school--mint">
+          <div class="p-school__art">
+            <span class="p-school__watermark">CJLU</span>
+            <span class="p-school__badge">本科</span>
+            <span class="p-school__label">BA / 2020—2024</span>
+            <span class="p-school__emoji" aria-hidden="true">🎓</span>
+          </div>
+          <div class="p-school__body">
+            <p class="p-date">2020.09 — 2024.06</p>
+            <h3>中国计量大学</h3>
+            <p class="p-school__degree">视觉传达 · 本科（全日制）</p>
+            <p class="p-school__gpa">GPA 3.9 / 4.0 · 专业前 3%</p>
+            <p class="p-school__desc">设计训练、摄影与校园媒体实践，让我开始习惯观察和记录。</p>
+            <div class="p-chip-row"><span class="p-chip p-chip--soft">澳门文创全国一等奖</span><span class="p-chip p-chip--soft">互联网+ 铜奖</span><span class="p-chip p-chip--soft">摄影社社长</span></div>
+          </div>
+        </article>
+          <span class="p-school-path" aria-hidden="true">成长路径 →</span>
         </div>
-        <div class="contact__stamp" aria-hidden="true">
-          <span>AVAILABLE FOR WORK</span><b>2027</b><span>HANGZHOU · CN</span>
+        <div class="p-awards-card">
+          <div><p class="p-kicker">HONORS / 荣誉</p><h3>一些被看见的时刻</h3></div>
+          <div class="p-awards"><span class="p-award"><i>🏅</i>美丽中国创新设计大赛 · 全国二等奖</span><span class="p-award"><i>🥉</i>全国会展策划创意大赛 · 全国三等奖</span><span class="p-award"><i>🥇</i>浙江省会展策划创意大赛 · 一等奖</span><span class="p-award"><i>🎨</i>ICCC 国际学生设计大赛 · 全国二等奖</span><span class="p-award"><i>🧵</i>两岸青年非遗文创 · 一等奖</span><span class="p-award"><i>🏛️</i>澳门文创设计大赛 · 全国一等奖</span><span class="p-award"><i>💡</i>浙江省「互联网+」· 铜奖</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="p-section p-skills" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="p-section-head">
+          <p class="p-kicker">05 / SKILLS</p>
+          <h2 id="skills-title">技能图谱</h2>
+          <p>跨领域的复合能力：从品牌全链路内容，到电商多维运营，再到 AI 搜索与视觉表达。</p>
+        </div>
+        <div class="p-skill-grid">
+        <article class="p-skill-card p-skill-card--peach">
+          <span class="p-skill-icon" aria-hidden="true">🚀</span>
+          <h3>核心内容运营</h3>
+          <p>从账号定位到内容复盘，建立可持续运转的内容系统。</p>
+          <div class="p-chip-row"><span class="p-chip p-chip--soft">小红书</span><span class="p-chip p-chip--soft">抖音</span><span class="p-chip p-chip--soft">账号定位</span><span class="p-chip p-chip--soft">选题策划</span><span class="p-chip p-chip--soft">内容矩阵</span><span class="p-chip p-chip--soft">内容 SOP</span></div>
+        </article>
+        <article class="p-skill-card p-skill-card--mint">
+          <span class="p-skill-icon" aria-hidden="true">✦</span>
+          <h3>AI & GEO</h3>
+          <p>理解生成式搜索的抓取、引用与推荐逻辑，让品牌成为 AI 愿意调用的知识。</p>
+          <div class="p-chip-row"><span class="p-chip p-chip--soft">GEO 策略</span><span class="p-chip p-chip--soft">Prompt</span><span class="p-chip p-chip--soft">结构化内容</span><span class="p-chip p-chip--soft">AI 搜索</span><span class="p-chip p-chip--soft">豆包 / 千问 / DeepSeek / 元宝</span></div>
+        </article>
+        <article class="p-skill-card p-skill-card--blue">
+          <span class="p-skill-icon" aria-hidden="true">📊</span>
+          <h3>数据复盘</h3>
+          <p>用曝光、点击、进店、成交与 AI 引用，判断内容是否真的有效。</p>
+          <div class="p-chip-row"><span class="p-chip p-chip--soft">曝光 / 阅读</span><span class="p-chip p-chip--soft">点击率</span><span class="p-chip p-chip--soft">进店 / 成交</span><span class="p-chip p-chip--soft">AI 引用</span><span class="p-chip p-chip--soft">复盘文档</span></div>
+        </article>
+        <article class="p-skill-card p-skill-card--lilac">
+          <span class="p-skill-icon" aria-hidden="true">🎨</span>
+          <h3>视觉创作</h3>
+          <p>把信息整理成有秩序、也有辨识度的画面。</p>
+          <div class="p-chip-row"><span class="p-chip p-chip--soft">Photoshop</span><span class="p-chip p-chip--soft">Illustrator</span><span class="p-chip p-chip--soft">剪映</span><span class="p-chip p-chip--soft">Midjourney</span><span class="p-chip p-chip--soft">Stable Diffusion</span><span class="p-chip p-chip--soft">图文排版</span></div>
+        </article></div>
+        <div class="p-soft-skills">
+          <span>SOFT SKILLS /</span>
+          <span class="p-chip">项目管理</span><span class="p-chip">跨部门协作</span><span class="p-chip">沟通表达</span><span class="p-chip">快速学习</span><span class="p-chip">抗压能力</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="p-section p-interests" id="interests" aria-labelledby="interests-title">
+      <div class="container">
+        <div class="p-section-head">
+          <p class="p-kicker">06 / OFF DUTY</p>
+          <h2 id="interests-title">工作之外的我</h2>
+          <p>关于审美、观察与记录。它们不一定直接写进 KPI，但一直在影响我怎么做内容。</p>
+        </div>
+        <div class="p-interest-grid">
+        <article class="p-interest p-interest--peach">
+          <span class="p-interest__icon" aria-hidden="true">📷</span>
+          <span class="p-interest__tag">记录生活</span>
+          <h3>摄影</h3>
+          <p>当过摄影社社长，也做过校荣媒体记者。喜欢观察光线、构图和人在场景里的状态。</p>
+        </article>
+        <article class="p-interest p-interest--mint">
+          <span class="p-interest__icon" aria-hidden="true">🎨</span>
+          <span class="p-interest__tag">保持输入</span>
+          <h3>设计收藏</h3>
+          <p>收集排版、包装、IP 与品牌视觉案例。做「懒羊羊素材库」时，把喜欢的东西变成了内容。</p>
+        </article>
+        <article class="p-interest p-interest--lilac">
+          <span class="p-interest__icon" aria-hidden="true">🔎</span>
+          <span class="p-interest__tag">研究表达</span>
+          <h3>内容观察</h3>
+          <p>长期观察小红书、抖音与 AI 搜索里的表达方式。刷到的内容，最后都会变成选题库。</p>
+        </article></div>
+        <div class="p-interest-note"><span>摄影社社长</span><i></i><span>校荣媒体记者</span><i></i><span>设计素材账号主理人</span></div>
+      </div>
+    </section>
+
+    <section class="p-contact" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="p-contact-card">
+          <span class="p-contact-sticker" aria-hidden="true">✳</span>
+          <p class="p-kicker">LET'S TALK / 联系我</p>
+          <h2 id="contact-title">一起做点<br>有回声的内容。</h2>
+          <p class="p-contact-copy">如果你正在找一位懂内容、也懂视觉的内容运营，欢迎直接把机会发给我。2027 届，杭州，可接受江浙沪机会。</p>
+          <div class="p-contact-actions">
+            <a class="p-btn p-btn--dark" href="mailto:Aria.zhong@outlook.com">Aria.zhong@outlook.com <span>↗</span></a>
+            <button class="p-btn p-btn--ghost" type="button" data-copy-email="Aria.zhong@outlook.com"><span class="email-copy__action">复制邮箱</span></button>
+            <a class="p-inline-link" href="assets/docs/zhongfei-resume.pdf" download>下载简历 PDF <span>↓</span></a>
+          </div>
+          <div class="p-contact-meta"><span><i></i> OPEN TO WORK</span><span>HANGZHOU / CN</span><span>2027</span></div>
         </div>
       </div>
     </section>
@@ -456,24 +506,27 @@
 
   <footer class="site-footer">
     <div class="container">
-      <div class="footer-main">
-        <a class="footer-brand" href="index.html" aria-label="回到首页">
-          <span class="brand-mark">ZF</span>
-          <span>钟菲 / ZHONG FEI</span>
-        </a>
-        <p class="footer-statement">让内容被看见，<br>也让结果被验证。</p>
-        <div class="footer-links">
-          <a href="operations.html">运营案例</a>
-          <a href="design.html">设计作品</a>
-          <a href="about.html">关于我</a>
-          <a href="mailto:Aria.zhong@outlook.com">Email ↗</a>
+      <div class="footer-card">
+        <div class="footer-main">
+          <a class="footer-brand" href="index.html" aria-label="回到首页">
+            <span class="brand-avatar"><img src="assets/img/portrait-160.webp" alt="" width="160" height="213" loading="lazy" decoding="async"></span>
+            <span><strong>钟菲</strong><small>CONTENT OPERATIONS / 2027</small></span>
+          </a>
+          <p class="footer-statement">让内容被看见，<br>也让结果被验证。</p>
+          <div class="footer-links">
+            <a href="index.html#projects">项目展示</a>
+            <a href="operations.html">运营案例</a>
+            <a href="design.html">设计作品</a>
+            <a href="about.html">关于我</a>
+            <a href="mailto:Aria.zhong@outlook.com">Email ↗</a>
+          </div>
         </div>
-      </div>
-      <div class="footer-bottom">
-        <p>© <span data-year>2026</span> 钟菲. 保留所有权利。</p>
-        <p>杭州，中国 <span class="footer-time" data-local-time>14:23</span></p>
-        <p>数据来自个人工作复盘 · 截图已做必要脱敏</p>
-        <a class="back-top" href="#top">回到顶部 ↑</a>
+        <div class="footer-bottom">
+          <p>© <span data-year>2026</span> 钟菲. 保留所有权利。</p>
+          <p>杭州，中国 <span class="footer-time" data-local-time>14:23</span></p>
+          <p>数据来自个人工作复盘 · 截图已做必要脱敏</p>
+          <a class="back-top" href="#top">回到顶部 ↑</a>
+        </div>
       </div>
     </div>
   </footer>

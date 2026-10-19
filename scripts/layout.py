@@ -5,14 +5,24 @@ from html import escape
 
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST = json.loads((ROOT / "assets/img-manifest.json").read_text())
+ASSET_VERSION = "20261019c"
 SITE_URL = "https://feizhong278-ui.github.io/personal-web/"
 
 NAV_ITEMS = [
-    ("index.html", "首页", "home"),
-    ("operations.html", "运营案例", "operations"),
-    ("design.html", "设计作品", "design"),
-    ("about.html", "关于我", "about"),
+    ("index.html#about", "关于我", "about"),
+    ("index.html#projects", "项目展示", "projects"),
+    ("index.html#experience", "工作经历", "experience"),
+    ("index.html#education", "教育背景", "education"),
+    ("index.html#skills", "技能特长", "skills"),
+    ("index.html#interests", "兴趣爱好", "interests"),
 ]
+
+NAV_ACTIVE_MAP = {
+    "home": "about",
+    "operations": "projects",
+    "design": "projects",
+    "about": "about",
+}
 
 
 def dims(src):
@@ -92,25 +102,32 @@ def lightbox_button(inner, group, full, caption, alt, base="", cls="media-open",
 
 
 def header(active, base=""):
+    active_key = NAV_ACTIVE_MAP.get(active, active)
     nav = []
     for href, label, key in NAV_ITEMS:
-        current = ' aria-current="page"' if key == active else ""
-        nav.append(f'<a href="{base}{href}"{current}>{label}</a>')
+        is_active = key == active_key
+        current = ' aria-current="location"' if is_active else ""
+        cls = ' class="is-active"' if is_active else ""
+        nav.append(f'<a href="{base}{href}" data-nav-section="{key}"{cls}{current}>{label}</a>')
     nav_html = "\n          ".join(nav)
+    mobile_links = []
+    for i, (href, label, key) in enumerate(NAV_ITEMS, 1):
+        cls = ' class="is-active"' if key == active_key else ""
+        mobile_links.append(f'<a href="{base}{href}"{cls}><span>{i:02d}</span>{label}<b>↗</b></a>')
+    mobile_nav = "\n        ".join(mobile_links)
     return f'''
   <header class="site-header" data-header>
-    <div class="container header-inner">
+    <div class="nav-shell">
       <a class="brand" href="{base}index.html" aria-label="钟菲作品集首页">
-        <span class="brand-mark">ZF</span>
-        <span class="brand-type"><strong>钟菲</strong><small>ZHONG FEI / PORTFOLIO</small></span>
+        <span class="brand-avatar"><img src="{base}assets/img/portrait-160.webp" alt="" width="160" height="213" decoding="async"></span>
+        <span class="brand-word">PORTFOLIO<small>钟菲 / 2027</small></span>
       </a>
       <nav class="desktop-nav" aria-label="主导航">
           {nav_html}
       </nav>
       <div class="header-tools">
-        <span class="availability"><i aria-hidden="true"></i> OPEN TO WORK</span>
-        <a class="resume-link" href="{base}assets/docs/zhongfei-resume.pdf" download>简历 <span aria-hidden="true">↓</span></a>
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" data-menu-toggle>
+        <a class="resume-link" href="{base}assets/docs/zhongfei-resume.pdf" download>简历.pdf <span aria-hidden="true">↗</span></a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="打开菜单" data-menu-toggle>
           <span class="menu-toggle__label">菜单</span>
           <span class="menu-toggle__lines" aria-hidden="true"><i></i><i></i></span>
         </button>
@@ -119,13 +136,10 @@ def header(active, base=""):
     <div class="scroll-progress" data-scroll-progress aria-hidden="true"></div>
   </header>
   <div class="mobile-menu" id="mobile-menu" data-mobile-menu aria-hidden="true">
-    <div class="mobile-menu__inner">
-      <p class="mobile-menu__kicker">INDEX / 2027</p>
+    <div class="mobile-menu__sheet">
+      <div class="mobile-menu__top"><span>INDEX / 2027</span><span>HANGZHOU, CN</span></div>
       <nav class="mobile-nav" aria-label="移动端主导航">
-        <a href="{base}index.html"><span>01</span>首页</a>
-        <a href="{base}operations.html"><span>02</span>运营案例</a>
-        <a href="{base}design.html"><span>03</span>设计作品</a>
-        <a href="{base}about.html"><span>04</span>关于我</a>
+        {mobile_nav}
       </nav>
       <div class="mobile-menu__foot">
         <a href="mailto:Aria.zhong@outlook.com">Aria.zhong@outlook.com</a>
@@ -140,24 +154,27 @@ def footer(base=""):
     return f'''
   <footer class="site-footer">
     <div class="container">
-      <div class="footer-main">
-        <a class="footer-brand" href="{base}index.html" aria-label="回到首页">
-          <span class="brand-mark">ZF</span>
-          <span>钟菲 / ZHONG FEI</span>
-        </a>
-        <p class="footer-statement">让内容被看见，<br>也让结果被验证。</p>
-        <div class="footer-links">
-          <a href="{base}operations.html">运营案例</a>
-          <a href="{base}design.html">设计作品</a>
-          <a href="{base}about.html">关于我</a>
-          <a href="mailto:Aria.zhong@outlook.com">Email ↗</a>
+      <div class="footer-card">
+        <div class="footer-main">
+          <a class="footer-brand" href="{base}index.html" aria-label="回到首页">
+            <span class="brand-avatar"><img src="{base}assets/img/portrait-160.webp" alt="" width="160" height="213" loading="lazy" decoding="async"></span>
+            <span><strong>钟菲</strong><small>CONTENT OPERATIONS / 2027</small></span>
+          </a>
+          <p class="footer-statement">让内容被看见，<br>也让结果被验证。</p>
+          <div class="footer-links">
+            <a href="{base}index.html#projects">项目展示</a>
+            <a href="{base}operations.html">运营案例</a>
+            <a href="{base}design.html">设计作品</a>
+            <a href="{base}about.html">关于我</a>
+            <a href="mailto:Aria.zhong@outlook.com">Email ↗</a>
+          </div>
         </div>
-      </div>
-      <div class="footer-bottom">
-        <p>© <span data-year>2026</span> 钟菲. 保留所有权利。</p>
-        <p>杭州，中国 <span class="footer-time" data-local-time>14:23</span></p>
-        <p>数据来自个人工作复盘 · 截图已做必要脱敏</p>
-        <a class="back-top" href="#top">回到顶部 ↑</a>
+        <div class="footer-bottom">
+          <p>© <span data-year>2026</span> 钟菲. 保留所有权利。</p>
+          <p>杭州，中国 <span class="footer-time" data-local-time>14:23</span></p>
+          <p>数据来自个人工作复盘 · 截图已做必要脱敏</p>
+          <a class="back-top" href="#top">回到顶部 ↑</a>
+        </div>
       </div>
     </div>
   </footer>'''
@@ -173,7 +190,7 @@ def page(title, description, content, active="home", base="", body_class="", can
   <meta charset="utf-8">
   {f'<base href="{base_href}">' if base_href else ''}
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f3efe5">
+  <meta name="theme-color" content="#fbf7f2">
   <meta name="author" content="钟菲">
   <title>{escape(title)}</title>
   <meta name="description" content="{escape(description, quote=True)}">
@@ -191,13 +208,14 @@ def page(title, description, content, active="home", base="", body_class="", can
   <meta name="twitter:title" content="{escape(title, quote=True)}">
   <meta name="twitter:description" content="{escape(description, quote=True)}">
   <meta name="twitter:image" content="{og_abs}">
-  <link rel="icon" href="{base}assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="{base}assets/favicon.png" type="image/png" sizes="64x64">
   <link rel="apple-touch-icon" href="{base}assets/img/apple-touch-icon.png">
-  <link rel="preload" href="{base}assets/fonts/source-han-serif-sc-light.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{base}assets/fonts/alibaba-puhuiti-heavy.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="{base}assets/fonts/source-han-sans-sc-regular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="{base}assets/css/site.css">
+  <link rel="stylesheet" href="{base}assets/css/site.css?v={ASSET_VERSION}">
+  <link rel="stylesheet" href="{base}assets/css/pastel.css?v={ASSET_VERSION}">
   <script>document.documentElement.classList.add('js');</script>
-  <script src="{base}assets/js/site.js" defer></script>
+  <script src="{base}assets/js/site.js?v={ASSET_VERSION}" defer></script>
   {extra_head}
   {jsonld}
 </head>

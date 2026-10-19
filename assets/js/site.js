@@ -39,6 +39,7 @@
   const setMenu = (open) => {
     if (!menuButton || !mobileMenu) return;
     menuButton.setAttribute("aria-expanded", String(open));
+    menuButton.setAttribute("aria-label", open ? "关闭菜单" : "打开菜单");
     mobileMenu.classList.toggle("is-open", open);
     mobileMenu.setAttribute("aria-hidden", String(!open));
     document.body.classList.toggle("is-locked", open);
@@ -90,6 +91,86 @@
       element.classList.add("reveal");
       element.style.transitionDelay = `${Math.min(index % 4, 3) * 55}ms`;
       observer.observe(element);
+    });
+  }
+
+
+  /* ---------- pastel home: active section nav ---------- */
+  const sectionLinks = $$(".desktop-nav [data-nav-section]");
+  if (document.body.classList.contains("page-home") && sectionLinks.length) {
+    const sectionPairs = sectionLinks
+      .map((link) => ({ link, section: document.getElementById(link.dataset.navSection) }))
+      .filter((pair) => pair.section);
+    let activeSection = null;
+    let navFrame = null;
+    const setActiveNav = (section) => {
+      if (section === activeSection) return;
+      activeSection = section;
+      sectionPairs.forEach(({ link, section: target }) => {
+        const active = target === section;
+        link.classList.toggle("is-active", active);
+        if (active) link.setAttribute("aria-current", "location");
+        else link.removeAttribute("aria-current");
+      });
+    };
+    const syncNav = () => {
+      navFrame = null;
+      const probe = window.scrollY + window.innerHeight * 0.34;
+      let current = sectionPairs[0];
+      sectionPairs.forEach((pair) => {
+        if (pair.section.offsetTop <= probe) current = pair;
+      });
+      if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) {
+        current = sectionPairs[sectionPairs.length - 1];
+      }
+      setActiveNav(current.section);
+    };
+    const requestNavSync = () => {
+      if (navFrame) return;
+      navFrame = window.requestAnimationFrame(syncNav);
+    };
+    window.addEventListener("scroll", requestNavSync, { passive: true });
+    window.addEventListener("resize", requestNavSync);
+    syncNav();
+  }
+
+  /* ---------- pastel home: scroll reveal ---------- */
+  if (!reducedMotion) {
+    const pastelTargets = $$(".p-section-head, .p-about-card, .p-project-row, .p-design-card, .p-school, .p-awards-card, .p-exp-item, .p-skill-card, .p-interest, .p-soft-skills, .p-contact-card");
+    const pastelObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-inview");
+        pastelObserver.unobserve(entry.target);
+      });
+    }, { threshold: 0.06, rootMargin: "0px 0px -5% 0px" });
+    pastelTargets.forEach((element, index) => {
+      element.classList.add("p-reveal");
+      element.style.transitionDelay = `${Math.min(index % 4, 3) * 55}ms`;
+      pastelObserver.observe(element);
+    });
+  }
+
+  /* ---------- portrait card tilt ---------- */
+  const portrait = $("[data-tilt-portrait]");
+  if (portrait && finePointer && !reducedMotion) {
+    let frame = null;
+    portrait.addEventListener("pointermove", (event) => {
+      if (frame) return;
+      frame = window.requestAnimationFrame(() => {
+        const rect = portrait.getBoundingClientRect();
+        const x = (event.clientX - rect.left) / rect.width - 0.5;
+        const y = (event.clientY - rect.top) / rect.height - 0.5;
+        portrait.style.setProperty("--rx", `${(-y * 4).toFixed(2)}deg`);
+        portrait.style.setProperty("--ry", `${(x * 5).toFixed(2)}deg`);
+        frame = null;
+      });
+    });
+    portrait.addEventListener("pointerleave", () => {
+      if (frame) window.cancelAnimationFrame(frame);
+      frame = null;
+      portrait.style.setProperty("--rx", "0deg");
+      portrait.style.setProperty("--ry", "0deg");
     });
   }
 

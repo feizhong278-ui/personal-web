@@ -76,263 +76,499 @@ def home_deck(project):
       </div>'''
 
 
-def index_page():
-    marquee_items = [
-        "CONTENT STRATEGY", "GEO", "XIAOHONGSHU", "DOUYIN", "IP DESIGN",
-        "DATA REVIEW", "AI CONTENT", "VISUAL STORYTELLING",
-    ]
-    marquee = "".join(f'<span>{x}</span><i aria-hidden="true">✳</i>' for x in marquee_items)
-    marquee = marquee * 2
+# -*- coding: utf-8 -*-
+HOME_EDUCATION = [
+    {
+        "tone": "peach",
+        "badge": "硕士",
+        "label": "MDes / 2024—2027",
+        "period": "2024.09 — 2027.06",
+        "school": "中国计量大学",
+        "degree": "设计学 · 硕士（全日制）",
+        "gpa": "GPA 3.93 / 4.0 · 专业前 3%",
+        "desc": "从视觉传达走到设计学，继续研究文化、视觉与内容之间的关系。",
+        "tags": ["ICCC 全国二等奖", "两岸青年非遗一等奖", "优秀班干部"],
+    },
+    {
+        "tone": "mint",
+        "badge": "本科",
+        "label": "BA / 2020—2024",
+        "period": "2020.09 — 2024.06",
+        "school": "中国计量大学",
+        "degree": "视觉传达 · 本科（全日制）",
+        "gpa": "GPA 3.9 / 4.0 · 专业前 3%",
+        "desc": "设计训练、摄影与校园媒体实践，让我开始习惯观察和记录。",
+        "tags": ["澳门文创全国一等奖", "互联网+ 铜奖", "摄影社社长"],
+    },
+]
 
-    project_cards = ""
-    for project in PROJECTS:
-        award = f'<span class="archive-card__award">{project["award_short"]}</span>' if project["award_short"] else ""
-        portrait_cls = " is-portrait" if project["slug"] == "harbin" else ""
-        project_cards += f'''
-        <a class="archive-card{portrait_cls}" href="design/{project['slug']}.html" data-cursor="OPEN">
-          <div class="archive-card__media">
-            <img src="{board_path(project, project['cover'], 640)}"
-                 srcset="{board_srcset(project, project['cover'])}"
-                 sizes="(max-width: 700px) 76vw, (max-width: 1100px) 42vw, 29vw"
-                 alt="{project['title']}项目封面" width="{project['_board_data'][project['cover']-1]['w']}" height="{project['_board_data'][project['cover']-1]['h']}" loading="lazy" decoding="async">
-            <span class="archive-card__index">{project['index']}</span>
-            <span class="archive-card__open">打开项目档案 <b>↗</b></span>
+HOME_EXPERIENCE = [
+    {
+        "num": "01",
+        "tone": "mint",
+        "period": "2026.07 — 至今",
+        "company": "萤石网络",
+        "company_note": "海康威视旗下",
+        "role": "AI 搜索内容运营（GEO）",
+        "now": True,
+        "bullets": [
+            "负责豆包、千问、DeepSeek、元宝等 AI 平台的 GEO 内容策略与执行，跟踪内容抓取、引用与推荐表现。",
+            "搭建并运营覆盖 50+ 个账号的内容矩阵，沉淀素材库、问答库、选题库、Prompt 模板与内容 SOP。",
+            "围绕 36 个核心提示词产出 800+ 篇结构化内容，260+ 篇被 AI 平台召回，累计召回 2,000+ 次。",
+        ],
+        "tags": ["50+ 矩阵账号", "800+ 结构化内容", "2,000+ 次召回", "90% 提示词覆盖"],
+    },
+    {
+        "num": "02",
+        "tone": "peach",
+        "period": "2024.12 — 2026.06",
+        "company": "杭州红商电子商务有限公司",
+        "company_note": "",
+        "role": "内容与店铺运营",
+        "now": False,
+        "bullets": [
+            "独立搭建并运营小红书矩阵及抖音账号「自拍杆小圆子」，负责账号定位、选题、图文、视频拍剪与日常维护。",
+            "参与 4 家 3C 数码店铺的商品上架、主图与详情页维护、笔记加热及推广素材优化。",
+            "累计产出 30+ 篇爆文，平均单篇获赞 1,000+；任职期间累计成交 3 万+ 单，最高月 GMV 27.4 万+。",
+        ],
+        "tags": ["30+ 爆文", "4 家店铺", "3万+ 订单", "最高月 GMV 27.4万"],
+    },
+    {
+        "num": "03",
+        "tone": "lilac",
+        "period": "2023.05 — 2024.05",
+        "company": "懒羊羊素材库",
+        "company_note": "设计内容账号",
+        "role": "主理人",
+        "now": False,
+        "bullets": [
+            "从 0 到 1 搭建设计素材账号，聚焦平面设计、IP 设计、包装设计与品牌视觉。",
+            "独立负责选题、图文排版、封面标题、发布与数据复盘，探索内容到店铺的引流闭环。",
+            "账号累计获赞与收藏 3 万+，6 篇爆款合计赞藏 1.7 万+，单篇最高获赞 3,645。",
+        ],
+        "tags": ["3万+ 累计赞藏", "6 篇爆款", "单篇最高赞 3,645"],
+    },
+]
+
+HOME_SKILLS = [
+    {
+        "icon": "🚀",
+        "tone": "peach",
+        "title": "核心内容运营",
+        "desc": "从账号定位到内容复盘，建立可持续运转的内容系统。",
+        "tags": ["小红书", "抖音", "账号定位", "选题策划", "内容矩阵", "内容 SOP"],
+    },
+    {
+        "icon": "✦",
+        "tone": "mint",
+        "title": "AI & GEO",
+        "desc": "理解生成式搜索的抓取、引用与推荐逻辑，让品牌成为 AI 愿意调用的知识。",
+        "tags": ["GEO 策略", "Prompt", "结构化内容", "AI 搜索", "豆包 / 千问 / DeepSeek / 元宝"],
+    },
+    {
+        "icon": "📊",
+        "tone": "blue",
+        "title": "数据复盘",
+        "desc": "用曝光、点击、进店、成交与 AI 引用，判断内容是否真的有效。",
+        "tags": ["曝光 / 阅读", "点击率", "进店 / 成交", "AI 引用", "复盘文档"],
+    },
+    {
+        "icon": "🎨",
+        "tone": "lilac",
+        "title": "视觉创作",
+        "desc": "把信息整理成有秩序、也有辨识度的画面。",
+        "tags": ["Photoshop", "Illustrator", "剪映", "Midjourney", "Stable Diffusion", "图文排版"],
+    },
+]
+
+HOME_INTERESTS = [
+    {
+        "icon": "📷",
+        "tone": "peach",
+        "title": "摄影",
+        "desc": "当过摄影社社长，也做过校荣媒体记者。喜欢观察光线、构图和人在场景里的状态。",
+        "tag": "记录生活",
+    },
+    {
+        "icon": "🎨",
+        "tone": "mint",
+        "title": "设计收藏",
+        "desc": "收集排版、包装、IP 与品牌视觉案例。做「懒羊羊素材库」时，把喜欢的东西变成了内容。",
+        "tag": "保持输入",
+    },
+    {
+        "icon": "🔎",
+        "tone": "lilac",
+        "title": "内容观察",
+        "desc": "长期观察小红书、抖音与 AI 搜索里的表达方式。刷到的内容，最后都会变成选题库。",
+        "tag": "研究表达",
+    },
+]
+
+HOME_AWARDS = [
+    ("🏅", "美丽中国创新设计大赛 · 全国二等奖"),
+    ("🥉", "全国会展策划创意大赛 · 全国三等奖"),
+    ("🥇", "浙江省会展策划创意大赛 · 一等奖"),
+    ("🎨", "ICCC 国际学生设计大赛 · 全国二等奖"),
+    ("🧵", "两岸青年非遗文创 · 一等奖"),
+    ("🏛️", "澳门文创设计大赛 · 全国一等奖"),
+    ("💡", "浙江省「互联网+」· 铜奖"),
+]
+
+P_STICKER = '''
+<svg class="p-sticker" viewBox="0 0 160 160" aria-hidden="true">
+  <defs>
+    <linearGradient id="pStickerGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d8f3ff"></stop>
+      <stop offset=".52" stop-color="#d8d1ff"></stop>
+      <stop offset="1" stop-color="#ffd8e6"></stop>
+    </linearGradient>
+    <filter id="pStickerShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#6b5a7a" flood-opacity=".18"></feDropShadow>
+    </filter>
+  </defs>
+  <g filter="url(#pStickerShadow)" transform="rotate(-8 80 80)">
+    <ellipse cx="80" cy="40" rx="23" ry="30" fill="url(#pStickerGrad)" stroke="#fff" stroke-width="3"></ellipse>
+    <ellipse cx="80" cy="40" rx="23" ry="30" fill="url(#pStickerGrad)" stroke="#fff" stroke-width="3" transform="rotate(60 80 80)"></ellipse>
+    <ellipse cx="80" cy="40" rx="23" ry="30" fill="url(#pStickerGrad)" stroke="#fff" stroke-width="3" transform="rotate(120 80 80)"></ellipse>
+    <ellipse cx="80" cy="40" rx="23" ry="30" fill="url(#pStickerGrad)" stroke="#fff" stroke-width="3" transform="rotate(180 80 80)"></ellipse>
+    <ellipse cx="80" cy="40" rx="23" ry="30" fill="url(#pStickerGrad)" stroke="#fff" stroke-width="3" transform="rotate(240 80 80)"></ellipse>
+    <ellipse cx="80" cy="40" rx="23" ry="30" fill="url(#pStickerGrad)" stroke="#fff" stroke-width="3" transform="rotate(300 80 80)"></ellipse>
+    <circle cx="80" cy="80" r="31" fill="#fff9fd" stroke="#fff" stroke-width="3"></circle>
+    <circle cx="70" cy="76" r="3.4" fill="#39332f"></circle>
+    <circle cx="90" cy="76" r="3.4" fill="#39332f"></circle>
+    <path d="M70 88 Q80 96 90 88" fill="none" stroke="#39332f" stroke-width="3" stroke-linecap="round"></path>
+    <ellipse cx="63" cy="86" rx="6" ry="3" fill="#ffafc4" opacity=".55"></ellipse>
+    <ellipse cx="97" cy="86" rx="6" ry="3" fill="#ffafc4" opacity=".55"></ellipse>
+  </g>
+  <path d="M31 28 l3 8 8 3 -8 3 -3 8 -3 -8 -8 -3 8 -3Z" fill="#fff" opacity=".9"></path>
+  <path d="M132 118 l2 6 6 2 -6 2 -2 6 -2 -6 -6 -2 6 -2Z" fill="#fff" opacity=".8"></path>
+</svg>'''
+
+
+def _chips(tags, tone=""):
+    return "".join(f'<span class="p-chip{(" p-chip--" + tone) if tone else ""}">{tag}</span>' for tag in tags)
+
+
+def _p_stat(value, suffix, label, note, tone):
+    return f'''
+      <div class="p-stat p-stat--{tone}">
+        <div class="p-stat__value"><span class="count-value" data-count="{value}">{value}</span><sup>{suffix}</sup></div>
+        <p>{label}</p>
+        <small>{note}</small>
+      </div>'''
+
+
+def _project_visual_geo():
+    return '''
+      <div class="p-geo-visual">
+        <div class="p-geo-visual__head"><span><i></i> GEO / VISIBILITY</span><span>2026.10</span></div>
+        <p class="p-geo-visual__title">让品牌<br>被 AI 推荐。</p>
+        <div class="p-geo-metric">
+          <div><span>品牌提及率</span><b>63.46<small>%</small></b></div>
+          <div class="p-bar"><i style="--w:63.46%"></i></div>
+          <small>44.53 → 63.46</small>
+        </div>
+        <div class="p-geo-metric">
+          <div><span>品牌推荐率</span><b>46.15<small>%</small></b></div>
+          <div class="p-bar p-bar--coral"><i style="--w:46.15%"></i></div>
+          <small>25.36 → 46.15</small>
+        </div>
+        <div class="p-geo-visual__foot"><span>50+ 账号</span><span>800+ 内容</span><span>90% 覆盖</span></div>
+      </div>'''
+
+
+def _project_row(project, tone, number, label, title, desc, tags, metrics, visual, href, cta):
+    chips = _chips(tags)
+    metric_html = "".join(f'<span><b>{v}</b>{k}</span>' for v, k in metrics)
+    return f'''
+      <a class="p-project-row p-project-row--{tone}" href="{href}" data-cursor="OPEN">
+        <div class="p-project-row__aside">
+          <span class="p-project-row__num">{number}</span>
+          <span class="p-project-row__label">{label}</span>
+        </div>
+        <div class="p-project-row__body">
+          <div class="p-chip-row">{chips}</div>
+          <h3>{title}</h3>
+          <p>{desc}</p>
+          <div class="p-project-row__metrics">{metric_html}</div>
+          <span class="p-project-row__cta">{cta} <b>↗</b></span>
+        </div>
+        <div class="p-project-row__visual">{visual}</div>
+      </a>'''
+
+
+def new_index_page():
+    g = PROJECT_BY_SLUG["gengong"]
+    l = PROJECT_BY_SLUG["liangzhu"]
+
+    # Selfie collage
+    selfie_visual = '''
+      <div class="p-note-stack" aria-hidden="true">
+        <img src="assets/img/ops/selfie/note-09-600.webp" alt="" width="600" height="460" loading="lazy" decoding="async">
+        <img src="assets/img/ops/selfie/note-04-600.webp" alt="" width="600" height="459" loading="lazy" decoding="async">
+        <img src="assets/img/ops/selfie/note-10-600.webp" alt="" width="600" height="448" loading="lazy" decoding="async">
+        <span>14 NOTES / 4 ACCOUNTS</span>
+      </div>'''
+
+    lazy_visual = f'''
+      <div class="p-board-visual">
+        <img src="assets/img/ops/lazy/case-board-1000.webp" alt="懒羊羊素材库内容案例板" width="1000" height="562" loading="lazy" decoding="async">
+        <span>CASE BOARD / 6 POSTS</span>
+      </div>'''
+
+    project_rows = "".join([
+        _project_row(
+            "geo", "mint", "01", "GEO / AI SEARCH", "让品牌，<br>进入 AI 的答案。",
+            "从 36 个核心提示词出发，搭建 50+ 账号内容矩阵，让品牌在生成式搜索中被看见、被引用、被推荐。",
+            ["GEO 策略", "内容矩阵", "AI 搜索"],
+            [("50+", "账号"), ("800+", "内容"), ("2,000+", "召回"), ("90%", "覆盖")],
+            _project_visual_geo(), "case-geo.html", "查看完整案例"
+        ),
+        _project_row(
+            "selfie", "peach", "02", "COMMERCE CONTENT", "把种草，<br>做成生意。",
+            "从账号定位、拍剪、标题封面，到商品页与成交复盘，跑通一条内容到生意的完整链路。",
+            ["小红书", "抖音", "电商转化"],
+            [("30+", "爆文"), ("3万+", "订单"), ("27.4万", "最高月 GMV")],
+            selfie_visual, "case-selfie.html", "查看完整案例"
+        ),
+        _project_row(
+            "lazy", "lilac", "03", "DESIGN CONTENT", "让审美，<br>成为流量。",
+            "从 0 到 1 搭建「懒羊羊素材库」，用设计案例内容连接审美、收藏与店铺转化。",
+            ["设计内容", "0 → 1", "内容账号"],
+            [("3万+", "赞藏"), ("6", "篇爆款"), ("3,645", "单篇最高赞")],
+            lazy_visual, "case-lazy.html", "查看完整案例"
+        ),
+    ])
+
+    design_cards = ""
+    for p in PROJECTS:
+        design_cards += f'''
+        <a class="p-design-card" href="design/{p['slug']}.html" data-cursor="OPEN">
+          <div class="p-design-card__img">
+            {design_picture(p, p['cover'], p['title'] + "项目封面", sizes="(max-width: 700px) 100vw, 28vw", loading="lazy")}
+            <span>{p['index']} / 04</span>
           </div>
-          <div class="archive-card__meta">
-            <div><span>{project['year']} / {project['discipline']}</span><h3>{project['title']}</h3></div>
-            {award}
+          <div class="p-design-card__body">
+            <div class="p-chip-row"><span class="p-chip p-chip--soft">{p['discipline'].split(" / ")[0]}</span><span class="p-chip p-chip--soft">{p['year']}</span>{f'<span class="p-chip p-chip--soft">{p["award_short"]}</span>' if p['award_short'] and p['award_short'] != p['discipline'].split(" / ")[0] else ''}</div>
+            <h3>{p['title']}</h3>
+            <p>{p['summary']}</p>
+            <span class="p-design-card__cta">查看项目 <b>↗</b></span>
           </div>
         </a>'''
 
-    steps = [
-        ("01", "INSIGHT", "看见", "先理解用户真正的问题。看搜索词、评论、竞品与平台语境，而不是从「我想说什么」开始。", ["问题地图", "受众洞察", "内容机会"]),
-        ("02", "STRUCTURE", "拆解", "把问题变成内容结构。标题、封面、叙事、关键词、账号矩阵与转化路径，各自承担明确任务。", ["选题库", "内容模板", "账号矩阵"]),
-        ("03", "MAKE", "生产", "用设计和 AI 提高产能，但不把判断外包给工具。能写、能拍、能剪、能排，也能建立 SOP。", ["图文", "短视频", "视觉系统"]),
-        ("04", "MEASURE", "复盘", "看曝光，也看进店和成交；看阅读，也看 AI 是否引用。用数据决定下一轮做什么。", ["数据看板", "复盘文档", "迭代清单"]),
-    ]
-    method_steps = "".join(f'''
-        <article class="method-step">
-          <div class="method-step__num">{num}</div>
-          <div class="method-step__body">
-            <p class="micro-label">{en}</p>
-            <h3>{zh}</h3>
-            <p>{copy}</p>
-            <ul class="tag-list">{"".join(f"<li>{t}</li>" for t in tags)}</ul>
+    school_cards = ""
+    for item in HOME_EDUCATION:
+        tags = _chips(item["tags"], "soft")
+        school_cards += f'''
+        <article class="p-school p-school--{item['tone']}">
+          <div class="p-school__art">
+            <span class="p-school__watermark">CJLU</span>
+            <span class="p-school__badge">{item['badge']}</span>
+            <span class="p-school__label">{item['label']}</span>
+            <span class="p-school__emoji" aria-hidden="true">🎓</span>
           </div>
-        </article>''' for num, en, zh, copy, tags in steps)
+          <div class="p-school__body">
+            <p class="p-date">{item['period']}</p>
+            <h3>{item['school']}</h3>
+            <p class="p-school__degree">{item['degree']}</p>
+            <p class="p-school__gpa">{item['gpa']}</p>
+            <p class="p-school__desc">{item['desc']}</p>
+            <div class="p-chip-row">{tags}</div>
+          </div>
+        </article>'''
+
+    award_chips = "".join(f'<span class="p-award"><i>{icon}</i>{label}</span>' for icon, label in HOME_AWARDS)
+
+    experience_cards = ""
+    for item in HOME_EXPERIENCE:
+        now = '<span class="p-now-badge"><i></i>NOW</span>' if item["now"] else ""
+        bullets = "".join(f'<li>{b}</li>' for b in item["bullets"])
+        tags = _chips(item["tags"], "soft")
+        experience_cards += f'''
+        <article class="p-exp-item p-exp-item--{item['tone']}">
+          <div class="p-exp-marker">{item['num']}</div>
+          <div class="p-exp-card">
+            <div class="p-exp-card__top"><span class="p-date">{item['period']}</span>{now}</div>
+            <h3>{item['company']} {f'<small>{item["company_note"]}</small>' if item["company_note"] else ""}</h3>
+            <p class="p-role">{item['role']}</p>
+            <ul>{bullets}</ul>
+            <div class="p-chip-row">{tags}</div>
+          </div>
+        </article>'''
+
+    skill_cards = ""
+    for s in HOME_SKILLS:
+        skill_cards += f'''
+        <article class="p-skill-card p-skill-card--{s['tone']}">
+          <span class="p-skill-icon" aria-hidden="true">{s['icon']}</span>
+          <h3>{s['title']}</h3>
+          <p>{s['desc']}</p>
+          <div class="p-chip-row">{_chips(s['tags'], "soft")}</div>
+        </article>'''
+
+    interest_cards = ""
+    for item in HOME_INTERESTS:
+        interest_cards += f'''
+        <article class="p-interest p-interest--{item['tone']}">
+          <span class="p-interest__icon" aria-hidden="true">{item['icon']}</span>
+          <span class="p-interest__tag">{item['tag']}</span>
+          <h3>{item['title']}</h3>
+          <p>{item['desc']}</p>
+        </article>'''
 
     content = f'''
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="container">
-        <div class="hero-topline">
-          <p class="micro-label">PORTFOLIO / 2027</p>
-          <p class="hero-topline__role">CONTENT OPERATIONS · GEO · VISUAL DESIGN</p>
-          <p class="micro-label">HANGZHOU, CN</p>
-        </div>
-        <div class="hero-main">
-          <div class="hero-copy">
-            <p class="eyebrow">设计学硕士 / 内容运营</p>
-            <h1 id="hero-title">
-              <span class="hero-line">让内容</span>
-              <span class="hero-line">留下<span class="accent">痕迹</span><span class="hero-period">。</span></span>
-            </h1>
-            <p class="hero-lede">我是钟菲。擅长把品牌洞察变成内容系统，也把审美直觉变成可衡量的结果。</p>
-            <div class="hero-actions">
-              {cta_link('#work', '浏览作品', 'btn btn--dark', '↓')}
-              <a class="text-link" href="assets/docs/zhongfei-resume.pdf" download>下载简历 PDF <span>↗</span></a>
-            </div>
-            <div class="hero-personal">
-              <span><i></i> 2027 届 · 求职中</span>
-              <span>杭州 / 可接受江浙沪机会</span>
-            </div>
+    <section class="p-hero" id="about" aria-labelledby="hero-title">
+      <div class="container p-hero__grid">
+        <div class="p-hero__copy">
+          <p class="hello-pill"><i aria-hidden="true"></i> HELLO / 你好</p>
+          <div class="p-hero__title-wrap">
+            <h1 id="hero-title">Hi,<br><span>我是钟菲</span></h1>
+            {P_STICKER}
           </div>
-          {home_deck(PROJECT_BY_SLUG['gengong'])}
-        </div>
-        <div class="hero-foot">
-          <p>CONTENT THAT LEAVES A TRACE.</p>
-          <a href="#work">向下滚动 <span>↓</span></a>
-          <p>45 PROJECT BOARDS / 14 NOTES / 30 SLIDES</p>
-        </div>
-      </div>
-    </section>
-
-    <div class="marquee" aria-hidden="true">
-      <div class="marquee__track">{marquee}</div>
-    </div>
-
-    <section class="proof" aria-labelledby="proof-title">
-      <div class="container">
-        <div class="proof-head">
-          <div>
-            <p class="micro-label">SELECTED NUMBERS / 2024—2026</p>
-            <h2 id="proof-title">一份可以快速扫读的<br>工作成绩单。</h2>
+          <p class="p-hero__role">内容运营 / GEO 内容运营 / 视觉设计</p>
+          <div class="p-philosophy">
+            <span>个人理念 /</span>
+            <p>让内容有审美的形状，<br>也有可被验证的结果。</p>
           </div>
-          <p>数据来自个人工作复盘；统计口径与时间范围见各案例页。这里不放无法解释的数字。</p>
-        </div>
-        <div class="proof-grid">
-          {stat(50, '+', '搭建并运营的 GEO 内容矩阵账号', 'AI SEARCH / 2026')}
-          {stat(800, '+', '围绕 36 个核心提示词产出的结构化内容', 'CONTENT MATRIX')}
-          {stat(2000, '+', '内容被 AI 平台累计召回次数', '260+ 篇被召回')}
-          {stat(3, '万+', '内容与店铺运营期间累计成交订单', 'MAX GMV ¥27.4万')}
-        </div>
-        <p class="proof-foot"><span>注</span> 数据区间：GEO 项目为 2026.08—2026.10；电商项目为 2024.12—2026.06。</p>
-      </div>
-    </section>
-
-    <section class="section work-section" id="work" aria-labelledby="work-title">
-      <div class="container">
-        {section_head('01', 'SELECTED WORK', '不是灵感合集，<br>是增长过程。', '三个项目，三种能力：在 AI 答案里建立品牌可见度，在电商内容里完成成交，在设计分享里从 0 到 1。')}
-
-        <div class="work-grid">
-          <a class="case-card case-card--geo" href="case-geo.html" data-cursor="CASE 01">
-            <div class="case-card__top">
-              <span class="case-card__index">CASE 01 / GEO</span>
-              <span class="case-card__arrow">↗</span>
-            </div>
-            <div class="case-card__copy">
-              <p class="micro-label">AI SEARCH / CONTENT MATRIX</p>
-              <h3>让品牌，<br>进入 AI 的答案。</h3>
-              <p>从 36 个核心提示词出发，搭建 50+ 账号内容矩阵，让品牌在生成式搜索中被看见、被引用、被推荐。</p>
-            </div>
-            <div class="mini-console">
-              <div class="mini-console__head"><span><i></i> GEO / SIGNAL</span><span>2026.10</span></div>
-              <div class="mini-console__row">
-                <div><span>品牌提及率</span><b>44.53 <em>→</em> 63.46<small>%</small></b></div>
-                <div class="mini-bars"><i style="--w:44.53%"></i><i style="--w:63.46%"></i></div>
-              </div>
-              <div class="mini-console__row">
-                <div><span>品牌推荐率</span><b>25.36 <em>→</em> 46.15<small>%</small></b></div>
-                <div class="mini-bars mini-bars--lime"><i style="--w:25.36%"></i><i style="--w:46.15%"></i></div>
-              </div>
-              <div class="mini-console__foot"><span>800+ 内容</span><span>260+ 召回</span><span>90% 覆盖</span></div>
-            </div>
-          </a>
-
-          <a class="case-card case-card--selfie" href="case-selfie.html" data-cursor="CASE 02">
-            <div class="case-photo-stack" aria-hidden="true">
-              <img src="assets/img/ops/selfie/note-09-600.webp" alt="" width="600" height="460" loading="lazy" decoding="async">
-              <img src="assets/img/ops/selfie/note-04-600.webp" alt="" width="600" height="459" loading="lazy" decoding="async">
-              <img src="assets/img/ops/selfie/note-10-600.webp" alt="" width="600" height="448" loading="lazy" decoding="async">
-              <span class="case-photo-stack__tag">30+ 篇爆文<br>3万+ 店铺订单</span>
-            </div>
-            <div class="case-card__copy">
-              <div class="case-card__top"><span class="case-card__index">CASE 02 / COMMERCE</span><span class="case-card__arrow">↗</span></div>
-              <p class="micro-label">XIAOHONGSHU × DOUYIN / 3C</p>
-              <h3>把种草，<br>做成生意。</h3>
-              <p>从账号定位、拍剪、标题封面，到商品页与成交复盘，跑通一条内容到生意的完整链路。</p>
-              <span class="case-card__cta">查看完整案例 <b>→</b></span>
-            </div>
-          </a>
-
-          <a class="case-card case-card--lazy" href="case-lazy.html" data-cursor="CASE 03">
-            <div class="case-card__image">
-              <img src="assets/img/ops/lazy/case-board-1000.webp" alt="懒羊羊素材库小红书账号的内容案例板" width="1000" height="562" loading="lazy" decoding="async">
-            </div>
-            <div class="case-card__copy">
-              <div class="case-card__top"><span class="case-card__index">CASE 03 / DESIGN CONTENT</span><span class="case-card__arrow">↗</span></div>
-              <p class="micro-label">XIAOHONGSHU / 0 TO 1</p>
-              <h3>让审美，<br>成为流量。</h3>
-              <p>从 0 到 1 搭建设计素材账号，6 篇爆款笔记合计赞藏 1.7 万+。</p>
-              <div class="case-card__micro-stats">
-                <span><b>3万+</b> 累计赞藏</span><span><b>6</b> 篇爆款</span><span><b>3645</b> 单篇最高赞</span>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div class="work-foot">
-          <p>还想看过程、数据与完整素材？</p>
-          <a class="text-link" href="operations.html">进入运营案例 <span>→</span></a>
-        </div>
-      </div>
-    </section>
-
-    <section class="design-band" aria-labelledby="design-title">
-      <div class="container">
-        <div class="design-band__head">
-          {section_head('02', 'DESIGN ARCHIVE', '设计的训练，<br>让内容有了形状。', '四组 IP 与文创项目，45 张项目板。从城市文化、景区、寺院到博物馆，看调研如何变成角色，角色如何变成可以被带走的东西。')}
-          <div class="rail-controls" role="group" aria-label="设计档案滑动控制">
-            <button type="button" data-rail-prev aria-label="向左滚动">←</button>
-            <button type="button" data-rail-next aria-label="向右滚动">→</button>
+          <p class="p-hero__bio">设计学硕士，7 年设计训练。做过 AI 搜索内容矩阵、电商内容与店铺运营、设计内容账号；擅长把洞察拆成内容结构，用数据复盘，也具备视觉与拍剪能力。</p>
+          <div class="p-chip-row">
+            <span class="p-chip">GEO 内容</span><span class="p-chip">小红书 / 抖音</span><span class="p-chip">电商运营</span><span class="p-chip">数据分析</span><span class="p-chip">视觉表达</span>
+          </div>
+          <div class="p-hero__actions">
+            <a class="p-btn p-btn--dark" href="assets/docs/zhongfei-resume.pdf" download>下载简历 <span>↗</span></a>
+            <a class="p-btn p-btn--ghost" href="#contact">联系我 <span>↓</span></a>
           </div>
         </div>
-        <div class="archive-rail" data-rail tabindex="0" role="region" aria-label="设计项目档案，可横向滚动">
-          {project_cards}
-        </div>
-        <div class="rail-progress"><span data-rail-progress></span></div>
-        <div class="design-band__foot">
-          <p><span>45</span> 张项目板 / 4 组项目 / 2 项全国奖项</p>
-          {cta_link('design.html', '浏览完整设计档案', 'btn btn--light', '↗')}
-        </div>
-      </div>
-    </section>
-
-    <section class="section method" aria-labelledby="method-title">
-      <div class="container">
-        {section_head('03', 'METHOD', '从一条洞察，<br>到一套系统。', '我习惯把模糊的传播问题，拆成可以执行、可以验证的四个动作。')}
-        <div class="method-layout">
-          <div class="method-aside">
-            <p class="micro-label">HOW I WORK</p>
-            <p class="method-aside__quote">内容运营不是发更多，<br>而是让每一次发布<br>都留下可复用的资产。</p>
-            <div class="method-system">
-              <span>MY CONTENT SYSTEM</span>
-              <ul><li>素材库</li><li>问答库</li><li>选题库</li><li>Prompt</li><li>SOP</li></ul>
+        <div class="p-hero__visual">
+          <div class="p-hero__halo" aria-hidden="true"></div>
+          <figure class="p-portrait" data-tilt-portrait>
+            <div class="p-portrait__img">
+              <img src="assets/img/portrait-900.webp" srcset="assets/img/portrait-480.webp 480w, assets/img/portrait-720.webp 720w, assets/img/portrait-900.webp 900w" sizes="(max-width: 700px) 92vw, 440px" alt="钟菲的职业肖像" width="900" height="1199" loading="eager" fetchpriority="high" decoding="async">
             </div>
-          </div>
-          <div class="method-steps">{method_steps}</div>
-        </div>
-        <div class="method-quote">
-          <p>“好内容不是一次爆发，是一次次可复用的积累。”</p>
-          <span>WORKING PRINCIPLE / 01</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="about-teaser" aria-labelledby="about-title">
-      <div class="container about-teaser__grid">
-        <div class="about-portrait">
-          <span class="about-portrait__big" aria-hidden="true">07</span>
-          <figure>
-            <img src="assets/img/portrait-640.webp" alt="钟菲的职业肖像" width="640" height="853" loading="lazy" decoding="async">
-            <figcaption><span>ZHONG FEI</span><span>HANGZHOU / 2026</span></figcaption>
+            <figcaption><span>ZHONG FEI / PORTRAIT 2026</span></figcaption>
           </figure>
-          <span class="about-portrait__stamp">DESIGN<br>×<br>CONTENT</span>
+          <div class="p-now">
+            <span class="p-now__label"><i aria-hidden="true"></i> NOW</span>
+            <strong>2027 届 · 求职中</strong>
+            <small>杭州 / 可接受江浙沪</small>
+          </div>
+          <span class="p-floating p-floating--a">OPEN TO WORK</span>
         </div>
-        <div class="about-teaser__copy">
-          <p class="micro-label">04 / ABOUT</p>
-          <h2 id="about-title">设计学的底子，<br>内容运营的现在。</h2>
-          <p class="about-teaser__lead">我在中国计量大学读了七年设计，从视觉传达走到设计学。设计训练给我的，不只是软件和审美，更是一套观察、拆解、表达、验证问题的方法。</p>
-          <p>现在，我把这套方法用在内容增长上：既关心一条内容有没有被看见，也关心它有没有带来下一步行动。</p>
-          <dl class="about-facts">
-            <div><dt>教育</dt><dd>设计学硕士 · 2027 届</dd></div>
-            <div><dt>成绩</dt><dd>GPA 3.93 / 4.0 · 专业前 3%</dd></div>
-            <div><dt>方向</dt><dd>内容运营 / GEO / AI 内容</dd></div>
-            <div><dt>地点</dt><dd>杭州 · 江浙沪</dd></div>
-          </dl>
-          {cta_link('about.html', '更多关于我', 'btn btn--dark', '↗')}
+      </div>
+      <a class="p-scroll-hint" href="#projects">继续下滑，探索更多 <span>↓</span></a>
+    </section>
+
+    <section class="p-section p-about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="p-about-card">
+          <div class="p-about-card__copy">
+            <p class="p-kicker">01 / ABOUT ME</p>
+            <h2 id="about-title">把审美变成方法，<br>把内容做成结果。</h2>
+            <p>我在中国计量大学读了七年设计，从视觉传达走到设计学。设计训练给我的不只是审美，更是一套观察、拆解、表达、验证问题的方法。</p>
+            <p>现在，我把这套方法用在内容增长上：既关心一条内容有没有被看见，也关心它有没有带来下一步行动。</p>
+            <div class="p-chip-row"><span class="p-chip">设计学硕士</span><span class="p-chip">GPA 3.93 / 4.0</span><span class="p-chip">专业前 3%</span></div>
+            <a class="p-inline-link" href="about.html">更多关于我 <span>↗</span></a>
+          </div>
+          <div class="p-stat-grid">
+            {_p_stat(50, "+", "GEO 内容矩阵账号", "AI SEARCH / 2026", "mint")}
+            {_p_stat(800, "+", "结构化内容", "围绕 36 个核心提示词", "peach")}
+            {_p_stat(2000, "+", "AI 平台累计召回", "260+ 篇内容被召回", "lilac")}
+            {_p_stat(3, "万+", "累计成交订单", "最高月 GMV 27.4万", "blue")}
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="contact" id="contact" aria-labelledby="contact-title">
-      <div class="container contact__inner">
-        <div class="contact__meta">
-          <p class="micro-label">05 / CONTACT</p>
-          <p>OPEN FOR CONVERSATION</p>
+    <section class="p-section p-projects" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="p-section-head">
+          <p class="p-kicker">02 / SELECTED WORK</p>
+          <h2 id="projects-title">我把内容，<br>做成了什么。</h2>
+          <p>三个运营项目，四组设计作品。每一个都从真实问题出发，也都有可以被查看的过程与结果。</p>
         </div>
-        <h2 id="contact-title">一起做点<br><em>有回声</em>的内容。</h2>
-        <div class="contact__bottom">
-          <p>如果你正在找一位懂内容、也懂视觉的内容运营，欢迎直接把机会发给我。</p>
-          <div class="contact__actions">
-            <button class="email-copy" type="button" data-copy-email="Aria.zhong@outlook.com">
-              <span>Aria.zhong@outlook.com</span><span class="email-copy__action">复制邮箱</span>
-            </button>
-            <a class="contact__mailto" href="mailto:Aria.zhong@outlook.com">或直接写信 ↗</a>
-            <a class="contact__resume" href="assets/docs/zhongfei-resume.pdf" download>下载简历 PDF <span>↓</span></a>
+        <div class="p-project-list">{project_rows}</div>
+        <div class="p-project-more"><a class="p-btn p-btn--ghost" href="operations.html">查看全部运营案例 <span>↗</span></a></div>
+
+        <div class="p-design-head">
+          <div><p class="p-kicker">DESIGN ARCHIVE / 04</p><h2>设计，是另一种表达。</h2></div>
+          <p>45 张项目板，从城市 IP、景区文创、寺院视觉到博物馆角色设计。</p>
+        </div>
+        <div class="p-design-grid">{design_cards}</div>
+        <div class="p-project-more"><a class="p-btn p-btn--ghost" href="design.html">打开完整设计档案 <span>↗</span></a></div>
+      </div>
+    </section>
+
+    <section class="p-section p-experience" id="experience" aria-labelledby="experience-title">
+      <div class="container">
+        <div class="p-section-head">
+          <p class="p-kicker">03 / THE PRACTITIONER</p>
+          <h2 id="experience-title">我在过往职场<br>做过什么。</h2>
+          <p>从 AI 搜索到电商内容，再到设计内容账号。每一段经历，都同时包含策略、执行与复盘。</p>
+        </div>
+        <div class="p-timeline">{experience_cards}</div>
+        <div class="p-center-link"><a class="p-inline-link" href="assets/docs/zhongfei-resume.pdf" download>下载完整简历 PDF <span>↓</span></a></div>
+      </div>
+    </section>
+
+    <section class="p-section p-education" id="education" aria-labelledby="education-title">
+      <div class="container">
+        <div class="p-section-head">
+          <p class="p-kicker">04 / EDUCATION</p>
+          <h2 id="education-title">我的学习轨迹</h2>
+          <p>从视觉传达到设计学，从本科到硕士。设计训练一直是我理解内容的方式。</p>
+        </div>
+        <div class="p-school-grid">
+          {school_cards}
+          <span class="p-school-path" aria-hidden="true">成长路径 →</span>
+        </div>
+        <div class="p-awards-card">
+          <div><p class="p-kicker">HONORS / 荣誉</p><h3>一些被看见的时刻</h3></div>
+          <div class="p-awards">{award_chips}</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="p-section p-skills" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="p-section-head">
+          <p class="p-kicker">05 / SKILLS</p>
+          <h2 id="skills-title">技能图谱</h2>
+          <p>跨领域的复合能力：从品牌全链路内容，到电商多维运营，再到 AI 搜索与视觉表达。</p>
+        </div>
+        <div class="p-skill-grid">{skill_cards}</div>
+        <div class="p-soft-skills">
+          <span>SOFT SKILLS /</span>
+          <span class="p-chip">项目管理</span><span class="p-chip">跨部门协作</span><span class="p-chip">沟通表达</span><span class="p-chip">快速学习</span><span class="p-chip">抗压能力</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="p-section p-interests" id="interests" aria-labelledby="interests-title">
+      <div class="container">
+        <div class="p-section-head">
+          <p class="p-kicker">06 / OFF DUTY</p>
+          <h2 id="interests-title">工作之外的我</h2>
+          <p>关于审美、观察与记录。它们不一定直接写进 KPI，但一直在影响我怎么做内容。</p>
+        </div>
+        <div class="p-interest-grid">{interest_cards}</div>
+        <div class="p-interest-note"><span>摄影社社长</span><i></i><span>校荣媒体记者</span><i></i><span>设计素材账号主理人</span></div>
+      </div>
+    </section>
+
+    <section class="p-contact" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="p-contact-card">
+          <span class="p-contact-sticker" aria-hidden="true">✳</span>
+          <p class="p-kicker">LET'S TALK / 联系我</p>
+          <h2 id="contact-title">一起做点<br>有回声的内容。</h2>
+          <p class="p-contact-copy">如果你正在找一位懂内容、也懂视觉的内容运营，欢迎直接把机会发给我。2027 届，杭州，可接受江浙沪机会。</p>
+          <div class="p-contact-actions">
+            <a class="p-btn p-btn--dark" href="mailto:Aria.zhong@outlook.com">Aria.zhong@outlook.com <span>↗</span></a>
+            <button class="p-btn p-btn--ghost" type="button" data-copy-email="Aria.zhong@outlook.com"><span class="email-copy__action">复制邮箱</span></button>
+            <a class="p-inline-link" href="assets/docs/zhongfei-resume.pdf" download>下载简历 PDF <span>↓</span></a>
           </div>
-        </div>
-        <div class="contact__stamp" aria-hidden="true">
-          <span>AVAILABLE FOR WORK</span><b>2027</b><span>HANGZHOU · CN</span>
+          <div class="p-contact-meta"><span><i></i> OPEN TO WORK</span><span>HANGZHOU / CN</span><span>2027</span></div>
         </div>
       </div>
     </section>
@@ -346,11 +582,6 @@ def index_page():
         canonical_path="",
     )
 
-
-
-# ---------------------------------------------------------------------------
-# Operations page
-# ---------------------------------------------------------------------------
 
 def ops_stat(value, suffix, label, note="", decimals=0):
     note_html = f'<span>{note}</span>' if note else ""
@@ -883,7 +1114,7 @@ def design_page():
     <div class="cross-next">
       <div class="container">
         <p class="micro-label">NEXT / OPERATIONS</p>
-        <a href="operations.html">看完设计，<br>再看我如何把内容做成增长 <span>↗</span></a>
+        <a href="operations.html"><span class="cross-next__text">看完设计，<br>再看我如何把内容做成增长</span><span class="cross-next__arrow" aria-hidden="true">↗</span></a>
       </div>
     </div>
 '''
@@ -1098,7 +1329,7 @@ def about_page():
         </div>
         <figure class="about-page-photo">
           <div class="about-page-photo__frame">
-            <img src="assets/img/portrait-1100.webp" alt="钟菲的职业肖像" width="1100" height="1466" loading="eager" fetchpriority="high" decoding="async">
+            <img src="assets/img/portrait-900.webp" srcset="assets/img/portrait-480.webp 480w, assets/img/portrait-720.webp 720w, assets/img/portrait-900.webp 900w" sizes="(max-width: 700px) 92vw, 520px" alt="钟菲的职业肖像" width="900" height="1199" loading="eager" fetchpriority="high" decoding="async">
           </div>
           <span class="about-page-photo__stamp">OPEN<br>TO<br>WORK</span>
           <figcaption><span>ZHONG FEI / 钟菲</span><span>PORTRAIT 2026</span></figcaption>
@@ -1191,65 +1422,120 @@ def about_page():
 
 
 def not_found_page():
+    import base64
     site = "https://feizhong278-ui.github.io/personal-web/"
+    avatar = base64.b64encode((ROOT / "assets/img/portrait-160.webp").read_bytes()).decode("ascii")
+    css = '''
+    @font-face { font-family: "PH"; src: url("__SITE__assets/fonts/alibaba-puhuiti-heavy.woff2") format("woff2"); font-weight: 700 900; font-style: normal; font-display: swap; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; }
+    body {
+      min-height: 100svh;
+      color: #27231f;
+      background:
+        radial-gradient(circle at 7% 4%, rgba(255, 211, 193, .88), transparent 27%),
+        radial-gradient(circle at 94% 3%, rgba(209, 241, 230, .92), transparent 31%),
+        radial-gradient(circle at 90% 72%, rgba(226, 215, 247, .7), transparent 33%),
+        linear-gradient(118deg, #fdf4ef, #fbfaf6 46%, #f6f7fb 74%, #f1faf5);
+      font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    .wrap { display: flex; width: min(calc(100% - 32px), 1220px); min-height: 100svh; flex-direction: column; margin: auto; padding: 14px 0 22px; }
+    .nav { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 8px 10px 8px 12px; border: 1px solid rgba(255,255,255,.94); border-radius: 999px; background: rgba(255,255,255,.7); box-shadow: 0 12px 36px rgba(102,79,60,.08); backdrop-filter: blur(20px); }
+    .brand { display: inline-flex; align-items: center; gap: 10px; color: #27231f; text-decoration: none; }
+    .brand img { width: 37px; height: 37px; border: 2px solid #fff; border-radius: 50%; object-fit: cover; object-position: center 23%; box-shadow: 0 4px 12px rgba(93,69,52,.14); }
+    .brand span { display: flex; flex-direction: column; font-family: "PH", sans-serif; font-size: 12px; font-weight: 900; letter-spacing: .08em; line-height: 1; }
+    .brand small { margin-top: 5px; color: #6f665d; font-family: "PingFang SC", sans-serif; font-size: 7px; font-weight: 400; letter-spacing: .04em; }
+    .back { padding: 9px 14px; border: 1px solid rgba(60,48,38,.16); border-radius: 999px; color: #27231f; background: rgba(255,255,255,.5); font-size: 10px; text-decoration: none; }
+    .back:hover { color: #fff; background: #27231f; }
+    main { display: flex; flex: 1; align-items: center; padding: 24px 0; }
+    .card { position: relative; width: 100%; overflow: hidden; padding: clamp(25px, 5.4vw, 68px); border: 1px solid rgba(255,255,255,.84); border-radius: 42px; background: rgba(255,255,255,.55); box-shadow: 0 28px 70px rgba(105,82,61,.09); backdrop-filter: blur(18px); }
+    .kicker { margin: 0 0 16px; color: #8b6047; font-family: "SFMono-Regular", Menlo, Consolas, monospace; font-size: 9px; letter-spacing: .12em; }
+    h1 { position: relative; z-index: 2; margin: 0; font-family: "PH", "PingFang SC", sans-serif; font-size: clamp(4.4rem, 11.5vw, 10.8rem); font-weight: 900; letter-spacing: -.075em; line-height: .93; }
+    .copy { position: relative; z-index: 2; max-width: 430px; margin: 26px 0 0; color: #5e554c; font-size: 12px; line-height: 1.9; }
+    .actions { position: relative; z-index: 2; display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center; margin-top: 28px; }
+    .btn { display: inline-flex; align-items: center; gap: 15px; min-height: 45px; padding: 10px 17px; border: 1px solid #27231f; border-radius: 999px; color: #fff; background: #27231f; font-size: 10px; text-decoration: none; }
+    .btn b { color: #ffd2c1; font-size: 12px; font-weight: 400; }
+    .link { padding-bottom: 3px; border-bottom: 1px solid rgba(69,56,43,.3); color: #5e554c; font-size: 10px; text-decoration: none; }
+    .link:hover { color: #a94f39; border-color: #a94f39; }
+    .note { position: relative; z-index: 2; margin: 44px 0 0; color: #6f665d; font-family: "SFMono-Regular", Menlo, Consolas, monospace; font-size: 7px; letter-spacing: .03em; }
+    .ghost { position: absolute; right: -2%; bottom: -16%; z-index: 0; color: rgba(255,255,255,.6); font-family: "PH", sans-serif; font-size: clamp(14rem, 38vw, 35rem); font-weight: 900; letter-spacing: -.1em; line-height: .7; pointer-events: none; }
+    .flower { position: absolute; top: 44px; right: 6%; z-index: 1; width: clamp(80px, 10vw, 130px); filter: drop-shadow(0 8px 12px rgba(107,90,122,.16)); transform: rotate(9deg); }
+    footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 7px 18px; padding: 15px 7px 0; border-top: 1px solid rgba(69,56,43,.14); color: #6f665d; font-family: "SFMono-Regular", Menlo, Consolas, monospace; font-size: 6px; }
+    footer a { text-decoration: none; }
+    footer b { color: #8a5f47; font-weight: 400; }
+    @media (max-width: 600px) {
+      .wrap { width: min(calc(100% - 20px), 1220px); padding-top: 9px; }
+      .nav { padding: 6px 7px 6px 8px; }
+      .brand img { width: 34px; height: 34px; }
+      .back { padding: 8px 10px; font-size: 8px; }
+      main { padding: 15px 0; }
+      .card { padding: 24px 18px 26px; border-radius: 29px; }
+      .copy { font-size: 11px; }
+      h1 { font-size: clamp(4rem, 21vw, 6rem); }
+      .flower { top: 25px; right: 6%; width: 78px; }
+      .ghost { right: -15%; bottom: -4%; font-size: 18rem; }
+      .note { margin-top: 31px; }
+      footer { flex-direction: column; font-size: 5.5px; }
+    }
+    '''
+    css = css.replace("__SITE__", site)
     return f'''<!doctype html>
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#151410">
+  <meta name="theme-color" content="#fbf8f4">
   <title>页面不存在｜钟菲作品集</title>
   <meta name="description" content="这个页面不存在。回到钟菲的作品集首页，浏览内容运营、GEO 与设计作品。">
   <meta name="robots" content="noindex">
   <link rel="canonical" href="{site}404.html">
-  <link rel="icon" href="{site}assets/favicon.svg" type="image/svg+xml">
-  <style>
-    * {{ box-sizing: border-box; }}
-    html, body {{ margin: 0; min-height: 100%; }}
-    body {{ color: #f3efe5; background: #151410; font-family: "SHS Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; }}
-    a {{ color: inherit; }}
-    .wrap {{ display: flex; min-height: 100svh; width: min(calc(100% - 40px), 1320px); flex-direction: column; margin: auto; padding: 24px 0 22px; }}
-    header {{ display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-bottom: 18px; border-bottom: 1px solid rgba(243,239,229,.25); }}
-    .brand {{ display: inline-flex; align-items: center; gap: 10px; text-decoration: none; }}
-    .mark {{ display: grid; width: 35px; height: 35px; place-items: center; color: #f3efe5; background: #b9361e; font-family: monospace; font-size: 10px; font-weight: 700; }}
-    .brand span:last-child {{ font-family: "Songti SC", "STSong", serif; font-size: 16px; letter-spacing: .08em; }}
-    .back {{ color: #d9ef63; font-family: monospace; font-size: 9px; letter-spacing: .06em; text-decoration: none; }}
-    main {{ position: relative; display: flex; flex: 1; flex-direction: column; justify-content: center; padding: 70px 0 50px; }}
-    .kicker {{ margin: 0 0 28px; color: #ef4a2b; font-family: monospace; font-size: 9px; letter-spacing: .12em; }}
-    h1 {{ position: relative; z-index: 1; margin: 0; font-family: "Songti SC", "STSong", "Noto Serif CJK SC", serif; font-size: clamp(5rem, 16vw, 14rem); font-weight: 400; letter-spacing: -.08em; line-height: .84; }}
-    p.copy {{ position: relative; z-index: 1; max-width: 430px; margin: 36px 0 0; color: #b8b1a0; font-size: 13px; line-height: 1.9; }}
-    .actions {{ position: relative; z-index: 1; display: flex; flex-wrap: wrap; gap: 22px; align-items: center; margin-top: 34px; }}
-    .btn {{ display: inline-flex; align-items: center; gap: 18px; padding: 11px 12px 11px 16px; border: 1px solid #f3efe5; color: #151410; background: #f3efe5; font-size: 11px; text-decoration: none; }}
-    .btn b {{ font-family: monospace; font-size: 13px; font-weight: 400; }}
-    .text {{ color: #f3efe5; font-size: 11px; text-decoration: none; border-bottom: 1px solid rgba(243,239,229,.45); padding-bottom: 4px; }}
-    .ghost {{ position: absolute; right: 0; bottom: -8%; z-index: 0; color: rgba(243,239,229,.045); font-family: Georgia, serif; font-size: clamp(15rem, 40vw, 38rem); line-height: .7; letter-spacing: -.08em; pointer-events: none; }}
-    footer {{ display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 20px; padding-top: 17px; border-top: 1px solid rgba(243,239,229,.25); color: #b8b1a0; font-family: monospace; font-size: 7px; letter-spacing: .04em; }}
-    footer a {{ text-decoration: none; }}
-    footer b {{ color: #d9ef63; font-weight: 400; }}
-    @media (max-width: 540px) {{ .wrap {{ width: min(calc(100% - 32px), 1320px); }} main {{ padding-top: 50px; }} h1 {{ font-size: 5rem; }} footer {{ flex-direction: column; }} }}
-  </style>
+  <link rel="icon" href="{site}assets/favicon.png" type="image/png" sizes="64x64">
+  <link rel="apple-touch-icon" href="{site}assets/img/apple-touch-icon.png">
+  <style>{css}</style>
 </head>
 <body>
   <div class="wrap">
-    <header>
-      <a class="brand" href="{site}" aria-label="钟菲作品集首页"><span class="mark">ZF</span><span>钟菲 / ZHONG FEI</span></a>
+    <header class="nav">
+      <a class="brand" href="{site}" aria-label="钟菲作品集首页">
+        <img src="data:image/webp;base64,{avatar}" alt="" width="160" height="213">
+        <span>PORTFOLIO<small>钟菲 / 2027</small></span>
+      </a>
       <a class="back" href="{site}">返回首页 ↗</a>
     </header>
     <main>
-      <p class="kicker">ERROR / 404 / PAGE NOT FOUND</p>
-      <h1>走丢了。</h1>
-      <p class="copy">这个页面不存在，或者已经被移走。但好内容和好机会，都不该在这里停下。</p>
-      <div class="actions">
-        <a class="btn" href="{site}">回到首页 <b>↗</b></a>
-        <a class="text" href="{site}operations.html">浏览运营案例 →</a>
-        <a class="text" href="{site}design.html">浏览设计作品 →</a>
+      <div class="card">
+        <p class="kicker">ERROR / 404 / PAGE NOT FOUND</p>
+        <h1>走丢了。</h1>
+        <p class="copy">这个页面不存在，或者已经被移走。但好内容和好机会，都不该在这里停下。</p>
+        <div class="actions">
+          <a class="btn" href="{site}">回到首页 <b>↗</b></a>
+          <a class="link" href="{site}operations.html">浏览运营案例 →</a>
+          <a class="link" href="{site}design.html">浏览设计作品 →</a>
+        </div>
+        <p class="note">页面走丢了，机会没有。 · Aria.zhong@outlook.com</p>
+        <span class="ghost" aria-hidden="true">404</span>
+        <svg class="flower" viewBox="0 0 160 160" aria-hidden="true">
+          <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d8f3ff"></stop><stop offset=".52" stop-color="#d8d1ff"></stop><stop offset="1" stop-color="#ffd8e6"></stop></linearGradient></defs>
+          <g transform="rotate(-8 80 80)">
+            <ellipse cx="80" cy="40" rx="23" ry="30" fill="url(#g)" stroke="#fff" stroke-width="3"></ellipse>
+            <ellipse cx="80" cy="40" rx="23" ry="30" fill="url(#g)" stroke="#fff" stroke-width="3" transform="rotate(60 80 80)"></ellipse>
+            <ellipse cx="80" cy="40" rx="23" ry="30" fill="url(#g)" stroke="#fff" stroke-width="3" transform="rotate(120 80 80)"></ellipse>
+            <ellipse cx="80" cy="40" rx="23" ry="30" fill="url(#g)" stroke="#fff" stroke-width="3" transform="rotate(180 80 80)"></ellipse>
+            <ellipse cx="80" cy="40" rx="23" ry="30" fill="url(#g)" stroke="#fff" stroke-width="3" transform="rotate(240 80 80)"></ellipse>
+            <ellipse cx="80" cy="40" rx="23" ry="30" fill="url(#g)" stroke="#fff" stroke-width="3" transform="rotate(300 80 80)"></ellipse>
+            <circle cx="80" cy="80" r="31" fill="#fff9fd" stroke="#fff" stroke-width="3"></circle>
+            <circle cx="70" cy="76" r="3.4" fill="#39332f"></circle><circle cx="90" cy="76" r="3.4" fill="#39332f"></circle>
+            <path d="M70 88 Q80 96 90 88" fill="none" stroke="#39332f" stroke-width="3" stroke-linecap="round"></path>
+            <ellipse cx="63" cy="86" rx="6" ry="3" fill="#ffafc4" opacity=".55"></ellipse><ellipse cx="97" cy="86" rx="6" ry="3" fill="#ffafc4" opacity=".55"></ellipse>
+          </g>
+        </svg>
       </div>
-      <span class="ghost" aria-hidden="true">404</span>
     </main>
     <footer>
       <span>© 2026 钟菲 / CONTENT OPERATIONS</span>
-      <span>页面走丢了，机会没有。<a href="mailto:Aria.zhong@outlook.com"> Aria.zhong@outlook.com</a></span>
-      <span><b>HANGZHOU · CN</b></span>
+      <span>杭州 · 中国 <b>HANGZHOU / CN</b></span>
     </footer>
   </div>
 </body>
@@ -1455,7 +1741,7 @@ def operations_overview_page():
 
 
 def write_site():
-    (ROOT / "index.html").write_text(index_page(), encoding="utf-8")
+    (ROOT / "index.html").write_text(new_index_page(), encoding="utf-8")
     full_ops = operations_page()
     (ROOT / "case-geo.html").write_text(case_page("geo", full_ops), encoding="utf-8")
     (ROOT / "case-selfie.html").write_text(case_page("selfie", full_ops), encoding="utf-8")

@@ -3,59 +3,110 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#151410">
+  <meta name="theme-color" content="#fbf8f4">
   <title>页面不存在｜钟菲作品集</title>
   <meta name="description" content="这个页面不存在。回到钟菲的作品集首页，浏览内容运营、GEO 与设计作品。">
   <meta name="robots" content="noindex">
   <link rel="canonical" href="https://feizhong278-ui.github.io/personal-web/404.html">
-  <link rel="icon" href="https://feizhong278-ui.github.io/personal-web/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="https://feizhong278-ui.github.io/personal-web/assets/favicon.png" type="image/png" sizes="64x64">
+  <link rel="apple-touch-icon" href="https://feizhong278-ui.github.io/personal-web/assets/img/apple-touch-icon.png">
   <style>
+    @font-face { font-family: "PH"; src: url("https://feizhong278-ui.github.io/personal-web/assets/fonts/alibaba-puhuiti-heavy.woff2") format("woff2"); font-weight: 700 900; font-style: normal; font-display: swap; }
     * { box-sizing: border-box; }
     html, body { margin: 0; min-height: 100%; }
-    body { color: #f3efe5; background: #151410; font-family: "SHS Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; }
+    body {
+      min-height: 100svh;
+      color: #27231f;
+      background:
+        radial-gradient(circle at 7% 4%, rgba(255, 211, 193, .88), transparent 27%),
+        radial-gradient(circle at 94% 3%, rgba(209, 241, 230, .92), transparent 31%),
+        radial-gradient(circle at 90% 72%, rgba(226, 215, 247, .7), transparent 33%),
+        linear-gradient(118deg, #fdf4ef, #fbfaf6 46%, #f6f7fb 74%, #f1faf5);
+      font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
     a { color: inherit; }
-    .wrap { display: flex; min-height: 100svh; width: min(calc(100% - 40px), 1320px); flex-direction: column; margin: auto; padding: 24px 0 22px; }
-    header { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-bottom: 18px; border-bottom: 1px solid rgba(243,239,229,.25); }
-    .brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; }
-    .mark { display: grid; width: 35px; height: 35px; place-items: center; color: #f3efe5; background: #b9361e; font-family: monospace; font-size: 10px; font-weight: 700; }
-    .brand span:last-child { font-family: "Songti SC", "STSong", serif; font-size: 16px; letter-spacing: .08em; }
-    .back { color: #d9ef63; font-family: monospace; font-size: 9px; letter-spacing: .06em; text-decoration: none; }
-    main { position: relative; display: flex; flex: 1; flex-direction: column; justify-content: center; padding: 70px 0 50px; }
-    .kicker { margin: 0 0 28px; color: #ef4a2b; font-family: monospace; font-size: 9px; letter-spacing: .12em; }
-    h1 { position: relative; z-index: 1; margin: 0; font-family: "Songti SC", "STSong", "Noto Serif CJK SC", serif; font-size: clamp(5rem, 16vw, 14rem); font-weight: 400; letter-spacing: -.08em; line-height: .84; }
-    p.copy { position: relative; z-index: 1; max-width: 430px; margin: 36px 0 0; color: #b8b1a0; font-size: 13px; line-height: 1.9; }
-    .actions { position: relative; z-index: 1; display: flex; flex-wrap: wrap; gap: 22px; align-items: center; margin-top: 34px; }
-    .btn { display: inline-flex; align-items: center; gap: 18px; padding: 11px 12px 11px 16px; border: 1px solid #f3efe5; color: #151410; background: #f3efe5; font-size: 11px; text-decoration: none; }
-    .btn b { font-family: monospace; font-size: 13px; font-weight: 400; }
-    .text { color: #f3efe5; font-size: 11px; text-decoration: none; border-bottom: 1px solid rgba(243,239,229,.45); padding-bottom: 4px; }
-    .ghost { position: absolute; right: 0; bottom: -8%; z-index: 0; color: rgba(243,239,229,.045); font-family: Georgia, serif; font-size: clamp(15rem, 40vw, 38rem); line-height: .7; letter-spacing: -.08em; pointer-events: none; }
-    footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 20px; padding-top: 17px; border-top: 1px solid rgba(243,239,229,.25); color: #b8b1a0; font-family: monospace; font-size: 7px; letter-spacing: .04em; }
+    .wrap { display: flex; width: min(calc(100% - 32px), 1220px); min-height: 100svh; flex-direction: column; margin: auto; padding: 14px 0 22px; }
+    .nav { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 8px 10px 8px 12px; border: 1px solid rgba(255,255,255,.94); border-radius: 999px; background: rgba(255,255,255,.7); box-shadow: 0 12px 36px rgba(102,79,60,.08); backdrop-filter: blur(20px); }
+    .brand { display: inline-flex; align-items: center; gap: 10px; color: #27231f; text-decoration: none; }
+    .brand img { width: 37px; height: 37px; border: 2px solid #fff; border-radius: 50%; object-fit: cover; object-position: center 23%; box-shadow: 0 4px 12px rgba(93,69,52,.14); }
+    .brand span { display: flex; flex-direction: column; font-family: "PH", sans-serif; font-size: 12px; font-weight: 900; letter-spacing: .08em; line-height: 1; }
+    .brand small { margin-top: 5px; color: #6f665d; font-family: "PingFang SC", sans-serif; font-size: 7px; font-weight: 400; letter-spacing: .04em; }
+    .back { padding: 9px 14px; border: 1px solid rgba(60,48,38,.16); border-radius: 999px; color: #27231f; background: rgba(255,255,255,.5); font-size: 10px; text-decoration: none; }
+    .back:hover { color: #fff; background: #27231f; }
+    main { display: flex; flex: 1; align-items: center; padding: 24px 0; }
+    .card { position: relative; width: 100%; overflow: hidden; padding: clamp(25px, 5.4vw, 68px); border: 1px solid rgba(255,255,255,.84); border-radius: 42px; background: rgba(255,255,255,.55); box-shadow: 0 28px 70px rgba(105,82,61,.09); backdrop-filter: blur(18px); }
+    .kicker { margin: 0 0 16px; color: #8b6047; font-family: "SFMono-Regular", Menlo, Consolas, monospace; font-size: 9px; letter-spacing: .12em; }
+    h1 { position: relative; z-index: 2; margin: 0; font-family: "PH", "PingFang SC", sans-serif; font-size: clamp(4.4rem, 11.5vw, 10.8rem); font-weight: 900; letter-spacing: -.075em; line-height: .93; }
+    .copy { position: relative; z-index: 2; max-width: 430px; margin: 26px 0 0; color: #5e554c; font-size: 12px; line-height: 1.9; }
+    .actions { position: relative; z-index: 2; display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center; margin-top: 28px; }
+    .btn { display: inline-flex; align-items: center; gap: 15px; min-height: 45px; padding: 10px 17px; border: 1px solid #27231f; border-radius: 999px; color: #fff; background: #27231f; font-size: 10px; text-decoration: none; }
+    .btn b { color: #ffd2c1; font-size: 12px; font-weight: 400; }
+    .link { padding-bottom: 3px; border-bottom: 1px solid rgba(69,56,43,.3); color: #5e554c; font-size: 10px; text-decoration: none; }
+    .link:hover { color: #a94f39; border-color: #a94f39; }
+    .note { position: relative; z-index: 2; margin: 44px 0 0; color: #6f665d; font-family: "SFMono-Regular", Menlo, Consolas, monospace; font-size: 7px; letter-spacing: .03em; }
+    .ghost { position: absolute; right: -2%; bottom: -16%; z-index: 0; color: rgba(255,255,255,.6); font-family: "PH", sans-serif; font-size: clamp(14rem, 38vw, 35rem); font-weight: 900; letter-spacing: -.1em; line-height: .7; pointer-events: none; }
+    .flower { position: absolute; top: 44px; right: 6%; z-index: 1; width: clamp(80px, 10vw, 130px); filter: drop-shadow(0 8px 12px rgba(107,90,122,.16)); transform: rotate(9deg); }
+    footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 7px 18px; padding: 15px 7px 0; border-top: 1px solid rgba(69,56,43,.14); color: #6f665d; font-family: "SFMono-Regular", Menlo, Consolas, monospace; font-size: 6px; }
     footer a { text-decoration: none; }
-    footer b { color: #d9ef63; font-weight: 400; }
-    @media (max-width: 540px) { .wrap { width: min(calc(100% - 32px), 1320px); } main { padding-top: 50px; } h1 { font-size: 5rem; } footer { flex-direction: column; } }
-  </style>
+    footer b { color: #8a5f47; font-weight: 400; }
+    @media (max-width: 600px) {
+      .wrap { width: min(calc(100% - 20px), 1220px); padding-top: 9px; }
+      .nav { padding: 6px 7px 6px 8px; }
+      .brand img { width: 34px; height: 34px; }
+      .back { padding: 8px 10px; font-size: 8px; }
+      main { padding: 15px 0; }
+      .card { padding: 24px 18px 26px; border-radius: 29px; }
+      .copy { font-size: 11px; }
+      h1 { font-size: clamp(4rem, 21vw, 6rem); }
+      .flower { top: 25px; right: 6%; width: 78px; }
+      .ghost { right: -15%; bottom: -4%; font-size: 18rem; }
+      .note { margin-top: 31px; }
+      footer { flex-direction: column; font-size: 5.5px; }
+    }
+    </style>
 </head>
 <body>
   <div class="wrap">
-    <header>
-      <a class="brand" href="https://feizhong278-ui.github.io/personal-web/" aria-label="钟菲作品集首页"><span class="mark">ZF</span><span>钟菲 / ZHONG FEI</span></a>
+    <header class="nav">
+      <a class="brand" href="https://feizhong278-ui.github.io/personal-web/" aria-label="钟菲作品集首页">
+        <img src="data:image/webp;base64,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" alt="" width="160" height="213">
+        <span>PORTFOLIO<small>钟菲 / 2027</small></span>
+      </a>
       <a class="back" href="https://feizhong278-ui.github.io/personal-web/">返回首页 ↗</a>
     </header>
     <main>
-      <p class="kicker">ERROR / 404 / PAGE NOT FOUND</p>
-      <h1>走丢了。</h1>
-      <p class="copy">这个页面不存在，或者已经被移走。但好内容和好机会，都不该在这里停下。</p>
-      <div class="actions">
-        <a class="btn" href="https://feizhong278-ui.github.io/personal-web/">回到首页 <b>↗</b></a>
-        <a class="text" href="https://feizhong278-ui.github.io/personal-web/operations.html">浏览运营案例 →</a>
-        <a class="text" href="https://feizhong278-ui.github.io/personal-web/design.html">浏览设计作品 →</a>
+      <div class="card">
+        <p class="kicker">ERROR / 404 / PAGE NOT FOUND</p>
+        <h1>走丢了。</h1>
+        <p class="copy">这个页面不存在，或者已经被移走。但好内容和好机会，都不该在这里停下。</p>
+        <div class="actions">
+          <a class="btn" href="https://feizhong278-ui.github.io/personal-web/">回到首页 <b>↗</b></a>
+          <a class="link" href="https://feizhong278-ui.github.io/personal-web/operations.html">浏览运营案例 →</a>
+          <a class="link" href="https://feizhong278-ui.github.io/personal-web/design.html">浏览设计作品 →</a>
+        </div>
+        <p class="note">页面走丢了，机会没有。 · Aria.zhong@outlook.com</p>
+        <span class="ghost" aria-hidden="true">404</span>
+        <svg class="flower" viewBox="0 0 160 160" aria-hidden="true">
+          <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d8f3ff"></stop><stop offset=".52" stop-color="#d8d1ff"></stop><stop offset="1" stop-color="#ffd8e6"></stop></linearGradient></defs>
+          <g transform="rotate(-8 80 80)">
+            <ellipse cx="80" cy="40" rx="23" ry="30" fill="url(#g)" stroke="#fff" stroke-width="3"></ellipse>
+            <ellipse cx="80" cy="40" rx="23" ry="30" fill="url(#g)" stroke="#fff" stroke-width="3" transform="rotate(60 80 80)"></ellipse>
+            <ellipse cx="80" cy="40" rx="23" ry="30" fill="url(#g)" stroke="#fff" stroke-width="3" transform="rotate(120 80 80)"></ellipse>
+            <ellipse cx="80" cy="40" rx="23" ry="30" fill="url(#g)" stroke="#fff" stroke-width="3" transform="rotate(180 80 80)"></ellipse>
+            <ellipse cx="80" cy="40" rx="23" ry="30" fill="url(#g)" stroke="#fff" stroke-width="3" transform="rotate(240 80 80)"></ellipse>
+            <ellipse cx="80" cy="40" rx="23" ry="30" fill="url(#g)" stroke="#fff" stroke-width="3" transform="rotate(300 80 80)"></ellipse>
+            <circle cx="80" cy="80" r="31" fill="#fff9fd" stroke="#fff" stroke-width="3"></circle>
+            <circle cx="70" cy="76" r="3.4" fill="#39332f"></circle><circle cx="90" cy="76" r="3.4" fill="#39332f"></circle>
+            <path d="M70 88 Q80 96 90 88" fill="none" stroke="#39332f" stroke-width="3" stroke-linecap="round"></path>
+            <ellipse cx="63" cy="86" rx="6" ry="3" fill="#ffafc4" opacity=".55"></ellipse><ellipse cx="97" cy="86" rx="6" ry="3" fill="#ffafc4" opacity=".55"></ellipse>
+          </g>
+        </svg>
       </div>
-      <span class="ghost" aria-hidden="true">404</span>
     </main>
     <footer>
       <span>© 2026 钟菲 / CONTENT OPERATIONS</span>
-      <span>页面走丢了，机会没有。<a href="mailto:Aria.zhong@outlook.com"> Aria.zhong@outlook.com</a></span>
-      <span><b>HANGZHOU · CN</b></span>
+      <span>杭州 · 中国 <b>HANGZHOU / CN</b></span>
     </footer>
   </div>
 </body>

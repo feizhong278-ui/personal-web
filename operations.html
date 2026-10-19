@@ -4,7 +4,7 @@
   <meta charset="utf-8">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f3efe5">
+  <meta name="theme-color" content="#fbf7f2">
   <meta name="author" content="钟菲">
   <title>运营案例｜钟菲 · 内容运营 / GEO</title>
   <meta name="description" content="钟菲的运营案例：GEO 内容增长、小红书 × 抖音电商内容、设计素材账号从 0 到 1。包含数据、方法与完整素材。">
@@ -22,13 +22,14 @@
   <meta name="twitter:title" content="运营案例｜钟菲 · 内容运营 / GEO">
   <meta name="twitter:description" content="钟菲的运营案例：GEO 内容增长、小红书 × 抖音电商内容、设计素材账号从 0 到 1。包含数据、方法与完整素材。">
   <meta name="twitter:image" content="https://feizhong278-ui.github.io/personal-web/assets/img/og-cover.jpg">
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon.png" type="image/png" sizes="64x64">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
-  <link rel="preload" href="assets/fonts/source-han-serif-sc-light.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/alibaba-puhuiti-heavy.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/source-han-sans-sc-regular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/css/site.css">
+  <link rel="stylesheet" href="assets/css/site.css?v=20261019c">
+  <link rel="stylesheet" href="assets/css/pastel.css?v=20261019c">
   <script>document.documentElement.classList.add('js');</script>
-  <script src="assets/js/site.js" defer></script>
+  <script src="assets/js/site.js?v=20261019c" defer></script>
 
 
 </head>
@@ -36,21 +37,22 @@
   <a class="skip-link" href="#main">跳到主要内容</a>
 
   <header class="site-header" data-header>
-    <div class="container header-inner">
+    <div class="nav-shell">
       <a class="brand" href="index.html" aria-label="钟菲作品集首页">
-        <span class="brand-mark">ZF</span>
-        <span class="brand-type"><strong>钟菲</strong><small>ZHONG FEI / PORTFOLIO</small></span>
+        <span class="brand-avatar"><img src="assets/img/portrait-160.webp" alt="" width="160" height="213" decoding="async"></span>
+        <span class="brand-word">PORTFOLIO<small>钟菲 / 2027</small></span>
       </a>
       <nav class="desktop-nav" aria-label="主导航">
-          <a href="index.html">首页</a>
-          <a href="operations.html" aria-current="page">运营案例</a>
-          <a href="design.html">设计作品</a>
-          <a href="about.html">关于我</a>
+          <a href="index.html#about" data-nav-section="about">关于我</a>
+          <a href="index.html#projects" data-nav-section="projects" class="is-active" aria-current="location">项目展示</a>
+          <a href="index.html#experience" data-nav-section="experience">工作经历</a>
+          <a href="index.html#education" data-nav-section="education">教育背景</a>
+          <a href="index.html#skills" data-nav-section="skills">技能特长</a>
+          <a href="index.html#interests" data-nav-section="interests">兴趣爱好</a>
       </nav>
       <div class="header-tools">
-        <span class="availability"><i aria-hidden="true"></i> OPEN TO WORK</span>
-        <a class="resume-link" href="assets/docs/zhongfei-resume.pdf" download>简历 <span aria-hidden="true">↓</span></a>
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" data-menu-toggle>
+        <a class="resume-link" href="assets/docs/zhongfei-resume.pdf" download>简历.pdf <span aria-hidden="true">↗</span></a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="打开菜单" data-menu-toggle>
           <span class="menu-toggle__label">菜单</span>
           <span class="menu-toggle__lines" aria-hidden="true"><i></i><i></i></span>
         </button>
@@ -59,13 +61,15 @@
     <div class="scroll-progress" data-scroll-progress aria-hidden="true"></div>
   </header>
   <div class="mobile-menu" id="mobile-menu" data-mobile-menu aria-hidden="true">
-    <div class="mobile-menu__inner">
-      <p class="mobile-menu__kicker">INDEX / 2027</p>
+    <div class="mobile-menu__sheet">
+      <div class="mobile-menu__top"><span>INDEX / 2027</span><span>HANGZHOU, CN</span></div>
       <nav class="mobile-nav" aria-label="移动端主导航">
-        <a href="index.html"><span>01</span>首页</a>
-        <a href="operations.html"><span>02</span>运营案例</a>
-        <a href="design.html"><span>03</span>设计作品</a>
-        <a href="about.html"><span>04</span>关于我</a>
+        <a href="index.html#about"><span>01</span>关于我<b>↗</b></a>
+        <a href="index.html#projects" class="is-active"><span>02</span>项目展示<b>↗</b></a>
+        <a href="index.html#experience"><span>03</span>工作经历<b>↗</b></a>
+        <a href="index.html#education"><span>04</span>教育背景<b>↗</b></a>
+        <a href="index.html#skills"><span>05</span>技能特长<b>↗</b></a>
+        <a href="index.html#interests"><span>06</span>兴趣爱好<b>↗</b></a>
       </nav>
       <div class="mobile-menu__foot">
         <a href="mailto:Aria.zhong@outlook.com">Aria.zhong@outlook.com</a>
@@ -188,24 +192,27 @@
 
   <footer class="site-footer">
     <div class="container">
-      <div class="footer-main">
-        <a class="footer-brand" href="index.html" aria-label="回到首页">
-          <span class="brand-mark">ZF</span>
-          <span>钟菲 / ZHONG FEI</span>
-        </a>
-        <p class="footer-statement">让内容被看见，<br>也让结果被验证。</p>
-        <div class="footer-links">
-          <a href="operations.html">运营案例</a>
-          <a href="design.html">设计作品</a>
-          <a href="about.html">关于我</a>
-          <a href="mailto:Aria.zhong@outlook.com">Email ↗</a>
+      <div class="footer-card">
+        <div class="footer-main">
+          <a class="footer-brand" href="index.html" aria-label="回到首页">
+            <span class="brand-avatar"><img src="assets/img/portrait-160.webp" alt="" width="160" height="213" loading="lazy" decoding="async"></span>
+            <span><strong>钟菲</strong><small>CONTENT OPERATIONS / 2027</small></span>
+          </a>
+          <p class="footer-statement">让内容被看见，<br>也让结果被验证。</p>
+          <div class="footer-links">
+            <a href="index.html#projects">项目展示</a>
+            <a href="operations.html">运营案例</a>
+            <a href="design.html">设计作品</a>
+            <a href="about.html">关于我</a>
+            <a href="mailto:Aria.zhong@outlook.com">Email ↗</a>
+          </div>
         </div>
-      </div>
-      <div class="footer-bottom">
-        <p>© <span data-year>2026</span> 钟菲. 保留所有权利。</p>
-        <p>杭州，中国 <span class="footer-time" data-local-time>14:23</span></p>
-        <p>数据来自个人工作复盘 · 截图已做必要脱敏</p>
-        <a class="back-top" href="#top">回到顶部 ↑</a>
+        <div class="footer-bottom">
+          <p>© <span data-year>2026</span> 钟菲. 保留所有权利。</p>
+          <p>杭州，中国 <span class="footer-time" data-local-time>14:23</span></p>
+          <p>数据来自个人工作复盘 · 截图已做必要脱敏</p>
+          <a class="back-top" href="#top">回到顶部 ↑</a>
+        </div>
       </div>
     </div>
   </footer>

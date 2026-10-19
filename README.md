@@ -7,7 +7,7 @@
 ## 页面结构
 
 ```text
-index.html              首页：岗位定位、关键成绩、精选案例、设计档案、方法与联系
+index.html              首页：关于我、项目展示、工作经历、教育背景、技能特长、兴趣爱好与联系
 operations.html         运营案例总览：三个案例的快速索引
 case-geo.html           GEO 内容增长完整案例
 case-selfie.html        自拍杆小圆子 / 电商内容完整案例
@@ -40,7 +40,7 @@ python3 scripts/build_site.py
 ```
 
 - `scripts/content.py`：项目文案、统计数字、图片引用与案例索引。
-- `scripts/layout.py`：共享 head、导航、页脚与 SEO。
+- `scripts/layout.py`：共享 head、浮动导航、页脚与 SEO。修改 CSS / JS 后请同步更新顶部的 `ASSET_VERSION`，避免浏览器继续使用旧缓存。
 - `scripts/build_site.py`：各页面结构与生成逻辑。
 - `scripts/resume-source.html`：两页简历的打印源文件，`assets/docs/zhongfei-resume.pdf` 由它生成。
 
@@ -54,9 +54,10 @@ python3 scripts/build_site.py
 
 ## 设计与技术说明
 
-- 字体：思源宋体 / 思源黑体（SIL Open Font License）按站内字符子集化，Instrument Serif（SIL OFL）用于拉丁文展示。
+- 视觉：柔和桃 / 薄荷 / 薰衣草渐变背景、白色玻璃卡、浮动胶囊导航与阿里巴巴普惠体展示标题；首页以「关于我 → 项目 → 经历 → 教育 → 技能 → 兴趣」组织，深层案例页保留完整内容。
+- 字体：标题使用阿里巴巴普惠体 Heavy（覆盖 700–900 字重），正文使用思源黑体；均按站内字符裁剪为 WOFF2 子集。
 - 图片：设计项目板与截图已转为 WebP；首屏只加载少量图片，其余使用懒加载，灯箱按需加载大图。
-- 交互：滚动显现、数字滚动、GEO 数据视图切换、拖拽/横向滚动画廊、键盘可用的图片灯箱与移动端菜单。
+- 交互：滚动显现、滚动章节导航、数字滚动、GEO 数据视图切换、拖拽/横向滚动画廊、键盘可用的图片灯箱、移动端浮动菜单与肖像卡微倾斜。
 - 无障碍：跳转链接、键盘焦点、语义化标签、图片替代文本、`prefers-reduced-motion` 支持。
 - 数据：所有数字来自项目复盘；页面中已注明统计口径。设计项目图片与文字版权归钟菲所有。
 
@@ -68,10 +69,7 @@ python3 scripts/build_site.py
 
 ## 字体许可
 
-本站使用并子集化以下 SIL Open Font License 1.1 字体：
+- **Alibaba PuHuiTi / 阿里巴巴普惠体**（Heavy）：由阿里巴巴集团发布，免费使用；来源与许可见 [`assets/fonts/ALIBABA-PUHUITI-NOTICE.md`](assets/fonts/ALIBABA-PUHUITI-NOTICE.md)。
+- **Source Han Sans / 思源黑体**（Regular）：SIL Open Font License 1.1，Copyright 2014-2025 Adobe；完整许可见 [`assets/fonts/OFL.txt`](assets/fonts/OFL.txt)。
 
-- Source Han Sans / 思源黑体，Copyright 2014-2025 Adobe。
-- Source Han Serif / 思源宋体，Copyright 2014-2021 Adobe。
-- Instrument Serif，Copyright 2022 The Instrument Serif Project Authors。
-
-完整许可见 [`assets/fonts/OFL.txt`](assets/fonts/OFL.txt)。字体已按站内字符裁剪为 WOFF2 子集，若新增大量中文内容，建议重新生成子集或回退到系统字体。
+字体已按站内字符裁剪为 WOFF2 子集。若新增大量中文内容，建议重新生成子集或回退到系统字体。
