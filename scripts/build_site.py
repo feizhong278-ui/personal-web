@@ -106,6 +106,9 @@ HOME_EDUCATION = [
         "degree": "设计学 · 硕士（全日制）",
         "gpa": "GPA 3.93 / 4.0 · 专业前 3%",
         "desc": "从视觉传达走到设计学，继续研究文化、视觉与内容之间的关系。",
+        "image": "assets/img/education/cjlu-campus-stone.webp",
+        "image_alt": "中国计量大学校园",
+        "image_h": 581,
         "tags": ["ICCC 全国二等奖", "两岸青年非遗一等奖", "优秀班干部"],
     },
     {
@@ -117,6 +120,9 @@ HOME_EDUCATION = [
         "degree": "视觉传达 · 本科（全日制）",
         "gpa": "GPA 3.9 / 4.0 · 专业前 3%",
         "desc": "设计训练、摄影与校园媒体实践，让我开始习惯观察和记录。",
+        "image": "assets/img/education/cjlu-campus-lake.webp",
+        "image_alt": "中国计量大学校园",
+        "image_h": 576,
         "tags": ["澳门文创全国一等奖", "互联网+ 铜奖", "摄影社社长"],
     },
 ]
@@ -332,15 +338,7 @@ HOME_HONORS = [
         "slug": "badminton-2024-runner-up",
         "tag": "校园",
     },
-    {
-        "rank": 16,
-        "title": "阿里云「云工开物」高校训练营",
-        "award": "结营证书",
-        "year": "2024",
-        "work": "AIGC 实践",
-        "slug": "alibaba-2024-camp",
-        "tag": "训练营",
-    },
+
 ]
 
 P_STICKER = '''
@@ -491,7 +489,8 @@ def new_index_page():
         school_cards += f'''
         <article class="p-school p-school--{item['tone']}">
           <div class="p-school__art">
-            <span class="p-school__watermark">CJLU</span>
+            <img class="p-school__art-img" src="{item['image']}" alt="{item['image_alt']}" width="1200" height="{item['image_h']}" loading="lazy" decoding="async">
+            <span class="p-school__shade" aria-hidden="true"></span>
             <span class="p-school__badge">{item['badge']}</span>
             <span class="p-school__label">{item['label']}</span>
             <span class="p-school__emoji" aria-hidden="true">🎓</span>
@@ -506,29 +505,9 @@ def new_index_page():
           </div>
         </article>'''
 
-    honor_items = ""
-    for item in HOME_HONORS:
-        rank = item["rank"]
-        if item.get("slug"):
-            slug = item["slug"]
-            thumb_key = f"assets/img/honors/{slug}-thumb.webp"
-            thumb_meta = MANIFEST.get(thumb_key, {"w": 113, "h": 160})
-            thumb = f'<img src="{thumb_key}" alt="" width="{thumb_meta["w"]}" height="{thumb_meta["h"]}" loading="lazy" decoding="async">'
-            inner = f'''<span class="p-honor__rank">{rank:02d}</span><span class="p-honor__thumb">{thumb}</span><span class="p-honor__copy"><strong>{item["title"]}</strong><small>{item["award"]} · {item["year"]}</small>{f'<span class="p-honor__tag">{item["tag"]}</span>' if item.get("tag") else ""}</span>'''
-            honor_items += lightbox_button(
-                inner,
-                "honor-certificates",
-                f"assets/img/honors/{slug}-full.webp",
-                f"{item['title']} / {item['award']}（{item['work']}）",
-                f"{item['title']}{item['award']}证书" if not item['award'].endswith("证书") else f"{item['title']}{item['award']}",
-                cls="p-honor",
-            )
-        else:
-            honor_items += f'''<div class="p-honor p-honor--static">
-              <span class="p-honor__rank">{rank:02d}</span>
-              <span class="p-honor__thumb p-honor__thumb--empty" aria-hidden="true"><span>AWARD</span></span>
-              <span class="p-honor__copy"><strong>{item["title"]}</strong><small>{item["award"]} · {item["year"]}</small></span>
-            </div>'''
+    honor_chips = "".join(
+        f'<span class="p-award">{item["title"]} · {item["award"]}</span>' for item in HOME_HONORS
+    )
 
     experience_cards = ""
     for item in HOME_EXPERIENCE:
@@ -586,7 +565,7 @@ def new_index_page():
             <span class="p-chip">GEO 内容</span><span class="p-chip">小红书 / 抖音</span><span class="p-chip">电商运营</span><span class="p-chip">数据分析</span><span class="p-chip">视觉表达</span>
           </div>
           <div class="p-hero__actions">
-            <a class="p-btn p-btn--dark" href="assets/docs/zhongfei-resume.pdf?v=20261021d" download>下载简历 <span>↗</span></a>
+            <a class="p-btn p-btn--dark" href="assets/docs/zhongfei-resume.pdf?v=20261021e" download>下载简历 <span>↗</span></a>
             <a class="p-btn p-btn--ghost" href="#contact">联系我 <span>↓</span></a>
           </div>
         </div>
@@ -657,7 +636,7 @@ def new_index_page():
           <p>从 AI 搜索到电商内容。两段实习经历，都同时包含策略、执行与复盘。</p>
         </div>
         <div class="p-timeline">{experience_cards}</div>
-        <div class="p-center-link"><a class="p-inline-link" href="assets/docs/zhongfei-resume.pdf?v=20261021d" download>下载完整简历 PDF <span>↓</span></a></div>
+        <div class="p-center-link"><a class="p-inline-link" href="assets/docs/zhongfei-resume.pdf?v=20261021e" download>下载完整简历 PDF <span>↓</span></a></div>
       </div>
     </section>
 
@@ -673,11 +652,8 @@ def new_index_page():
           <span class="p-school-path" aria-hidden="true">成长路径 →</span>
         </div>
         <div class="p-awards-card">
-          <div class="p-awards-head">
-            <div><p class="p-kicker">HONORS / 荣誉</p><h3>一些被看见的时刻</h3></div>
-            <p>16 份荣誉与证书 · 按重要程度排序 · 点击证书查看大图</p>
-          </div>
-          <div class="p-honors-grid">{honor_items}</div>
+          <div><p class="p-kicker">HONORS / 荣誉</p><h3>一些被看见的时刻</h3></div>
+          <div class="p-awards">{honor_chips}</div>
         </div>
       </div>
     </section>
@@ -719,7 +695,7 @@ def new_index_page():
           <div class="p-contact-actions">
             <a class="p-btn p-btn--dark" href="mailto:Aria.zhong@outlook.com">Aria.zhong@outlook.com <span>↗</span></a>
             <button class="p-btn p-btn--ghost" type="button" data-copy-email="Aria.zhong@outlook.com"><span class="email-copy__action">复制邮箱</span></button>
-            <a class="p-inline-link" href="assets/docs/zhongfei-resume.pdf?v=20261021d" download>下载简历 PDF <span>↓</span></a>
+            <a class="p-inline-link" href="assets/docs/zhongfei-resume.pdf?v=20261021e" download>下载简历 PDF <span>↓</span></a>
           </div>
           <div class="p-contact-meta"><span><i></i> OPEN TO WORK</span><span>HANGZHOU / CN</span><span>2027</span></div>
         </div>
@@ -1451,7 +1427,7 @@ def about_page():
           <p class="about-hero-page__lead">我是钟菲，设计学硕士，2027 届。正在寻找内容运营、GEO 内容运营与 AI 内容运营的机会。</p>
           <div class="about-hero-page__actions">
             {cta_link('mailto:Aria.zhong@outlook.com', '发一封邮件', 'btn btn--dark', '↗')}
-            <a class="text-link" href="assets/docs/zhongfei-resume.pdf?v=20261021d" download>下载简历 PDF <span>↓</span></a>
+            <a class="text-link" href="assets/docs/zhongfei-resume.pdf?v=20261021e" download>下载简历 PDF <span>↓</span></a>
           </div>
           <div class="about-now">
             <p class="micro-label">NOW / 现在</p>
@@ -1538,7 +1514,7 @@ def about_page():
           <div class="contact__actions">
             <button class="email-copy" type="button" data-copy-email="Aria.zhong@outlook.com"><span>Aria.zhong@outlook.com</span><span class="email-copy__action">复制邮箱</span></button>
             <a class="contact__mailto" href="mailto:Aria.zhong@outlook.com">或直接写信 ↗</a>
-            <a class="contact__resume" href="assets/docs/zhongfei-resume.pdf?v=20261021d" download>下载简历 PDF <span>↓</span></a>
+            <a class="contact__resume" href="assets/docs/zhongfei-resume.pdf?v=20261021e" download>下载简历 PDF <span>↓</span></a>
           </div>
         </div>
         <div class="contact__stamp" aria-hidden="true"><span>AVAILABLE FOR WORK</span><b>2027</b><span>HANGZHOU · CN</span></div>
