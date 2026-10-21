@@ -42,7 +42,7 @@ python3 scripts/build_site.py
 - `scripts/content.py`：项目文案、统计数字、图片引用与案例索引。
 - `scripts/layout.py`：共享 head、浮动导航、页脚与 SEO。修改 CSS / JS 后请同步更新顶部的 `ASSET_VERSION`，避免浏览器继续使用旧缓存。
 - `scripts/build_site.py`：各页面结构与生成逻辑。
-- `scripts/resume-source.html`：两页简历的打印源文件，`assets/docs/zhongfei-resume.pdf` 由它生成。
+- `scripts/resume-source.html`：旧版两页简历的打印源文件；当前对外下载 PDF 以 `assets/docs/zhongfei-resume.pdf` 为准。
 
 图片位于 `assets/img/`，尺寸记录在 `assets/img-manifest.json`。新增图片后，需要同步更新 manifest 与对应的内容引用。
 
