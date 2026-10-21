@@ -385,7 +385,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
   letter-spacing: 0.09em;
 }
 .hello-pill i { width: 7px; height: 7px; border-radius: 50%; background: #78c99b; box-shadow: 0 0 0 4px rgba(120, 201, 155, 0.15); }
-.p-hero__title-wrap { position: relative; width: max-content; max-width: 100%; }
+.p-hero__title-wrap { position: relative; width: max-content; max-width: 100%; margin-bottom: 30px; }
 .p-hero h1 {
   margin: 0;
   color: var(--p-ink);
@@ -849,7 +849,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
   .p-hero { padding: 98px 0 20px; }
   .p-hero__grid { gap: 29px; }
   .p-hero h1 { font-size: clamp(3.4rem, 16.5vw, 5.3rem); line-height: 0.98; }
-  .p-hero__title-wrap { max-width: calc(100% - 32px); }
+  .p-hero__title-wrap { max-width: calc(100% - 32px); margin-bottom: 22px; }
   .p-sticker { top: -24px; right: -19px; width: 103px; height: 103px; }
   .hello-pill { margin-bottom: 18px; padding: 6px 10px; font-size: 7.5px; }
   .p-hero__role { margin: 18px 0 18px; font-size: 1rem; }
