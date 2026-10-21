@@ -385,7 +385,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
   letter-spacing: 0.09em;
 }
 .hello-pill i { width: 7px; height: 7px; border-radius: 50%; background: #78c99b; box-shadow: 0 0 0 4px rgba(120, 201, 155, 0.15); }
-.p-hero__title-wrap { position: relative; width: max-content; max-width: 100%; margin-bottom: 30px; }
+.p-hero__title-wrap { position: relative; width: max-content; max-width: 100%; margin-bottom: 52px; }
 .p-hero h1 {
   margin: 0;
   color: var(--p-ink);
@@ -429,8 +429,8 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
 }
 .p-philosophy {
   max-width: 430px;
-  margin-bottom: 22px;
-  padding: 18px 21px;
+  margin-bottom: 28px;
+  padding: 20px 23px;
   border: 1px solid rgba(255, 255, 255, 0.9);
   border-radius: 23px;
   background: rgba(255, 255, 255, 0.62);
@@ -439,8 +439,8 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
 }
 .p-philosophy > span { display: block; margin-bottom: 9px; color: var(--p-brown); font-family: var(--mono); font-size: 8px; letter-spacing: 0.1em; }
 .p-philosophy p { margin: 0; color: var(--p-ink); font-family: var(--display); font-size: clamp(1.05rem, 1.6vw, 1.28rem); font-weight: 700; letter-spacing: -0.035em; line-height: 1.45; }
-.p-hero__bio { max-width: 500px; margin: 0 0 20px; color: var(--p-muted); font-size: 13px; line-height: 1.9; }
-.p-hero__actions { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 26px; }
+.p-hero__bio { max-width: 520px; margin: 0 0 24px; color: var(--p-muted); font-size: 13px; line-height: 1.95; }
+.p-hero__actions { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 32px; }
 .p-hero__visual { position: relative; width: min(100%, 460px); justify-self: end; padding: 17px 9px 20px; }
 .p-hero__halo {
   position: absolute;
@@ -849,15 +849,15 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
   .p-hero { padding: 98px 0 20px; }
   .p-hero__grid { gap: 29px; }
   .p-hero h1 { font-size: clamp(3.4rem, 16.5vw, 5.3rem); line-height: 0.98; }
-  .p-hero__title-wrap { max-width: calc(100% - 32px); margin-bottom: 22px; }
+  .p-hero__title-wrap { max-width: calc(100% - 32px); margin-bottom: 34px; }
   .p-sticker { top: -24px; right: -19px; width: 103px; height: 103px; }
   .hello-pill { margin-bottom: 18px; padding: 6px 10px; font-size: 7.5px; }
   .p-hero__role { margin: 18px 0 18px; font-size: 1rem; }
-  .p-philosophy { padding: 15px 17px; border-radius: 19px; }
+  .p-philosophy { padding: 16px 18px; border-radius: 19px; margin-bottom: 24px; }
   .p-philosophy p { font-size: 1rem; }
-  .p-hero__bio { font-size: 12px; line-height: 1.8; }
+  .p-hero__bio { font-size: 12px; line-height: 1.9; margin-bottom: 22px; }
   .p-chip { min-height: 25px; padding: 4px 9px; font-size: 9px; }
-  .p-hero__actions { gap: 8px; margin-top: 20px; }
+  .p-hero__actions { gap: 8px; margin-top: 26px; }
   .p-hero__actions .p-btn { min-height: 43px; padding: 10px 15px; font-size: 10px; }
   .p-hero__visual { width: min(100%, 350px); }
   .p-portrait { border-radius: 29px; padding: 7px 7px 9px; }
