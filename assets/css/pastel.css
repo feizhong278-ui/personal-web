@@ -757,8 +757,8 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
 
 /* ---------- footer ---------- */
 .site-footer { padding: 14px 0 25px; color: var(--p-ink); background: transparent; }
-.footer-card { padding: 25px 27px 16px; border: 1px solid rgba(255, 255, 255, 0.8); border-radius: 30px; background: rgba(255, 255, 255, 0.5); backdrop-filter: blur(13px); }
-.footer-main { display: grid; grid-template-columns: 0.9fr 1.25fr 0.85fr; gap: 30px; align-items: start; padding-bottom: 29px; }
+.footer-card { padding: 26px 27px 24px; border: 1px solid rgba(255, 255, 255, 0.8); border-radius: 30px; background: rgba(255, 255, 255, 0.5); backdrop-filter: blur(13px); }
+.footer-main { display: grid; grid-template-columns: 0.9fr 1.25fr 0.85fr; gap: 30px; align-items: start; }
 .footer-brand { display: inline-flex; align-items: center; gap: 9px; color: var(--p-ink); text-decoration: none; }
 .footer-brand .brand-avatar { width: 34px; height: 34px; }
 .footer-brand > span:last-child { display: flex; flex-direction: column; }
@@ -768,11 +768,6 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
 .footer-links { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 7px 16px; align-content: start; }
 .footer-links a { color: var(--p-muted); font-size: 9px; text-decoration: none; transition: color 0.2s; }
 .footer-links a:hover { color: var(--p-coral-deep); }
-.footer-bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 7px 20px; padding-top: 13px; border-top: 1px solid rgba(69, 56, 43, 0.1); color: var(--p-muted); font-family: var(--mono); font-size: 6px; letter-spacing: 0.015em; }
-.footer-bottom p { margin: 0; }
-.footer-time { color: var(--p-coral-deep); }
-.back-top { color: var(--p-muted); text-decoration: none; }
-.back-top:hover { color: var(--p-coral-deep); }
 
 /* ---------- home animations ---------- */
 @keyframes p-float { 0%, 100% { transform: translateY(0) rotate(11deg); } 50% { transform: translateY(-8px) rotate(7deg); } }
@@ -951,8 +946,8 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
   .p-contact-actions .p-inline-link { margin: 3px 0 0 2px; }
   .p-contact-meta { gap: 7px 13px; margin-top: 28px; font-size: 6px; }
   .p-contact-sticker { top: 20px; right: 5%; font-size: 6.5rem; }
-  .footer-card { padding: 19px 16px 14px; border-radius: 23px; }
-  .footer-main { grid-template-columns: 1fr; gap: 17px; padding-bottom: 20px; }
+  .footer-card { padding: 19px 16px 18px; border-radius: 23px; }
+  .footer-main { grid-template-columns: 1fr; gap: 17px; }
   .footer-statement { font-size: 1.45rem; }
   .footer-links { justify-content: flex-start; gap: 6px 13px; }
   .footer-links a { font-size: 8px; }
