@@ -1736,5 +1736,155 @@
     "w": 1600,
     "h": 814,
     "bytes": 186186
+  },
+  "assets/img/honors/alibaba-2024-camp-full.webp": {
+    "w": 960,
+    "h": 1228,
+    "bytes": 56212
+  },
+  "assets/img/honors/alibaba-2024-camp-thumb.webp": {
+    "w": 125,
+    "h": 160,
+    "bytes": 2540
+  },
+  "assets/img/honors/canal-2025-finalist-full.webp": {
+    "w": 1015,
+    "h": 1500,
+    "bytes": 93836
+  },
+  "assets/img/honors/canal-2025-finalist-thumb.webp": {
+    "w": 108,
+    "h": 160,
+    "bytes": 2376
+  },
+  "assets/img/honors/cross-strait-2024-first-full.webp": {
+    "w": 1061,
+    "h": 1500,
+    "bytes": 90930
+  },
+  "assets/img/honors/cross-strait-2024-first-thumb.webp": {
+    "w": 113,
+    "h": 160,
+    "bytes": 2132
+  },
+  "assets/img/honors/cross-strait-2024-second-full.webp": {
+    "w": 1061,
+    "h": 1500,
+    "bytes": 90560
+  },
+  "assets/img/honors/cross-strait-2024-second-thumb.webp": {
+    "w": 113,
+    "h": 160,
+    "bytes": 2130
+  },
+  "assets/img/honors/cross-strait-2025-merit-full.webp": {
+    "w": 1061,
+    "h": 1500,
+    "bytes": 77196
+  },
+  "assets/img/honors/cross-strait-2025-merit-thumb.webp": {
+    "w": 113,
+    "h": 160,
+    "bytes": 2062
+  },
+  "assets/img/honors/expo-2024-national-third-full.webp": {
+    "w": 1500,
+    "h": 1061,
+    "bytes": 444438
+  },
+  "assets/img/honors/expo-2024-national-third-thumb.webp": {
+    "w": 160,
+    "h": 113,
+    "bytes": 3130
+  },
+  "assets/img/honors/expo-2024-provincial-first-full.webp": {
+    "w": 1500,
+    "h": 1061,
+    "bytes": 450110
+  },
+  "assets/img/honors/expo-2024-provincial-first-thumb.webp": {
+    "w": 160,
+    "h": 113,
+    "bytes": 3110
+  },
+  "assets/img/honors/iccc-2024-second-full.webp": {
+    "w": 1061,
+    "h": 1500,
+    "bytes": 81916
+  },
+  "assets/img/honors/iccc-2024-second-thumb.webp": {
+    "w": 113,
+    "h": 160,
+    "bytes": 1988
+  },
+  "assets/img/honors/igc-2024-silver-full.webp": {
+    "w": 1042,
+    "h": 1500,
+    "bytes": 76560
+  },
+  "assets/img/honors/igc-2024-silver-thumb.webp": {
+    "w": 111,
+    "h": 160,
+    "bytes": 2618
+  },
+  "assets/img/honors/internet-plus-2022-bronze-full.webp": {
+    "w": 1500,
+    "h": 1091,
+    "bytes": 158596
+  },
+  "assets/img/honors/internet-plus-2022-bronze-thumb.webp": {
+    "w": 160,
+    "h": 116,
+    "bytes": 3818
+  },
+  "assets/img/honors/macau-2024-first-full.webp": {
+    "w": 1061,
+    "h": 1500,
+    "bytes": 125120
+  },
+  "assets/img/honors/macau-2024-first-thumb.webp": {
+    "w": 113,
+    "h": 160,
+    "bytes": 2594
+  },
+  "assets/img/honors/macau-2024-second-full.webp": {
+    "w": 1061,
+    "h": 1500,
+    "bytes": 125190
+  },
+  "assets/img/honors/macau-2024-second-thumb.webp": {
+    "w": 113,
+    "h": 160,
+    "bytes": 2608
+  },
+  "assets/img/honors/macau-2025-third-full.webp": {
+    "w": 1061,
+    "h": 1500,
+    "bytes": 129674
+  },
+  "assets/img/honors/macau-2025-third-thumb.webp": {
+    "w": 113,
+    "h": 160,
+    "bytes": 3884
+  },
+  "assets/img/honors/milan-2025-third-full.webp": {
+    "w": 1071,
+    "h": 1500,
+    "bytes": 202230
+  },
+  "assets/img/honors/milan-2025-third-thumb.webp": {
+    "w": 114,
+    "h": 160,
+    "bytes": 2226
+  },
+  "assets/img/honors/badminton-2024-runner-up-full.webp": {
+    "w": 1500,
+    "h": 1080,
+    "bytes": 139614
+  },
+  "assets/img/honors/badminton-2024-runner-up-thumb.webp": {
+    "w": 160,
+    "h": 115,
+    "bytes": 3054
   }
 }

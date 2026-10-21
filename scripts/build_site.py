@@ -210,14 +210,137 @@ HOME_INTERESTS = [
     },
 ]
 
-HOME_AWARDS = [
-    ("🏅", "美丽中国创新设计大赛 · 全国二等奖"),
-    ("🥉", "全国会展策划创意大赛 · 全国三等奖"),
-    ("🥇", "浙江省会展策划创意大赛 · 一等奖"),
-    ("🎨", "ICCC 国际学生设计大赛 · 全国二等奖"),
-    ("🧵", "两岸青年非遗文创 · 一等奖"),
-    ("🏛️", "澳门文创设计大赛 · 全国一等奖"),
-    ("💡", "浙江省「互联网+」· 铜奖"),
+HOME_HONORS = [
+    {
+        "rank": 1,
+        "title": "澳门文创设计大赛",
+        "award": "全国一等奖",
+        "year": "2024",
+        "work": "灵隐万象集",
+        "slug": "macau-2024-first",
+    },
+    {
+        "rank": 2,
+        "title": "国文奖 · 两岸青年非遗文创大赛",
+        "award": "一等奖",
+        "year": "2024",
+        "work": "灵隐万象集",
+        "slug": "cross-strait-2024-first",
+    },
+    {
+        "rank": 3,
+        "title": "第三届中国研究生「美丽中国」创新设计大赛",
+        "award": "全国二等奖",
+        "year": "2025",
+        "work": "哈尔滨夏日文化使者",
+        "slug": None,
+    },
+    {
+        "rank": 4,
+        "title": "ICCC 国际学生设计大赛",
+        "award": "二等奖",
+        "year": "2024",
+        "work": "仙灵所隐",
+        "slug": "iccc-2024-second",
+    },
+    {
+        "rank": 5,
+        "title": "国际金创意华人设计奖",
+        "award": "银华奖",
+        "year": "2024",
+        "work": "舞动中华情",
+        "slug": "igc-2024-silver",
+    },
+    {
+        "rank": 6,
+        "title": "澳门文创设计大赛",
+        "award": "全国二等奖",
+        "year": "2024",
+        "work": "舞动中华情",
+        "slug": "macau-2024-second",
+    },
+    {
+        "rank": 7,
+        "title": "全国会展策划创意大赛",
+        "award": "全国三等奖",
+        "year": "2024",
+        "work": "根宫佛国「无念熊」",
+        "slug": "expo-2024-national-third",
+    },
+    {
+        "rank": 8,
+        "title": "澳门文创设计大赛",
+        "award": "全国三等奖",
+        "year": "2025",
+        "work": "三晋之旅",
+        "slug": "macau-2025-third",
+    },
+    {
+        "rank": 9,
+        "title": "国文奖 · 两岸青年非遗文创大赛",
+        "award": "二等奖",
+        "year": "2024",
+        "work": "舞动中华情",
+        "slug": "cross-strait-2024-second",
+    },
+    {
+        "rank": 10,
+        "title": "国文奖 · 两岸青年非遗文创大赛",
+        "award": "优秀奖",
+        "year": "2025",
+        "work": "出发！台州非遗之旅",
+        "slug": "cross-strait-2025-merit",
+    },
+    {
+        "rank": 11,
+        "title": "浙江省会展策划创意大赛",
+        "award": "一等奖",
+        "year": "2024",
+        "work": "根宫佛国「无念熊」",
+        "slug": "expo-2024-provincial-first",
+    },
+    {
+        "rank": 12,
+        "title": "浙江省国际「互联网+」大学生创新创业大赛",
+        "award": "铜奖",
+        "year": "2022",
+        "work": "慧知",
+        "slug": "internet-plus-2022-bronze",
+    },
+    {
+        "rank": 13,
+        "title": "米兰设计周中国高校设计学科师生优秀作品展",
+        "award": "浙江赛区三等奖",
+        "year": "2025",
+        "work": "赶海去！",
+        "slug": "milan-2025-third",
+    },
+    {
+        "rank": 14,
+        "title": "大运河文化转化设计大赛",
+        "award": "入围奖",
+        "year": "2025",
+        "work": "专业组",
+        "slug": "canal-2025-finalist",
+    },
+    {
+        "rank": 15,
+        "title": "中国计量大学研究生校区联动羽毛球友谊赛",
+        "award": "亚军",
+        "year": "2024",
+        "work": "团体赛",
+        "slug": "badminton-2024-runner-up",
+        "tag": "校园",
+    },
+    {
+        "rank": 16,
+        "title": "阿里云「云工开物」高校训练营",
+        "award": "结营证书",
+        "year": "2024",
+        "work": "AIGC 实践",
+        "slug": "alibaba-2024-camp",
+        "tag": "训练营",
+    },
 ]
 
 P_STICKER = '''
@@ -383,7 +506,29 @@ def new_index_page():
           </div>
         </article>'''
 
-    award_chips = "".join(f'<span class="p-award"><i>{icon}</i>{label}</span>' for icon, label in HOME_AWARDS)
+    honor_items = ""
+    for item in HOME_HONORS:
+        rank = item["rank"]
+        if item.get("slug"):
+            slug = item["slug"]
+            thumb_key = f"assets/img/honors/{slug}-thumb.webp"
+            thumb_meta = MANIFEST.get(thumb_key, {"w": 113, "h": 160})
+            thumb = f'<img src="{thumb_key}" alt="" width="{thumb_meta["w"]}" height="{thumb_meta["h"]}" loading="lazy" decoding="async">'
+            inner = f'''<span class="p-honor__rank">{rank:02d}</span><span class="p-honor__thumb">{thumb}</span><span class="p-honor__copy"><strong>{item["title"]}</strong><small>{item["award"]} · {item["year"]}</small>{f'<span class="p-honor__tag">{item["tag"]}</span>' if item.get("tag") else ""}</span>'''
+            honor_items += lightbox_button(
+                inner,
+                "honor-certificates",
+                f"assets/img/honors/{slug}-full.webp",
+                f"{item['title']} / {item['award']}（{item['work']}）",
+                f"{item['title']}{item['award']}证书" if not item['award'].endswith("证书") else f"{item['title']}{item['award']}",
+                cls="p-honor",
+            )
+        else:
+            honor_items += f'''<div class="p-honor p-honor--static">
+              <span class="p-honor__rank">{rank:02d}</span>
+              <span class="p-honor__thumb p-honor__thumb--empty" aria-hidden="true"><span>AWARD</span></span>
+              <span class="p-honor__copy"><strong>{item["title"]}</strong><small>{item["award"]} · {item["year"]}</small></span>
+            </div>'''
 
     experience_cards = ""
     for item in HOME_EXPERIENCE:
@@ -441,7 +586,7 @@ def new_index_page():
             <span class="p-chip">GEO 内容</span><span class="p-chip">小红书 / 抖音</span><span class="p-chip">电商运营</span><span class="p-chip">数据分析</span><span class="p-chip">视觉表达</span>
           </div>
           <div class="p-hero__actions">
-            <a class="p-btn p-btn--dark" href="assets/docs/zhongfei-resume.pdf?v=20261021" download>下载简历 <span>↗</span></a>
+            <a class="p-btn p-btn--dark" href="assets/docs/zhongfei-resume.pdf?v=20261021d" download>下载简历 <span>↗</span></a>
             <a class="p-btn p-btn--ghost" href="#contact">联系我 <span>↓</span></a>
           </div>
         </div>
@@ -512,7 +657,7 @@ def new_index_page():
           <p>从 AI 搜索到电商内容。两段实习经历，都同时包含策略、执行与复盘。</p>
         </div>
         <div class="p-timeline">{experience_cards}</div>
-        <div class="p-center-link"><a class="p-inline-link" href="assets/docs/zhongfei-resume.pdf?v=20261021" download>下载完整简历 PDF <span>↓</span></a></div>
+        <div class="p-center-link"><a class="p-inline-link" href="assets/docs/zhongfei-resume.pdf?v=20261021d" download>下载完整简历 PDF <span>↓</span></a></div>
       </div>
     </section>
 
@@ -528,8 +673,11 @@ def new_index_page():
           <span class="p-school-path" aria-hidden="true">成长路径 →</span>
         </div>
         <div class="p-awards-card">
-          <div><p class="p-kicker">HONORS / 荣誉</p><h3>一些被看见的时刻</h3></div>
-          <div class="p-awards">{award_chips}</div>
+          <div class="p-awards-head">
+            <div><p class="p-kicker">HONORS / 荣誉</p><h3>一些被看见的时刻</h3></div>
+            <p>16 份荣誉与证书 · 按重要程度排序 · 点击证书查看大图</p>
+          </div>
+          <div class="p-honors-grid">{honor_items}</div>
         </div>
       </div>
     </section>
@@ -571,7 +719,7 @@ def new_index_page():
           <div class="p-contact-actions">
             <a class="p-btn p-btn--dark" href="mailto:Aria.zhong@outlook.com">Aria.zhong@outlook.com <span>↗</span></a>
             <button class="p-btn p-btn--ghost" type="button" data-copy-email="Aria.zhong@outlook.com"><span class="email-copy__action">复制邮箱</span></button>
-            <a class="p-inline-link" href="assets/docs/zhongfei-resume.pdf?v=20261021" download>下载简历 PDF <span>↓</span></a>
+            <a class="p-inline-link" href="assets/docs/zhongfei-resume.pdf?v=20261021d" download>下载简历 PDF <span>↓</span></a>
           </div>
           <div class="p-contact-meta"><span><i></i> OPEN TO WORK</span><span>HANGZHOU / CN</span><span>2027</span></div>
         </div>
@@ -1303,7 +1451,7 @@ def about_page():
           <p class="about-hero-page__lead">我是钟菲，设计学硕士，2027 届。正在寻找内容运营、GEO 内容运营与 AI 内容运营的机会。</p>
           <div class="about-hero-page__actions">
             {cta_link('mailto:Aria.zhong@outlook.com', '发一封邮件', 'btn btn--dark', '↗')}
-            <a class="text-link" href="assets/docs/zhongfei-resume.pdf?v=20261021" download>下载简历 PDF <span>↓</span></a>
+            <a class="text-link" href="assets/docs/zhongfei-resume.pdf?v=20261021d" download>下载简历 PDF <span>↓</span></a>
           </div>
           <div class="about-now">
             <p class="micro-label">NOW / 现在</p>
@@ -1390,7 +1538,7 @@ def about_page():
           <div class="contact__actions">
             <button class="email-copy" type="button" data-copy-email="Aria.zhong@outlook.com"><span>Aria.zhong@outlook.com</span><span class="email-copy__action">复制邮箱</span></button>
             <a class="contact__mailto" href="mailto:Aria.zhong@outlook.com">或直接写信 ↗</a>
-            <a class="contact__resume" href="assets/docs/zhongfei-resume.pdf?v=20261021" download>下载简历 PDF <span>↓</span></a>
+            <a class="contact__resume" href="assets/docs/zhongfei-resume.pdf?v=20261021d" download>下载简历 PDF <span>↓</span></a>
           </div>
         </div>
         <div class="contact__stamp" aria-hidden="true"><span>AVAILABLE FOR WORK</span><b>2027</b><span>HANGZHOU · CN</span></div>
