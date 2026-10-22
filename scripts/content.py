@@ -5,7 +5,7 @@ SITE = {
     "name": "钟菲",
     "name_en": "ZHONG FEI",
     "url": "https://feizhong278-ui.github.io/personal-web/",
-    "email": "Aria.zhong@outlook.com",
+    "email": "zf13732218682@163.com",
     "role": "内容运营 / GEO 内容增长 / 视觉设计",
     "location": "杭州",
     "status": "2027 届 · 求职中",
