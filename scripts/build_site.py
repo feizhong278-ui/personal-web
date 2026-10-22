@@ -564,7 +564,7 @@ def new_index_page():
             <span class="p-chip">GEO 内容</span><span class="p-chip">小红书 / 抖音</span><span class="p-chip">电商内容运营</span><span class="p-chip">数据分析</span><span class="p-chip">视觉表达</span>
           </div>
           <div class="p-hero__actions">
-            <a class="p-btn p-btn--dark" href="assets/docs/zhongfei-resume.pdf?v=20261022b" download>下载简历 <span>↗</span></a>
+            <a class="p-btn p-btn--dark" href="assets/docs/zhongfei-resume.pdf?v=20261022d" download>下载简历 <span>↗</span></a>
             <a class="p-btn p-btn--ghost" href="#contact">联系我 <span>↓</span></a>
           </div>
         </div>
@@ -635,7 +635,7 @@ def new_index_page():
           <p>从 AI 搜索到电商内容。两段实习经历，都同时包含策略、执行与复盘。</p>
         </div>
         <div class="p-timeline">{experience_cards}</div>
-        <div class="p-center-link"><a class="p-inline-link" href="assets/docs/zhongfei-resume.pdf?v=20261022b" download>下载完整简历 PDF <span>↓</span></a></div>
+        <div class="p-center-link"><a class="p-inline-link" href="assets/docs/zhongfei-resume.pdf?v=20261022d" download>下载完整简历 PDF <span>↓</span></a></div>
       </div>
     </section>
 
@@ -694,7 +694,7 @@ def new_index_page():
           <div class="p-contact-actions">
             <a class="p-btn p-btn--dark" href="mailto:zf13732218682@163.com">zf13732218682@163.com <span>↗</span></a>
             <button class="p-btn p-btn--ghost" type="button" data-copy-email="zf13732218682@163.com"><span class="email-copy__action">复制邮箱</span></button>
-            <a class="p-inline-link" href="assets/docs/zhongfei-resume.pdf?v=20261022b" download>下载简历 PDF <span>↓</span></a>
+            <a class="p-inline-link" href="assets/docs/zhongfei-resume.pdf?v=20261022d" download>下载简历 PDF <span>↓</span></a>
           </div>
           <div class="p-contact-meta"><span><i></i> OPEN TO WORK</span><span>HANGZHOU / CN</span><span>2027</span></div>
         </div>
@@ -1426,7 +1426,7 @@ def about_page():
           <p class="about-hero-page__lead">我是钟菲，设计学硕士，2027 届。正在寻找内容运营、GEO 内容运营与 AI 内容运营的机会。</p>
           <div class="about-hero-page__actions">
             {cta_link('mailto:zf13732218682@163.com', '发一封邮件', 'btn btn--dark', '↗')}
-            <a class="text-link" href="assets/docs/zhongfei-resume.pdf?v=20261022b" download>下载简历 PDF <span>↓</span></a>
+            <a class="text-link" href="assets/docs/zhongfei-resume.pdf?v=20261022d" download>下载简历 PDF <span>↓</span></a>
           </div>
           <div class="about-now">
             <p class="micro-label">NOW / 现在</p>
@@ -1513,7 +1513,7 @@ def about_page():
           <div class="contact__actions">
             <button class="email-copy" type="button" data-copy-email="zf13732218682@163.com"><span>zf13732218682@163.com</span><span class="email-copy__action">复制邮箱</span></button>
             <a class="contact__mailto" href="mailto:zf13732218682@163.com">或直接写信 ↗</a>
-            <a class="contact__resume" href="assets/docs/zhongfei-resume.pdf?v=20261022b" download>下载简历 PDF <span>↓</span></a>
+            <a class="contact__resume" href="assets/docs/zhongfei-resume.pdf?v=20261022d" download>下载简历 PDF <span>↓</span></a>
           </div>
         </div>
         <div class="contact__stamp" aria-hidden="true"><span>AVAILABLE FOR WORK</span><b>2027</b><span>HANGZHOU · CN</span></div>
@@ -1555,39 +1555,39 @@ def not_found_page():
     .nav { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 8px 10px 8px 12px; border: 1px solid rgba(255,255,255,.94); border-radius: 999px; background: rgba(255,255,255,.7); box-shadow: 0 12px 36px rgba(102,79,60,.08); backdrop-filter: blur(20px); }
     .brand { display: inline-flex; align-items: center; gap: 10px; color: #27231f; text-decoration: none; }
     .brand img { width: 37px; height: 37px; border: 2px solid #fff; border-radius: 50%; object-fit: cover; object-position: center 23%; box-shadow: 0 4px 12px rgba(93,69,52,.14); }
-    .brand span { display: flex; flex-direction: column; font-family: "PH", sans-serif; font-size: 12px; font-weight: 900; letter-spacing: .08em; line-height: 1; }
-    .brand small { margin-top: 5px; color: #6f665d; font-family: "PingFang SC", sans-serif; font-size: 7px; font-weight: 400; letter-spacing: .04em; }
-    .back { padding: 9px 14px; border: 1px solid rgba(60,48,38,.16); border-radius: 999px; color: #27231f; background: rgba(255,255,255,.5); font-size: 10px; text-decoration: none; }
+    .brand span { display: flex; flex-direction: column; font-family: "PH", sans-serif; font-size: 14px; font-weight: 900; letter-spacing: .08em; line-height: 1; }
+    .brand small { margin-top: 5px; color: #5f584f; font-family: "PingFang SC", sans-serif; font-size: 9px; font-weight: 400; letter-spacing: .04em; }
+    .back { padding: 10px 16px; border: 1px solid rgba(60,48,38,.16); border-radius: 999px; color: #27231f; background: rgba(255,255,255,.5); font-size: 12px; text-decoration: none; }
     .back:hover { color: #fff; background: #27231f; }
     main { display: flex; flex: 1; align-items: center; padding: 24px 0; }
     .card { position: relative; width: 100%; overflow: hidden; padding: clamp(25px, 5.4vw, 68px); border: 1px solid rgba(255,255,255,.84); border-radius: 42px; background: rgba(255,255,255,.55); box-shadow: 0 28px 70px rgba(105,82,61,.09); backdrop-filter: blur(18px); }
-    .kicker { margin: 0 0 16px; color: #8b6047; font-family: "SFMono-Regular", Menlo, Consolas, monospace; font-size: 9px; letter-spacing: .12em; }
+    .kicker { margin: 0 0 16px; color: #7b5640; font-family: "SFMono-Regular", Menlo, Consolas, monospace; font-size: 11px; letter-spacing: .12em; }
     h1 { position: relative; z-index: 2; margin: 0; font-family: "PH", "PingFang SC", sans-serif; font-size: clamp(4.4rem, 11.5vw, 10.8rem); font-weight: 900; letter-spacing: -.075em; line-height: .93; }
-    .copy { position: relative; z-index: 2; max-width: 430px; margin: 26px 0 0; color: #5e554c; font-size: 12px; line-height: 1.9; }
+    .copy { position: relative; z-index: 2; max-width: 480px; margin: 26px 0 0; color: #3f3a34; font-size: 15px; line-height: 1.8; }
     .actions { position: relative; z-index: 2; display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center; margin-top: 28px; }
-    .btn { display: inline-flex; align-items: center; gap: 15px; min-height: 45px; padding: 10px 17px; border: 1px solid #27231f; border-radius: 999px; color: #fff; background: #27231f; font-size: 10px; text-decoration: none; }
-    .btn b { color: #ffd2c1; font-size: 12px; font-weight: 400; }
-    .link { padding-bottom: 3px; border-bottom: 1px solid rgba(69,56,43,.3); color: #5e554c; font-size: 10px; text-decoration: none; }
+    .btn { display: inline-flex; align-items: center; gap: 15px; min-height: 46px; padding: 10px 18px; border: 1px solid #27231f; border-radius: 999px; color: #fff; background: #27231f; font-size: 13px; text-decoration: none; }
+    .btn b { color: #ffd2c1; font-size: 14px; font-weight: 400; }
+    .link { padding-bottom: 3px; border-bottom: 1px solid rgba(69,56,43,.3); color: #4d463f; font-size: 12px; text-decoration: none; }
     .link:hover { color: #a94f39; border-color: #a94f39; }
-    .note { position: relative; z-index: 2; margin: 44px 0 0; color: #6f665d; font-family: "SFMono-Regular", Menlo, Consolas, monospace; font-size: 7px; letter-spacing: .03em; }
+    .note { position: relative; z-index: 2; margin: 44px 0 0; color: #5f584f; font-family: "SFMono-Regular", Menlo, Consolas, monospace; font-size: 10px; letter-spacing: .03em; }
     .ghost { position: absolute; right: -2%; bottom: -16%; z-index: 0; color: rgba(255,255,255,.6); font-family: "PH", sans-serif; font-size: clamp(14rem, 38vw, 35rem); font-weight: 900; letter-spacing: -.1em; line-height: .7; pointer-events: none; }
     .flower { position: absolute; top: 44px; right: 6%; z-index: 1; width: clamp(80px, 10vw, 130px); filter: drop-shadow(0 8px 12px rgba(107,90,122,.16)); transform: rotate(9deg); }
-    footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 7px 18px; padding: 15px 7px 0; border-top: 1px solid rgba(69,56,43,.14); color: #6f665d; font-family: "SFMono-Regular", Menlo, Consolas, monospace; font-size: 6px; }
+    footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 7px 18px; padding: 15px 7px 0; border-top: 1px solid rgba(69,56,43,.14); color: #5f584f; font-family: "SFMono-Regular", Menlo, Consolas, monospace; font-size: 9px; }
     footer a { text-decoration: none; }
     footer b { color: #8a5f47; font-weight: 400; }
     @media (max-width: 600px) {
       .wrap { width: min(calc(100% - 20px), 1220px); padding-top: 9px; }
       .nav { padding: 6px 7px 6px 8px; }
       .brand img { width: 34px; height: 34px; }
-      .back { padding: 8px 10px; font-size: 8px; }
+      .back { padding: 8px 11px; font-size: 10px; }
       main { padding: 15px 0; }
       .card { padding: 24px 18px 26px; border-radius: 29px; }
-      .copy { font-size: 11px; }
+      .copy { font-size: 14px; }
       h1 { font-size: clamp(4rem, 21vw, 6rem); }
       .flower { top: 25px; right: 6%; width: 78px; }
       .ghost { right: -15%; bottom: -4%; font-size: 18rem; }
       .note { margin-top: 31px; }
-      footer { flex-direction: column; font-size: 5.5px; }
+      footer { flex-direction: column; font-size: 8px; }
     }
     '''
     css = css.replace("__SITE__", site)
