@@ -2505,3 +2505,114 @@ h1, h2, h3, h4 { font-family: var(--display); font-weight: 700 !important; }
   .p-award { padding: 9px 0; }
   .p-awards-figure { margin-top: 18px; }
 }
+
+/* =========================================================
+   EXPERIENCE — full-width alignment and stronger hierarchy
+   ========================================================= */
+.p-exp-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.42fr);
+  gap: clamp(34px, 6vw, 92px);
+  align-items: end;
+  margin: 0 0 clamp(34px, 4.5vw, 52px);
+}
+.p-exp-head .p-kicker { margin-bottom: 14px; }
+.p-exp-head h2 {
+  margin: 0;
+  font-size: clamp(2.5rem, 3.9vw, 3.55rem);
+  letter-spacing: -0.045em;
+  line-height: 1.12;
+}
+.p-exp-head > p {
+  max-width: 44ch;
+  margin: 0 0 5px;
+  color: var(--p-muted);
+  font-size: 0.9375rem;
+  line-height: 1.75;
+}
+.p-exp-list { display: flex; flex-direction: column; gap: 16px; }
+.p-exp-card {
+  display: grid;
+  grid-template-columns: minmax(235px, 0.32fr) minmax(0, 1fr);
+  gap: clamp(28px, 5vw, 74px);
+  align-items: start;
+  padding: clamp(26px, 3.6vw, 38px);
+  border: 1px solid rgba(29, 27, 25, 0.08);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.74);
+  box-shadow: none;
+}
+.p-exp-meta { min-width: 0; }
+.p-exp-meta__top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  margin-bottom: 26px;
+}
+.p-exp-num {
+  color: var(--p-muted);
+  font-family: var(--mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.04em;
+}
+.p-exp-meta__top .p-date { margin-right: auto; color: var(--p-muted); font-size: 0.6875rem; }
+.p-exp-meta h3 {
+  margin: 0 0 11px;
+  font-size: clamp(1.75rem, 2.45vw, 2.1rem);
+  line-height: 1.2;
+}
+.p-exp-meta .p-role {
+  margin: 0 0 22px;
+  padding: 5px 9px;
+  border: 1px solid rgba(29, 27, 25, 0.08);
+  border-radius: 999px;
+  color: #6b5544;
+  background: #f4ece5;
+  font-size: 0.75rem;
+}
+.p-exp-body { min-width: 0; }
+.p-exp-impact {
+  max-width: 58ch;
+  margin: 0 0 20px;
+  color: var(--p-ink);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.65;
+}
+.p-exp-card ul { gap: 9px; margin: 0 0 22px; }
+.p-exp-card li {
+  padding-left: 14px;
+  color: var(--text-body);
+  font-size: 0.875rem;
+  line-height: 1.78;
+}
+.p-exp-card li::before {
+  top: 0.72em;
+  width: 4px;
+  height: 4px;
+  background: var(--p-brown);
+}
+.p-exp-card .p-chip-row { gap: 7px; }
+.p-exp-card .p-chip { background: rgba(255, 255, 255, 0.62); font-size: 0.6875rem; }
+
+@media (max-width: 900px) {
+  .p-exp-head { grid-template-columns: 1fr; gap: 20px; }
+  .p-exp-head > p { margin-bottom: 0; }
+  .p-exp-card { grid-template-columns: 1fr; gap: 22px; padding: 24px 20px; }
+  .p-exp-meta__top { margin-bottom: 15px; }
+  .p-exp-meta h3 { font-size: 1.65rem; }
+  .p-exp-meta .p-role { margin-bottom: 0; }
+  .p-exp-impact { font-size: 0.9375rem; }
+}
+@media (max-width: 700px) {
+  .p-exp-head h2 { font-size: clamp(2.1rem, 9vw, 2.8rem); }
+  .p-exp-card { padding: 22px 18px; }
+  .p-exp-card li { font-size: 0.8125rem; line-height: 1.75; }
+  .p-exp-card .p-chip { font-size: 0.625rem; }
+  .p-exp-impact { font-size: 0.875rem; }
+}
+
+/* Contrast-safe status badge in the experience cards. */
+.p-now-badge { color: #386149; background: #e3f2e9; }
+.p-now-badge i { background: #4f8d70; }

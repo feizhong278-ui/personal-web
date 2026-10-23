@@ -135,6 +135,7 @@ HOME_EXPERIENCE = [
         "company": "海康威视",
         "company_note": "",
         "role": "AI 搜索内容运营（GEO）",
+        "impact": "搭建 50+ 账号内容矩阵，累计 2,000+ 次 AI 召回，核心提示词覆盖 90%。",
         "now": True,
         "bullets": [
             "负责豆包、千问、DeepSeek、元宝等 AI 平台的 GEO 内容策略与执行，跟踪内容抓取、引用与推荐表现。",
@@ -151,6 +152,7 @@ HOME_EXPERIENCE = [
         "company": "杭州红商电子商务有限公司",
         "company_note": "",
         "role": "内容与店铺运营",
+        "impact": "产出 30+ 篇爆文笔记，累计成交 3 万+ 单，最高月 GMV 27.4 万。",
         "now": False,
         "bullets": [
             "独立搭建并运营小红书矩阵及抖音账号「自拍杆小圆子」，负责账号定位、选题策划、图文制作、视频拍摄剪辑与日常维护。",
@@ -459,12 +461,14 @@ def new_index_page():
         bullets = "".join(f'<li>{b}</li>' for b in item["bullets"])
         tags = _chips(item["tags"], "soft")
         experience_cards += f'''
-        <article class="p-exp-item p-exp-item--{item['tone']}">
-          <div class="p-exp-marker">{item['num']}</div>
-          <div class="p-exp-card">
-            <div class="p-exp-card__top"><span class="p-date">{item['period']}</span>{now}</div>
+        <article class="p-exp-card">
+          <div class="p-exp-meta">
+            <div class="p-exp-meta__top"><span class="p-exp-num">{item['num']}</span><span class="p-date">{item['period']}</span>{now}</div>
             <h3>{item['company']}{f' <small>{item["company_note"]}</small>' if item["company_note"] else ""}</h3>
             <p class="p-role">{item['role']}</p>
+          </div>
+          <div class="p-exp-body">
+            <p class="p-exp-impact">{item['impact']}</p>
             <ul>{bullets}</ul>
             <div class="p-chip-row">{tags}</div>
           </div>
@@ -487,7 +491,7 @@ def new_index_page():
             <span class="p-chip">GEO 内容</span><span class="p-chip">小红书 / 抖音</span><span class="p-chip">电商内容运营</span><span class="p-chip">数据分析</span><span class="p-chip">视觉表达</span>
           </div>
           <div class="p-hero__actions">
-            <a class="p-btn p-btn--dark" href="assets/docs/zhongfei-resume.pdf?v=20261023f" download>下载简历 <span>↗</span></a>
+            <a class="p-btn p-btn--dark" href="assets/docs/zhongfei-resume.pdf?v=20261023h" download>下载简历 <span>↗</span></a>
             <a class="p-btn p-btn--ghost" href="#contact">联系我 <span>↓</span></a>
           </div>
         </div>
@@ -549,13 +553,12 @@ def new_index_page():
 
     <section class="p-section p-experience" id="experience" aria-labelledby="experience-title">
       <div class="container">
-        <div class="p-section-head">
-          <p class="p-kicker">03 / THE PRACTITIONER</p>
-          <h2 id="experience-title">我在过往职场<br>做过什么。</h2>
+        <div class="p-exp-head">
+          <div><p class="p-kicker">03 / THE PRACTITIONER</p><h2 id="experience-title">我在过往职场<br>做过什么。</h2></div>
           <p>从 AI 搜索到电商内容。两段实习经历，都同时包含策略、执行与复盘。</p>
         </div>
-        <div class="p-timeline">{experience_cards}</div>
-        <div class="p-center-link"><a class="p-inline-link" href="assets/docs/zhongfei-resume.pdf?v=20261023f" download>下载完整简历 PDF <span>↓</span></a></div>
+        <div class="p-exp-list">{experience_cards}</div>
+        <div class="p-center-link"><a class="p-inline-link" href="assets/docs/zhongfei-resume.pdf?v=20261023h" download>下载完整简历 PDF <span>↓</span></a></div>
       </div>
     </section>
 
@@ -593,7 +596,7 @@ def new_index_page():
           <div class="p-contact-actions">
             <a class="p-btn p-btn--dark" href="mailto:zf13732218682@163.com">zf13732218682@163.com <span>↗</span></a>
             <button class="p-btn p-btn--ghost" type="button" data-copy-email="zf13732218682@163.com"><span class="email-copy__action">复制邮箱</span></button>
-            <a class="p-inline-link" href="assets/docs/zhongfei-resume.pdf?v=20261023f" download>下载简历 PDF <span>↓</span></a>
+            <a class="p-inline-link" href="assets/docs/zhongfei-resume.pdf?v=20261023h" download>下载简历 PDF <span>↓</span></a>
           </div>
           <div class="p-contact-meta"><span><i></i> OPEN TO WORK</span><span>HANGZHOU / CN</span><span>2027</span></div>
         </div>
@@ -1325,7 +1328,7 @@ def about_page():
           <p class="about-hero-page__lead">我是钟菲，设计学硕士，2027 届。正在寻找内容运营、GEO 内容运营与 AI 内容运营的机会。</p>
           <div class="about-hero-page__actions">
             {cta_link('mailto:zf13732218682@163.com', '发一封邮件', 'btn btn--dark', '↗')}
-            <a class="text-link" href="assets/docs/zhongfei-resume.pdf?v=20261023f" download>下载简历 PDF <span>↓</span></a>
+            <a class="text-link" href="assets/docs/zhongfei-resume.pdf?v=20261023h" download>下载简历 PDF <span>↓</span></a>
           </div>
           <div class="about-now">
             <p class="micro-label">NOW / 现在</p>
@@ -1412,7 +1415,7 @@ def about_page():
           <div class="contact__actions">
             <button class="email-copy" type="button" data-copy-email="zf13732218682@163.com"><span>zf13732218682@163.com</span><span class="email-copy__action">复制邮箱</span></button>
             <a class="contact__mailto" href="mailto:zf13732218682@163.com">或直接写信 ↗</a>
-            <a class="contact__resume" href="assets/docs/zhongfei-resume.pdf?v=20261023f" download>下载简历 PDF <span>↓</span></a>
+            <a class="contact__resume" href="assets/docs/zhongfei-resume.pdf?v=20261023h" download>下载简历 PDF <span>↓</span></a>
           </div>
         </div>
         <div class="contact__stamp" aria-hidden="true"><span>AVAILABLE FOR WORK</span><b>2027</b><span>HANGZHOU · CN</span></div>
