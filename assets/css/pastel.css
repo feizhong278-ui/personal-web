@@ -2460,3 +2460,47 @@ h1, h2, h3, h4 { font-family: var(--display); font-weight: 700 !important; }
   color: var(--p-ink);
   background: rgba(255, 255, 255, 0.86);
 }
+
+/* One certificate-wall image, award names beside it. */
+.p-awards-card {
+  grid-template-columns: minmax(300px, 0.42fr) minmax(0, 1fr);
+  gap: 36px;
+  align-items: start;
+}
+.p-awards-intro { min-width: 0; }
+.p-awards-figure {
+  margin: 22px 0 0;
+  overflow: hidden;
+  border: 1px solid rgba(29, 27, 25, 0.1);
+  border-radius: 10px;
+  background: #fff;
+}
+.p-awards-figure img { display: block; width: 100%; height: auto; }
+.p-awards { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 28px; }
+.p-award {
+  display: flex;
+  min-height: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 3px;
+  width: 100%;
+  padding: 10px 0;
+  border: 0;
+  border-bottom: 1px solid var(--p-line);
+  border-radius: 0;
+  background: transparent;
+}
+.p-award strong { color: var(--p-ink); font-size: 0.8125rem; font-weight: 600; line-height: 1.4; }
+.p-award > span { color: var(--p-brown); font-size: 0.75rem; line-height: 1.35; }
+.p-award__thumb { display: none; }
+
+@media (max-width: 900px) {
+  .p-awards-card { grid-template-columns: 1fr; gap: 26px; }
+  .p-awards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 700px) {
+  .p-awards { grid-template-columns: 1fr; gap: 0; }
+  .p-award { padding: 9px 0; }
+  .p-awards-figure { margin-top: 18px; }
+}

@@ -169,9 +169,6 @@ HOME_HONORS = [
         "year": "2024",
         "work": "灵隐万象集",
         "slug": "macau-2024-first",
-        "image": "assets/img/honors/macau-first.webp",
-        "image_w": 360,
-        "image_h": 406,
     },
     {
         "rank": 2,
@@ -180,9 +177,6 @@ HOME_HONORS = [
         "year": "2024",
         "work": "灵隐万象集",
         "slug": "cross-strait-2024-first",
-        "image": "assets/img/honors/cross-strait-first.webp",
-        "image_w": 360,
-        "image_h": 454,
     },
     {
         "rank": 3,
@@ -191,7 +185,6 @@ HOME_HONORS = [
         "year": "2025",
         "work": "哈尔滨夏日文化使者",
         "slug": None,
-        "image": None,
     },
     {
         "rank": 4,
@@ -200,9 +193,6 @@ HOME_HONORS = [
         "year": "2024",
         "work": "仙灵所隐",
         "slug": "iccc-2024-second",
-        "image": "assets/img/honors/iccc-second.webp",
-        "image_w": 360,
-        "image_h": 417,
     },
     {
         "rank": 5,
@@ -211,9 +201,6 @@ HOME_HONORS = [
         "year": "2024",
         "work": "舞动中华情",
         "slug": "igc-2024-silver",
-        "image": "assets/img/honors/igc-silver.webp",
-        "image_w": 351,
-        "image_h": 480,
     },
     {
         "rank": 6,
@@ -222,9 +209,6 @@ HOME_HONORS = [
         "year": "2024",
         "work": "舞动中华情",
         "slug": "macau-2024-second",
-        "image": "assets/img/honors/macau-second.webp",
-        "image_w": 360,
-        "image_h": 425,
     },
     {
         "rank": 7,
@@ -233,9 +217,6 @@ HOME_HONORS = [
         "year": "2024",
         "work": "根宫佛国「无念熊」",
         "slug": "expo-2024-national-third",
-        "image": "assets/img/honors/expo-national-third.webp",
-        "image_w": 360,
-        "image_h": 187,
     },
     {
         "rank": 8,
@@ -244,9 +225,6 @@ HOME_HONORS = [
         "year": "2025",
         "work": "三晋之旅",
         "slug": "macau-2025-third",
-        "image": "assets/img/honors/macau-third.webp",
-        "image_w": 360,
-        "image_h": 459,
     },
     {
         "rank": 9,
@@ -255,9 +233,6 @@ HOME_HONORS = [
         "year": "2024",
         "work": "舞动中华情",
         "slug": "cross-strait-2024-second",
-        "image": "assets/img/honors/cross-strait-second.webp",
-        "image_w": 352,
-        "image_h": 480,
     },
     {
         "rank": 10,
@@ -266,9 +241,6 @@ HOME_HONORS = [
         "year": "2025",
         "work": "出发！台州非遗之旅",
         "slug": "cross-strait-2025-merit",
-        "image": "assets/img/honors/cross-strait-merit.webp",
-        "image_w": 327,
-        "image_h": 480,
     },
     {
         "rank": 11,
@@ -277,9 +249,6 @@ HOME_HONORS = [
         "year": "2024",
         "work": "根宫佛国「无念熊」",
         "slug": "expo-2024-provincial-first",
-        "image": "assets/img/honors/expo-provincial-first.webp",
-        "image_w": 360,
-        "image_h": 181,
     },
     {
         "rank": 12,
@@ -288,9 +257,6 @@ HOME_HONORS = [
         "year": "2022",
         "work": "慧知",
         "slug": "internet-plus-2022-bronze",
-        "image": "assets/img/honors/internet-plus-bronze.webp",
-        "image_w": 360,
-        "image_h": 257,
     },
     {
         "rank": 13,
@@ -299,9 +265,6 @@ HOME_HONORS = [
         "year": "2025",
         "work": "赶海去！",
         "slug": "milan-2025-third",
-        "image": "assets/img/honors/milan-third.webp",
-        "image_w": 346,
-        "image_h": 480,
     },
     {
         "rank": 14,
@@ -310,9 +273,6 @@ HOME_HONORS = [
         "year": "2025",
         "work": "专业组",
         "slug": "canal-2025-finalist",
-        "image": "assets/img/honors/canal-finalist.webp",
-        "image_w": 360,
-        "image_h": 404,
     },
     {
         "rank": 15,
@@ -321,9 +281,6 @@ HOME_HONORS = [
         "year": "2024",
         "work": "团体赛",
         "slug": "badminton-2024-runner-up",
-        "image": "assets/img/honors/badminton-runner-up.webp",
-        "image_w": 360,
-        "image_h": 277,
         "tag": "校园",
     },
 
@@ -491,19 +448,10 @@ def new_index_page():
           </div>
         </article>'''
 
-    honor_items = []
-    for item in HOME_HONORS:
-        if item.get("image"):
-            alt = f'{item["title"]}{item["award"]}获奖证书'
-            thumb = (f'<span class="p-award__thumb"><img src="{item["image"]}" alt="{alt}" '
-                     f'width="{item["image_w"]}" height="{item["image_h"]}" loading="lazy" decoding="async"></span>')
-        else:
-            thumb = '<span class="p-award__thumb p-award__thumb--empty" aria-hidden="true"><span>HONOR</span></span>'
-        honor_items.append(f'''<div class="p-award">
-          {thumb}
-          <div class="p-award__copy"><strong>{item["title"]}</strong><span>{item["award"]}</span></div>
-        </div>''')
-    honor_chips = "".join(honor_items)
+    honor_chips = "".join(
+        f'<div class="p-award"><strong>{item["title"]}</strong><span>{item["award"]}</span></div>'
+        for item in HOME_HONORS
+    )
 
     experience_cards = ""
     for item in HOME_EXPERIENCE:
@@ -539,7 +487,7 @@ def new_index_page():
             <span class="p-chip">GEO 内容</span><span class="p-chip">小红书 / 抖音</span><span class="p-chip">电商内容运营</span><span class="p-chip">数据分析</span><span class="p-chip">视觉表达</span>
           </div>
           <div class="p-hero__actions">
-            <a class="p-btn p-btn--dark" href="assets/docs/zhongfei-resume.pdf?v=20261023c" download>下载简历 <span>↗</span></a>
+            <a class="p-btn p-btn--dark" href="assets/docs/zhongfei-resume.pdf?v=20261023e" download>下载简历 <span>↗</span></a>
             <a class="p-btn p-btn--ghost" href="#contact">联系我 <span>↓</span></a>
           </div>
         </div>
@@ -607,7 +555,7 @@ def new_index_page():
           <p>从 AI 搜索到电商内容。两段实习经历，都同时包含策略、执行与复盘。</p>
         </div>
         <div class="p-timeline">{experience_cards}</div>
-        <div class="p-center-link"><a class="p-inline-link" href="assets/docs/zhongfei-resume.pdf?v=20261023c" download>下载完整简历 PDF <span>↓</span></a></div>
+        <div class="p-center-link"><a class="p-inline-link" href="assets/docs/zhongfei-resume.pdf?v=20261023e" download>下载完整简历 PDF <span>↓</span></a></div>
       </div>
     </section>
 
@@ -622,7 +570,14 @@ def new_index_page():
           {school_cards}
         </div>
         <div class="p-awards-card">
-          <div><p class="p-kicker">HONORS / 荣誉</p><h3>一些被看见的时刻</h3><p class="p-awards-note">15 项 · 2022—2025</p></div>
+          <div class="p-awards-intro">
+            <p class="p-kicker">HONORS / 荣誉</p>
+            <h3>一些被看见的时刻</h3>
+            <p class="p-awards-note">15 项 · 2022—2025</p>
+            <figure class="p-awards-figure">
+              <img src="assets/img/honors/award-certificates.webp" alt="钟菲的获奖证书合集" width="1400" height="1123" loading="lazy" decoding="async">
+            </figure>
+          </div>
           <div class="p-awards">{honor_chips}</div>
         </div>
       </div>
@@ -637,7 +592,7 @@ def new_index_page():
           <div class="p-contact-actions">
             <a class="p-btn p-btn--dark" href="mailto:zf13732218682@163.com">zf13732218682@163.com <span>↗</span></a>
             <button class="p-btn p-btn--ghost" type="button" data-copy-email="zf13732218682@163.com"><span class="email-copy__action">复制邮箱</span></button>
-            <a class="p-inline-link" href="assets/docs/zhongfei-resume.pdf?v=20261023c" download>下载简历 PDF <span>↓</span></a>
+            <a class="p-inline-link" href="assets/docs/zhongfei-resume.pdf?v=20261023e" download>下载简历 PDF <span>↓</span></a>
           </div>
           <div class="p-contact-meta"><span><i></i> OPEN TO WORK</span><span>HANGZHOU / CN</span><span>2027</span></div>
         </div>
@@ -1369,7 +1324,7 @@ def about_page():
           <p class="about-hero-page__lead">我是钟菲，设计学硕士，2027 届。正在寻找内容运营、GEO 内容运营与 AI 内容运营的机会。</p>
           <div class="about-hero-page__actions">
             {cta_link('mailto:zf13732218682@163.com', '发一封邮件', 'btn btn--dark', '↗')}
-            <a class="text-link" href="assets/docs/zhongfei-resume.pdf?v=20261023c" download>下载简历 PDF <span>↓</span></a>
+            <a class="text-link" href="assets/docs/zhongfei-resume.pdf?v=20261023e" download>下载简历 PDF <span>↓</span></a>
           </div>
           <div class="about-now">
             <p class="micro-label">NOW / 现在</p>
@@ -1456,7 +1411,7 @@ def about_page():
           <div class="contact__actions">
             <button class="email-copy" type="button" data-copy-email="zf13732218682@163.com"><span>zf13732218682@163.com</span><span class="email-copy__action">复制邮箱</span></button>
             <a class="contact__mailto" href="mailto:zf13732218682@163.com">或直接写信 ↗</a>
-            <a class="contact__resume" href="assets/docs/zhongfei-resume.pdf?v=20261023c" download>下载简历 PDF <span>↓</span></a>
+            <a class="contact__resume" href="assets/docs/zhongfei-resume.pdf?v=20261023e" download>下载简历 PDF <span>↓</span></a>
           </div>
         </div>
         <div class="contact__stamp" aria-hidden="true"><span>AVAILABLE FOR WORK</span><b>2027</b><span>HANGZHOU · CN</span></div>
