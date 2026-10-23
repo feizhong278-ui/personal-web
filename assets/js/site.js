@@ -557,3 +557,17 @@
   }
   $$("[data-year]").forEach((element) => { element.textContent = String(new Date().getFullYear()); });
 })();
+
+/* Keep trackpad horizontal gestures from panning the whole page.
+   Horizontal scrollers inside cards/navigations keep working. */
+document.addEventListener("wheel", (event) => {
+  if (Math.abs(event.deltaX) <= Math.abs(event.deltaY)) return;
+  let node = event.target;
+  while (node && node !== document.body) {
+    const style = window.getComputedStyle(node);
+    if ((style.overflowX === "auto" || style.overflowX === "scroll") &&
+        node.scrollWidth > node.clientWidth + 1) return;
+    node = node.parentElement;
+  }
+  event.preventDefault();
+}, { passive: false });

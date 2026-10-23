@@ -5,7 +5,7 @@ from html import escape
 
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST = json.loads((ROOT / "assets/img-manifest.json").read_text())
-ASSET_VERSION = "20261022d"
+ASSET_VERSION = "20261023c"
 SITE_URL = "https://feizhong278-ui.github.io/personal-web/"
 
 NAV_ITEMS = [
@@ -13,8 +13,6 @@ NAV_ITEMS = [
     ("index.html#projects", "项目展示", "projects"),
     ("index.html#experience", "工作经历", "experience"),
     ("index.html#education", "教育背景", "education"),
-    ("index.html#skills", "技能特长", "skills"),
-    ("index.html#interests", "兴趣爱好", "interests"),
 ]
 
 NAV_ACTIVE_MAP = {
@@ -126,7 +124,7 @@ def header(active, base=""):
           {nav_html}
       </nav>
       <div class="header-tools">
-        <a class="resume-link" href="{base}assets/docs/zhongfei-resume.pdf?v=20261022d" download>简历.pdf <span aria-hidden="true">↗</span></a>
+        <a class="resume-link" href="{base}assets/docs/zhongfei-resume.pdf?v=20261023c" download>简历.pdf <span aria-hidden="true">↗</span></a>
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="打开菜单" data-menu-toggle>
           <span class="menu-toggle__label">菜单</span>
           <span class="menu-toggle__lines" aria-hidden="true"><i></i><i></i></span>
@@ -143,7 +141,7 @@ def header(active, base=""):
       </nav>
       <div class="mobile-menu__foot">
         <a href="mailto:zf13732218682@163.com">zf13732218682@163.com</a>
-        <a href="{base}assets/docs/zhongfei-resume.pdf?v=20261022d" download>下载简历 PDF ↓</a>
+        <a href="{base}assets/docs/zhongfei-resume.pdf?v=20261023c" download>下载简历 PDF ↓</a>
         <p>杭州 · 2027 届 · 可接受江浙沪机会</p>
       </div>
     </div>
