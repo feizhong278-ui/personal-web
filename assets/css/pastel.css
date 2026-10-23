@@ -2476,6 +2476,7 @@ h1, h2, h3, h4 { font-family: var(--display); font-weight: 700 !important; }
   background: #fff;
 }
 .p-awards-figure img { display: block; width: 100%; height: auto; }
+.p-awards-figure figcaption { padding: 8px 10px; border-top: 1px solid var(--p-line); color: var(--p-muted); background: #fff; font-family: var(--mono); font-size: 0.625rem; letter-spacing: 0.04em; }
 .p-awards { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 28px; }
 .p-award {
   display: flex;
