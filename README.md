@@ -1,6 +1,6 @@
 # 钟菲｜内容增长与设计作品集
 
-一个为内容运营 / GEO / AI 内容岗位制作的作品集网站。没有框架与第三方脚本，纯静态 HTML、CSS 与 JavaScript，部署在 GitHub Pages。
+一个为品牌策划 / 品牌内容 / GEO 内容岗位制作的作品集网站。没有框架与第三方脚本，纯静态 HTML、CSS 与 JavaScript，部署在 GitHub Pages。
 
 **线上地址：** <https://feizhong278-ui.github.io/personal-web/>
 

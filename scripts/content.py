@@ -6,10 +6,10 @@ SITE = {
     "name_en": "ZHONG FEI",
     "url": "https://feizhong278-ui.github.io/personal-web/",
     "email": "zf13732218682@163.com",
-    "role": "内容运营 / GEO 内容增长 / 视觉设计",
+    "role": "品牌策划 / 品牌内容 / GEO 内容运营",
     "location": "杭州",
     "status": "2027 届 · 求职中",
-    "description": "钟菲的作品集：内容运营、GEO 内容增长与视觉设计。用策略、数据与视觉，让内容留下痕迹。",
+    "description": "钟菲的作品集：品牌策划、品牌内容与视觉设计。用策略、数据与视觉，让品牌留下痕迹。",
 }
 
 NAV = [

@@ -5,7 +5,7 @@ from html import escape
 
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST = json.loads((ROOT / "assets/img-manifest.json").read_text())
-ASSET_VERSION = "20261023h"
+ASSET_VERSION = "20261110"
 SITE_URL = "https://feizhong278-ui.github.io/personal-web/"
 
 NAV_ITEMS = [
@@ -124,7 +124,7 @@ def header(active, base=""):
           {nav_html}
       </nav>
       <div class="header-tools">
-        <a class="resume-link" href="{base}assets/docs/zhongfei-resume.pdf?v=20261023h" download>简历.pdf <span aria-hidden="true">↗</span></a>
+        <a class="resume-link" href="{base}assets/docs/zhongfei-resume.pdf?v=20261110" download>简历.pdf <span aria-hidden="true">↗</span></a>
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="打开菜单" data-menu-toggle>
           <span class="menu-toggle__label">菜单</span>
           <span class="menu-toggle__lines" aria-hidden="true"><i></i><i></i></span>
@@ -141,7 +141,7 @@ def header(active, base=""):
       </nav>
       <div class="mobile-menu__foot">
         <a href="mailto:zf13732218682@163.com">zf13732218682@163.com</a>
-        <a href="{base}assets/docs/zhongfei-resume.pdf?v=20261023h" download>下载简历 PDF ↓</a>
+        <a href="{base}assets/docs/zhongfei-resume.pdf?v=20261110" download>下载简历 PDF ↓</a>
         <p>杭州 · 2027 届 · 可接受江浙沪机会</p>
       </div>
     </div>
@@ -156,7 +156,7 @@ def footer(base=""):
         <div class="footer-main">
           <a class="footer-brand" href="{base}index.html" aria-label="回到首页">
             <span class="brand-avatar"><img src="{base}assets/img/portrait-160.webp" alt="" width="160" height="213" loading="lazy" decoding="async"></span>
-            <span><strong>钟菲</strong><small>CONTENT OPERATIONS / 2027</small></span>
+            <span><strong>钟菲</strong><small>BRAND PLANNING / 2027</small></span>
           </a>
           <p class="footer-statement">让内容被看见，<br>也让结果被验证。</p>
           <div class="footer-links">

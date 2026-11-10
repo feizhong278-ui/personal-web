@@ -71,7 +71,7 @@ def home_deck(project):
             <div><span>品牌推荐率</span><b>46.15<small>%</small></b></div>
             <div class="deck-meter__bar deck-meter__bar--lime"><i style="--w:46.15%"></i><em>25.36 → 46.15</em></div>
           </div>
-          <div class="deck-console__foot"><span>50+ ACCOUNTS</span><span>800+ POSTS</span><span>90% COVERAGE</span></div>
+          <div class="deck-console__foot"><span>60+ ACCOUNTS</span><span>800+ POSTS</span><span>90% COVERAGE</span></div>
         </div>
 
         <figure class="deck-card deck-note">
@@ -88,7 +88,7 @@ def home_deck(project):
           <svg viewBox="0 0 120 120" role="presentation">
             <defs><path id="deckCircle" d="M60,60 m-41,0 a41,41 0 1,1 82,0 a41,41 0 1,1 -82,0"/></defs>
             <circle cx="60" cy="60" r="57" fill="none" stroke="currentColor" stroke-width="1"/>
-            <text><textPath href="#deckCircle" startOffset="0">OPEN TO WORK · CONTENT OPERATIONS · 2027 · </textPath></text>
+            <text><textPath href="#deckCircle" startOffset="0">OPEN TO WORK · BRAND PLANNING · 2027 · </textPath></text>
           </svg>
           <span class="deck-sticker__star">✳</span>
         </div>
@@ -103,13 +103,13 @@ HOME_EDUCATION = [
         "label": "MDes / 2024—2027",
         "period": "2024.09 — 2027.06",
         "school": "中国计量大学",
-        "degree": "设计学 · 硕士（全日制）",
-        "gpa": "GPA 3.93 / 4.0 · 专业前 3%",
-        "desc": "从视觉传达走到设计学，继续研究文化、视觉与内容之间的关系。",
+        "degree": "设计（品牌方向）· 硕士（全日制）",
+        "gpa": "GPA 3.9 / 4.0 · 校级一、二等奖学金",
+        "desc": "从视觉传达走到品牌设计，研究品牌策划、信息传播与内容表达之间的关系。",
         "image": "assets/img/education/cjlu-campus-stone.webp",
         "image_alt": "中国计量大学校园",
         "image_h": 581,
-        "tags": ["ICCC 全国二等奖", "两岸青年非遗一等奖", "优秀班干部"],
+        "tags": ["全国会展策划国家三等奖", "ICCC 全国二等奖", "两岸青年非遗一等奖"],
     },
     {
         "tone": "mint",
@@ -117,13 +117,13 @@ HOME_EDUCATION = [
         "label": "BA / 2020—2024",
         "period": "2020.09 — 2024.06",
         "school": "中国计量大学",
-        "degree": "视觉传达 · 本科（全日制）",
-        "gpa": "GPA 3.9 / 4.0 · 专业前 3%",
-        "desc": "设计训练、摄影与校园媒体实践，让我开始习惯观察和记录。",
+        "degree": "视觉传达（数媒方向）· 本科（全日制）",
+        "gpa": "GPA 3.83 / 4.0",
+        "desc": "品牌形象设计、商业广告创意，加上摄影社与校媒体实践，让我开始习惯观察和记录。",
         "image": "assets/img/education/cjlu-campus-lake.webp",
         "image_alt": "中国计量大学校园",
         "image_h": 576,
-        "tags": ["澳门文创全国一等奖", "互联网+ 铜奖", "摄影社社长"],
+        "tags": ["澳门文创全国一等奖", "互联网+ 铜奖", "摄影社社长", "校融媒体记者"],
     },
 ]
 
@@ -131,36 +131,36 @@ HOME_EXPERIENCE = [
     {
         "num": "01",
         "tone": "mint",
-        "period": "2026.07 — 至今",
+        "period": "2026.05 — 2026.11",
         "company": "海康威视",
         "company_note": "",
-        "role": "AI 搜索内容运营（GEO）",
-        "impact": "搭建 50+ 账号内容矩阵，累计 2,000+ 次 AI 召回，核心提示词覆盖 90%。",
-        "now": True,
+        "role": "GEO 策略运营（AI 搜索）",
+        "impact": "运营 60+ 账号矩阵，300+ 篇内容被 AI 召回，日均召回 1,400+ 次，核心提示词覆盖 90%。",
+        "now": False,
         "bullets": [
-            "负责豆包、千问、DeepSeek、元宝等 AI 平台的 GEO 内容策略与执行，跟踪内容抓取、引用与推荐表现。",
-            "搭建并运营覆盖 50+ 个账号的内容矩阵，沉淀 GEO 素材库、问答库、选题库、Prompt 模板及内容生产 SOP。",
-            "围绕 36 个核心提示词产出 800+ 篇结构化内容；按项目统计口径，260+ 篇被 AI 平台召回，累计召回 2,000+ 次，核心提示词覆盖率达 90%。",
-            "豆包平台品牌提及率由 44.53% 提升至 63.46%，品牌推荐率由 25.36% 提升至 46.15%。",
+            "研究豆包、千问、DeepSeek 等 AI 平台收录与排名规则，围绕智能锁、摄像头业务场景制定 GEO 内容策略，让品牌内容成为 AI 搜索的权威信源。",
+            "每日监控品牌关键词在 AI 搜索场景的展示效果，联动市场、产品团队优化内容策略，强化品牌与业务场景绑定。",
+            "搭建适配大模型抓取的标准化内容体系，沉淀素材库、问答库、Prompt 模板及 SOP；运用 AI 生文、生图与数字人视频工具，与团队运营 60+ 账号矩阵，围绕 36 个核心提示词产出 800+ 篇结构化内容。",
+            "品牌声量：300+ 篇内容被 AI 召回，日均召回 1,400+ 次，核心提示词覆盖率 90%；豆包提及率 +18.93pp、推荐率 +20.79pp，其他 AI 平台同样提升。",
         ],
-        "tags": ["50+ 矩阵账号", "800+ 结构化内容", "2,000+ 次召回", "90% 提示词覆盖"],
+        "tags": ["60+ 矩阵账号", "800+ 结构化内容", "1,400+ 日均召回", "90% 提示词覆盖"],
     },
     {
         "num": "02",
         "tone": "peach",
-        "period": "2024.12 — 2026.06",
+        "period": "2024.12 — 2026.04",
         "company": "杭州红商电子商务有限公司",
         "company_note": "",
-        "role": "内容与店铺运营",
-        "impact": "产出 30+ 篇爆文笔记，累计成交 3 万+ 单，最高月 GMV 27.4 万。",
+        "role": "市场内容策划",
+        "impact": "产出 30+ 篇爆文笔记，内容种草带动 2,000+ 单成交，最高月 GMV 27 万。",
         "now": False,
         "bullets": [
-            "独立搭建并运营小红书矩阵及抖音账号「自拍杆小圆子」，负责账号定位、选题策划、图文制作、视频拍摄剪辑与日常维护。",
-            "负责 4 家 3C 数码类店铺的商品上架、主图与详情页维护，参与笔记加热及付费推广，跟踪曝光、点击、进店与成交表现。",
-            "累计产出 30+ 篇爆文笔记，平均单篇获赞 1,000+，单篇最高阅读量 10 万+、赞藏 6,000+。",
-            "任职期间累计成交 3 万+ 单，其中 3 个月成交 5,000+ 单；最高月成交 GMV 27 万+。",
+            "品牌洞察与定位策略：对比自拍杆竞品价格、产品卖点及用户关注点，提炼便携、美观、多功能等核心卖点，制定场景化品牌传播方向。",
+            "品牌视觉与渠道呈现：负责 4 家店铺商品上架与日常运营，独立完成主图、详情页等品牌视觉设计及库存统计，对接厂家与供应商；跟踪投放 ROI，复盘曝光、点击、进店及成交数据。",
+            "品牌内容传播与转化：负责「自拍杆小圆子」账号矩阵的选题、拍摄与剪辑，累计产出 30+ 篇爆文笔记，平均单篇获赞 1,500+，单篇最高阅读量 10 万+、赞藏 6,000+。",
+            "内容种草带动商品售出 2,000+ 单；账号矩阵起步 3 个多月成交 5,000+ 单，约一年累计成交 3 万+ 单，最高单月 GMV 27 万+。",
         ],
-        "tags": ["30+ 爆文", "4 家店铺", "3万+ 订单", "最高月 GMV 27.4万"],
+        "tags": ["30+ 爆文", "4 家店铺", "2,000+ 内容成交单", "最高月 GMV 27万"],
     },
 ]
 HOME_HONORS = [
@@ -324,9 +324,10 @@ def _chips(tags, tone=""):
 
 
 def _p_stat(value, suffix, label, note, tone):
+    display = f"{value:,}" if isinstance(value, int) else value
     return f'''
       <div class="p-stat p-stat--{tone}">
-        <div class="p-stat__value"><span class="count-value" data-count="{value}">{value}</span><sup>{suffix}</sup></div>
+        <div class="p-stat__value"><span class="count-value" data-count="{value}">{display}</span><sup>{suffix}</sup></div>
         <p>{label}</p>
         <small>{note}</small>
       </div>'''
@@ -347,7 +348,7 @@ def _project_visual_geo():
           <div class="p-bar p-bar--coral"><i style="--w:46.15%"></i></div>
           <small>25.36 → 46.15</small>
         </div>
-        <div class="p-geo-visual__foot"><span>50+ 账号</span><span>800+ 内容</span><span>90% 覆盖</span></div>
+        <div class="p-geo-visual__foot"><span>60+ 账号</span><span>800+ 内容</span><span>90% 覆盖</span></div>
       </div>'''
 
 
@@ -391,16 +392,16 @@ def new_index_page():
     project_rows = "".join([
         _project_row(
             "geo", "mint", "01", "GEO / AI SEARCH", "让品牌，<br>进入 AI 的答案。",
-            "从 36 个核心提示词出发，搭建 50+ 账号内容矩阵，让品牌在生成式搜索中被看见、被引用、被推荐。",
-            ["GEO 策略", "内容矩阵", "AI 搜索"],
-            [("50+", "账号"), ("800+", "内容"), ("2,000+", "召回"), ("90%", "覆盖")],
+            "从 36 个核心提示词出发，搭建 60+ 账号内容矩阵，让品牌在生成式搜索中被看见、被引用、被推荐。",
+            ["GEO 策略", "品牌内容", "AI 搜索"],
+            [("60+", "账号"), ("800+", "内容"), ("1,400+", "日均召回"), ("90%", "覆盖")],
             _project_visual_geo(), "case-geo.html", "查看完整案例"
         ),
         _project_row(
-            "selfie", "peach", "02", "COMMERCE CONTENT", "把种草，<br>做成生意。",
-            "从账号定位、拍剪、标题封面，到商品页与成交复盘，跑通一条内容到生意的完整链路。",
-            ["小红书", "抖音", "电商转化"],
-            [("30+", "爆文"), ("3万+", "订单"), ("27.4万", "最高月 GMV")],
+            "selfie", "peach", "02", "BRAND SEEDING", "把种草，<br>做成生意。",
+            "从竞品调研、卖点提炼、账号定位、拍剪，到商品页与成交复盘，跑通一条品牌内容到生意的完整链路。",
+            ["小红书", "抖音", "品牌种草"],
+            [("30+", "爆文"), ("3万+", "订单"), ("27万", "最高月 GMV")],
             selfie_visual, "case-selfie.html", "查看完整案例"
         ),
         _project_row(
@@ -484,14 +485,14 @@ def new_index_page():
           </div>
           <div class="p-philosophy">
             <span>个人理念 /</span>
-            <p>让内容有审美的形状，<br>也有可被验证的结果。</p>
+            <p>让品牌有可被感知的形状，<br>也有可被验证的结果。</p>
           </div>
-          <p class="p-hero__bio">设计学硕士，曾参与AI 搜索内容矩阵搭建、电商内容与店铺运营，并独立运营设计类账号。擅长将创意转化为有逻辑、有表达力的内容；具备短视频策划、拍摄与剪辑经验，能够兼顾内容叙事、视觉呈现与传播效果，并通过数据复盘持续优化。</p>
+          <p class="p-hero__bio">设计（品牌方向）硕士，做过 GEO 内容矩阵、3C 品牌内容与店铺运营，也独立运营过设计内容账号。擅长竞品调研、卖点提炼与场景化内容策划，把创意转化为有逻辑、有表达力的内容，并用数据复盘持续优化传播效果。</p>
           <div class="p-chip-row">
-            <span class="p-chip">GEO 内容</span><span class="p-chip">小红书 / 抖音</span><span class="p-chip">电商内容运营</span><span class="p-chip">数据分析</span><span class="p-chip">视觉表达</span>
+            <span class="p-chip">品牌策划</span><span class="p-chip">小红书 / 抖音</span><span class="p-chip">品牌种草</span><span class="p-chip">GEO 内容</span><span class="p-chip">视觉表达</span>
           </div>
           <div class="p-hero__actions">
-            <a class="p-btn p-btn--dark" href="assets/docs/zhongfei-resume.pdf?v=20261023h" download>下载简历 <span>↗</span></a>
+            <a class="p-btn p-btn--dark" href="assets/docs/zhongfei-resume.pdf?v=20261110" download>下载简历 <span>↗</span></a>
             <a class="p-btn p-btn--ghost" href="#contact">联系我 <span>↓</span></a>
           </div>
         </div>
@@ -516,17 +517,17 @@ def new_index_page():
         <div class="p-about-card">
           <div class="p-about-card__copy">
             <p class="p-kicker">01 / ABOUT ME</p>
-            <h2 id="about-title">把审美变成方法，<br>把内容做成结果。</h2>
-            <p>我在中国计量大学读了七年设计，从视觉传达走到设计学。设计训练给我的不只是审美，更是一套观察、拆解、表达、验证问题的方法。</p>
-            <p>现在，我把这套方法用在内容增长上：既关心一条内容有没有被看见，也关心它有没有带来下一步行动。</p>
-            <div class="p-chip-row"><span class="p-chip">设计学硕士</span><span class="p-chip">GPA 3.93 / 4.0</span><span class="p-chip">专业前 3%</span></div>
+            <h2 id="about-title">把洞察变成策略，<br>把内容做成结果。</h2>
+            <p>我在中国计量大学读了七年设计，从视觉传达走到设计（品牌方向）。设计训练给我的不只是审美，更是一套观察、拆解、表达、验证问题的方法。</p>
+            <p>现在，我把这套方法用在品牌传播上：既关心一个品牌有没有被看见，也关心它有没有走进用户的具体场景。</p>
+            <div class="p-chip-row"><span class="p-chip">设计（品牌方向）硕士</span><span class="p-chip">GPA 3.9 / 4.0</span><span class="p-chip">15 项设计奖项</span></div>
             <a class="p-inline-link" href="about.html">更多关于我 <span>↗</span></a>
           </div>
           <div class="p-stat-grid">
-            {_p_stat(50, "+", "GEO 内容矩阵账号", "AI SEARCH / 2026", "mint")}
+            {_p_stat(60, "+", "GEO 内容矩阵账号", "AI SEARCH / 2026", "mint")}
             {_p_stat(800, "+", "结构化内容", "围绕 36 个核心提示词", "peach")}
-            {_p_stat(2000, "+", "AI 平台累计召回", "260+ 篇内容被召回", "lilac")}
-            {_p_stat(3, "万+", "累计成交订单", "最高月 GMV 27.4万", "blue")}
+            {_p_stat(1400, "+", "日均 AI 召回", "300+ 篇内容被召回", "lilac")}
+            {_p_stat(3, "万+", "累计成交订单", "最高月 GMV 27万", "blue")}
           </div>
         </div>
       </div>
@@ -555,10 +556,10 @@ def new_index_page():
       <div class="container">
         <div class="p-exp-head">
           <div><p class="p-kicker">03 / THE PRACTITIONER</p><h2 id="experience-title">我在过往职场<br>做过什么。</h2></div>
-          <p>从 AI 搜索到电商内容。两段实习经历，都同时包含策略、执行与复盘。</p>
+          <p>从 3C 品牌内容到 AI 搜索 GEO。两段经历，都同时包含策略、执行与复盘。</p>
         </div>
         <div class="p-exp-list">{experience_cards}</div>
-        <div class="p-center-link"><a class="p-inline-link" href="assets/docs/zhongfei-resume.pdf?v=20261023h" download>下载完整简历 PDF <span>↓</span></a></div>
+        <div class="p-center-link"><a class="p-inline-link" href="assets/docs/zhongfei-resume.pdf?v=20261110" download>下载完整简历 PDF <span>↓</span></a></div>
       </div>
     </section>
 
@@ -567,7 +568,7 @@ def new_index_page():
         <div class="p-section-head">
           <p class="p-kicker">04 / EDUCATION</p>
           <h2 id="education-title">我的学习轨迹</h2>
-          <p>从视觉传达到设计学，从本科到硕士。设计训练一直是我理解内容的方式。</p>
+          <p>从视觉传达（数媒方向）到设计（品牌方向），从本科到硕士。设计训练一直是我理解品牌的方式。</p>
         </div>
         <div class="p-school-grid">
           {school_cards}
@@ -592,11 +593,11 @@ def new_index_page():
         <div class="p-contact-card">
           <p class="p-kicker">LET'S TALK / 联系我</p>
           <h2 id="contact-title">一起做点<br>有回声的内容。</h2>
-          <p class="p-contact-copy">如果你正在找一位懂内容、也懂视觉的内容运营，欢迎直接把机会发给我。2027 届，杭州，可接受江浙沪机会。</p>
+          <p class="p-contact-copy">如果你正在找一位既懂品牌策略、也懂内容与视觉的品牌策划，欢迎直接把机会发给我。2027 届，杭州，可接受江浙沪机会。</p>
           <div class="p-contact-actions">
             <a class="p-btn p-btn--dark" href="mailto:zf13732218682@163.com">zf13732218682@163.com <span>↗</span></a>
             <button class="p-btn p-btn--ghost" type="button" data-copy-email="zf13732218682@163.com"><span class="email-copy__action">复制邮箱</span></button>
-            <a class="p-inline-link" href="assets/docs/zhongfei-resume.pdf?v=20261023h" download>下载简历 PDF <span>↓</span></a>
+            <a class="p-inline-link" href="assets/docs/zhongfei-resume.pdf?v=20261110" download>下载简历 PDF <span>↓</span></a>
           </div>
           <div class="p-contact-meta"><span><i></i> OPEN TO WORK</span><span>HANGZHOU / CN</span><span>2027</span></div>
         </div>
@@ -604,7 +605,7 @@ def new_index_page():
     </section>
 '''
     return page(
-        "钟菲｜内容运营 · GEO 内容增长 · 设计作品集",
+        "钟菲｜品牌策划 · 品牌内容 · 设计作品集",
         SITE["description"],
         content,
         active="home",
@@ -617,7 +618,7 @@ def ops_stat(value, suffix, label, note="", decimals=0):
     note_html = f'<span>{note}</span>' if note else ""
     decimals_attr = f' data-decimals="{decimals}"' if decimals else ""
     return f'''<div class="ops-stat">
-      <p class="ops-stat__value"><span class="count-value" data-count="{value}"{decimals_attr}>{value}</span><sup>{suffix}</sup></p>
+      <p class="ops-stat__value"><span class="count-value" data-count="{value}"{decimals_attr}>{f"{value:,}" if isinstance(value, int) else value}</span><sup>{suffix}</sup></p>
       <p class="ops-stat__label">{label}</p>
       {note_html}
     </div>'''
@@ -625,8 +626,8 @@ def ops_stat(value, suffix, label, note="", decimals=0):
 
 def operations_page():
     dots = []
-    for i in range(1, 51):
-        cls = " is-lit" if i in {3, 7, 11, 16, 21, 28, 32, 37, 41, 46, 50} else ""
+    for i in range(1, 61):
+        cls = " is-lit" if i in {3, 7, 11, 16, 21, 28, 32, 37, 41, 46, 52, 57, 60} else ""
         dots.append(f'<i class="{cls.strip()}" style="--d:{i}"></i>')
     dots_html = "".join(dots)
 
@@ -727,9 +728,9 @@ def operations_page():
         </div>
         <h1 id="ops-title">把注意力，<br><span class="accent">变成结果。</span></h1>
         <div class="intro-bottom">
-          <p>三个项目，三种内容能力：在 AI 搜索里建立品牌可见度，在电商场景里完成内容到成交，在设计分享里从 0 到 1 建立账号。</p>
+          <p>三个项目，三种内容能力：在 AI 搜索里建立品牌可见度，在电商场景里完成品牌种草到成交，在设计分享里从 0 到 1 建立账号。</p>
           <div class="ops-index">
-            <a href="case-geo.html"><span>01</span><strong>GEO 内容增长</strong><small>AI 搜索 / 50+ 内容矩阵</small><b>↗</b></a>
+            <a href="case-geo.html"><span>01</span><strong>GEO 内容增长</strong><small>AI 搜索 / 60+ 内容矩阵</small><b>↗</b></a>
             <a href="case-selfie.html"><span>02</span><strong>自拍杆小圆子</strong><small>小红书 × 抖音 / 店铺转化</small><b>↗</b></a>
             <a href="case-lazy.html"><span>03</span><strong>懒羊羊素材库</strong><small>设计内容 / 0 到 1</small><b>↗</b></a>
           </div>
@@ -751,26 +752,26 @@ def operations_page():
 
     <section class="case case--geo" id="geo" aria-labelledby="geo-title">
       <div class="container">
-        <div class="case-label"><span>CASE 01 / GEO CONTENT</span><span>2026.07—至今</span></div>
+        <div class="case-label"><span>CASE 01 / GEO CONTENT</span><span>2026.05—2026.11</span></div>
         <div class="case-intro">
           <div>
             <p class="eyebrow">AI SEARCH / CONTENT MATRIX</p>
             <h2 id="geo-title">让品牌，<br>进入 AI 的答案。</h2>
           </div>
           <div class="case-intro__side">
-            <p>当用户把问题交给 AI，品牌竞争的对象不再只是搜索结果页，而是答案里的那一句话。</p>
+            <p>当用户把问题交给 AI，品牌竞争的对象不再只是搜索结果页，而是答案里的那一句话。智能锁、摄像头这类产品，更需要让品牌成为 AI 回答里的权威信源。</p>
             <dl class="role-list">
               <div><dt>公司</dt><dd>海康威视</dd></div>
-              <div><dt>角色</dt><dd>AI 搜索内容运营（GEO）</dd></div>
+              <div><dt>角色</dt><dd>GEO 策略运营（AI 搜索）</dd></div>
               <div><dt>范围</dt><dd>策略 / 矩阵 / 生产 / 复盘</dd></div>
             </dl>
           </div>
         </div>
 
         <div class="ops-stats">
-          {ops_stat(50, '+', '内容矩阵账号', 'ACCOUNTS')}
+          {ops_stat(60, '+', '内容矩阵账号', 'ACCOUNTS')}
           {ops_stat(800, '+', '结构化内容', '36 个核心提示词')}
-          {ops_stat(2000, '+', 'AI 平台累计召回', '260+ 篇被召回')}
+          {ops_stat(1400, '+', '日均 AI 召回', '300+ 篇被召回')}
           {ops_stat(90, '%', '核心提示词覆盖率', '2026.08—10')}
         </div>
 
@@ -810,20 +811,20 @@ def operations_page():
               </div>
               <div class="console-panel" id="geo-panel-matrix" role="tabpanel" aria-labelledby="geo-tab-matrix" hidden>
                 <div class="matrix-panel">
-                  <div class="matrix-panel__head"><span>50+ ACCOUNTS / CONTENT MATRIX</span><span>ACTIVE NODES</span></div>
+                  <div class="matrix-panel__head"><span>60+ ACCOUNTS / CONTENT MATRIX</span><span>ACTIVE NODES</span></div>
                   <div class="matrix-grid">{dots_html}</div>
                   <div class="matrix-panel__foot">
                     <span>素材库</span><span>问答库</span><span>选题库</span><span>Prompt</span><span>SOP</span>
                   </div>
-                  <p>不是 50 个账号各说各话，而是围绕同一套品牌知识，用不同内容形态持续供给。</p>
+                  <p>不是 60 个账号各说各话，而是围绕同一套品牌知识，用不同内容形态持续供给。</p>
                 </div>
               </div>
               <div class="console-panel" id="geo-panel-content" role="tabpanel" aria-labelledby="geo-tab-content" hidden>
                 <div class="content-panel">
                   <div class="content-panel__hero"><span>800<sup>+</sup></span><p>篇结构化内容<br>围绕 36 个核心提示词</p></div>
                   <div class="content-panel__grid">
-                    <div><strong>260<sup>+</sup></strong><span>篇内容被 AI 召回</span></div>
-                    <div><strong>2,000<sup>+</sup></strong><span>次累计召回</span></div>
+                    <div><strong>300<sup>+</sup></strong><span>篇内容被 AI 召回</span></div>
+                    <div><strong>1,400<sup>+</sup></strong><span>次日均召回</span></div>
                     <div><strong>90<sup>%</sup></strong><span>核心提示词覆盖率</span></div>
                   </div>
                   <div class="content-panel__list"><span>素材库</span><span>问答库</span><span>选题库</span><span>Prompt 模板</span><span>内容生产 SOP</span></div>
@@ -835,7 +836,7 @@ def operations_page():
 
         <div class="case-process">
           <article><span>01</span><h3>识别问题</h3><p>把用户在 AI 里的真实提问，拆成 36 个核心提示词。先理解问题如何被问出来，再决定内容怎么回答。</p></article>
-          <article><span>02</span><h3>建立系统</h3><p>搭建 50+ 账号的内容矩阵，沉淀素材库、问答库、选题库、Prompt 模板与内容 SOP，让生产不依赖单次灵感。</p></article>
+          <article><span>02</span><h3>建立系统</h3><p>搭建 60+ 账号的内容矩阵，沉淀素材库、问答库、选题库、Prompt 模板与内容 SOP，让生产不依赖单次灵感。</p></article>
           <article><span>03</span><h3>持续生产</h3><p>围绕核心问题持续产出 800+ 篇结构化内容，用问答、清单、场景与测评等不同形态覆盖用户决策路径。</p></article>
           <article><span>04</span><h3>追踪迭代</h3><p>跟踪豆包、千问、DeepSeek、元宝的抓取、引用与推荐表现，根据数据反馈调整选题与内容结构。</p></article>
         </div>
@@ -850,27 +851,27 @@ def operations_page():
 
     <section class="case case--selfie" id="selfie" aria-labelledby="selfie-title">
       <div class="container">
-        <div class="case-label"><span>CASE 02 / COMMERCE CONTENT</span><span>2024.12—2026.06</span></div>
+        <div class="case-label"><span>CASE 02 / BRAND SEEDING</span><span>2024.12—2026.04</span></div>
         <div class="case-intro">
           <div>
             <p class="eyebrow">XIAOHONGSHU × DOUYIN / 3C</p>
             <h2 id="selfie-title">把种草，<br>做成生意。</h2>
           </div>
           <div class="case-intro__side">
-            <p>从选题、拍摄、剪辑，到店铺页面与成交复盘，跑通内容到生意的完整链路。</p>
+            <p>从竞品调研、卖点提炼、选题、拍摄、剪辑，到店铺页面与成交复盘，跑通品牌内容到生意的完整链路。</p>
             <dl class="role-list">
               <div><dt>公司</dt><dd>杭州红商电子商务有限公司</dd></div>
-              <div><dt>角色</dt><dd>账号矩阵主理人 / 独立拍剪写与运营</dd></div>
+              <div><dt>角色</dt><dd>市场内容策划 / 品牌内容与店铺运营</dd></div>
               <div><dt>范围</dt><dd>小红书 / 抖音</dd></div>
             </dl>
           </div>
         </div>
 
         <div class="ops-stats ops-stats--selfie">
-          {ops_stat(30, '+', '高互动爆文笔记', 'AVG. 1,000+ LIKES')}
+          {ops_stat(30, '+', '高互动爆文笔记', 'AVG. 1,500+ LIKES')}
           {ops_stat(10, 'W+', '单篇最高阅读量', 'XIAOHONGSHU')}
           {ops_stat(3, '万+', '任职期间累计成交订单', '3 个月 5,000+ 单')}
-          {ops_stat(27.4, '万', '最高月成交 GMV', '2025.12 / 店铺后台', 1)}
+          {ops_stat(27, '万', '最高月成交 GMV', '2025.12 / 店铺后台')}
         </div>
 
         <div class="subsection">
@@ -915,7 +916,7 @@ def operations_page():
         <div class="subsection">
           <div class="subsection__head">
             <div><p class="micro-label">04 / CONTENT TO COMMERCE</p><h3>内容和生意之间，<br>不能靠感觉。</h3></div>
-            <p>跟踪曝光、点击、进店与成交表现，用数据判断哪一类选题、封面与场景值得继续投入。</p>
+            <p>跟踪曝光、点击、进店与成交表现，用数据判断哪一类选题、封面与场景值得继续投入；内容种草带动商品售出 2,000+ 单。</p>
           </div>
           <div class="commerce-grid">
             <div class="commerce-panel">
@@ -962,7 +963,7 @@ def operations_page():
           <p>“先让内容被看见，再让看见发生行动。”</p>
           <span>COMMERCE CONTENT / 2026</span>
         </blockquote>
-        <p class="source-note">数据口径：项目任职期间为 2024.12—2026.06；店铺数据截图为 2025 年 12 月。笔记与店铺截图已做必要脱敏。</p>
+        <p class="source-note">数据口径：项目任职期间为 2024.12—2026.04；店铺数据截图为 2025 年 12 月。笔记与店铺截图已做必要脱敏。</p>
       </div>
     </section>
 
@@ -1039,8 +1040,8 @@ def operations_page():
     <div hidden>{slide_triggers}</div>
 '''
     return page(
-        "运营案例｜钟菲 · 内容运营 / GEO",
-        "钟菲的运营案例：GEO 内容增长、小红书 × 抖音电商内容、设计素材账号从 0 到 1。包含数据、方法与完整素材。",
+        "运营案例｜钟菲 · 品牌内容与 GEO",
+        "钟菲的运营案例：GEO 内容增长、小红书 × 抖音品牌种草、设计素材账号从 0 到 1。包含数据、方法与完整素材。",
         content,
         active="operations",
         body_class="page-operations",
@@ -1141,7 +1142,7 @@ def design_page():
     <div class="cross-next">
       <div class="container">
         <p class="micro-label">NEXT / OPERATIONS</p>
-        <a href="operations.html"><span class="cross-next__text">看完设计，<br>再看我如何把内容做成增长</span><span class="cross-next__arrow" aria-hidden="true">↗</span></a>
+        <a href="operations.html"><span class="cross-next__text">看完设计，<br>再看我如何把品牌内容做成增长</span><span class="cross-next__arrow" aria-hidden="true">↗</span></a>
       </div>
     </div>
 '''
@@ -1273,12 +1274,12 @@ def project_page(project):
 
 def about_page():
     experience = [
-        ("2026.07—至今", "海康威视", "AI 搜索内容运营（GEO）",
-         "负责豆包、千问、DeepSeek、元宝等 AI 平台的 GEO 内容策略与执行；搭建并运营 50+ 账号矩阵，沉淀 GEO 素材库、问答库、选题库、Prompt 模板与生产 SOP；围绕 36 个核心提示词产出 800+ 篇结构化内容，按项目统计口径 260+ 篇被 AI 平台召回、累计召回 2,000+ 次，核心提示词覆盖率达 90%。",
-         ["50+ 矩阵账号", "800+ 结构化内容", "2,000+ 次 AI 召回"]),
-        ("2024.12—2026.06", "杭州红商电子商务有限公司", "内容与店铺运营",
-         "独立搭建并运营小红书矩阵及抖音账号「自拍杆小圆子」，负责账号定位、选题、图文、视频拍剪与日常维护；负责 4 家 3C 数码店铺商品上架、主图与详情页维护、笔记加热及推广优化，跟踪曝光、点击、进店与成交表现。",
-         ["30+ 篇爆文", "3万+ 累计订单", "最高月 GMV 27.4万"]),
+        ("2026.05—2026.11", "海康威视", "GEO 策略运营（AI 搜索）",
+         "研究豆包、千问、DeepSeek 等 AI 平台收录与排名规则，围绕智能锁、摄像头业务场景制定 GEO 内容策略；搭建适配大模型抓取的标准化内容体系，沉淀素材库、问答库、Prompt 模板与 SOP；运用 AI 生文、生图与数字人视频工具，与团队运营 60+ 账号矩阵，围绕 36 个核心提示词产出 800+ 篇结构化内容；300+ 篇内容被 AI 召回、日均召回 1,400+ 次，核心提示词覆盖率 90%，豆包提及率 +18.93pp、推荐率 +20.79pp。",
+         ["60+ 矩阵账号", "800+ 结构化内容", "1,400+ 日均召回"]),
+        ("2024.12—2026.04", "杭州红商电子商务有限公司", "市场内容策划",
+         "对比自拍杆竞品价格、产品卖点与用户关注点，提炼核心卖点并制定场景化品牌传播方向；负责 4 家 3C 数码店铺商品上架、主图与详情页视觉设计及库存统计，对接厂家与供应商，跟踪投放 ROI；负责「自拍杆小圆子」账号矩阵选题、拍摄与剪辑，产出 30+ 篇爆文，内容种草带动 2,000+ 单成交，最高单月 GMV 27 万+。",
+         ["30+ 篇爆文", "2,000+ 内容成交单", "最高月 GMV 27万"]),
     ]
     exp_html = "".join(f'''
         <article class="timeline-item">
@@ -1291,12 +1292,31 @@ def about_page():
           </div>
         </article>''' for date, company, role, desc, tags in experience)
 
+    projects = [
+        ("2025.06—2025.09", "个人项目", "TikTok Shop 跨境电商实践",
+         "面向东南亚市场，了解马来西亚、越南市场及平台规则，开展选品分析；从 0 到 1 独立完成 TikTok Shop 店铺搭建，负责商品上架、内容运营与基础数据跟踪。项目运营约 2—3 个月，累计成交 6—7 单，初步跑通从开店、选品到销售的出海链路。",
+         ["0 → 1 开店", "马来西亚 / 越南", "6—7 单"]),
+        ("2023.05—2024.05", "主理人 · 设计内容账号", "小红书「懒羊羊素材库」",
+         "从 0 到 1 搭建小红书设计素材账号，围绕平面设计、IP 设计、包装设计与品牌视觉策划内容；独立完成选题、图文排版、封面标题、发布与数据复盘，探索内容到小红书店铺的引流链路。账号累计获赞与收藏 3 万+，6 篇高互动笔记合计赞藏 1.7 万+，单篇最高获赞 3,645。",
+         ["3万+ 赞藏", "6 篇爆款", "3,645 单篇最高赞"]),
+    ]
+    projects_html = "".join(f'''
+        <article class="timeline-item">
+          <div class="timeline-item__date">{date}</div>
+          <div class="timeline-item__body">
+            <p class="timeline-item__company">{company}</p>
+            <h3>{role}</h3>
+            <p>{desc}</p>
+            <ul>{"".join(f"<li>{tag}</li>" for tag in tags)}</ul>
+          </div>
+        </article>''' for date, company, role, desc, tags in projects)
+
     capabilities = [
-        ("内容策略", "选题策划 / 关键词布局 / 内容矩阵 / 内容 SOP", "从用户问题出发，建立可复用的内容结构。"),
-        ("平台运营", "小红书 / 抖音 / 账号定位 / 内容复盘", "理解平台语境，也理解内容如何被消费。"),
-        ("GEO & AI", "AI 搜索引用 / Prompt / 结构化内容", "让品牌信息成为 AI 可以理解、调用和推荐的知识。"),
-        ("视觉表达", "Photoshop / Illustrator / 剪映 / Midjourney / Stable Diffusion", "设计学训练带来的审美判断与执行能力。"),
-        ("数据复盘", "曝光 / CTR / 互动 / 进店 / 成交 / AI 引用", "用数据验证判断，再决定下一轮做什么。"),
+        ("品牌策划", "品牌定位 / 卖点提炼 / 竞品调研 / 传播策划", "从竞品与用户场景出发，找到品牌可以被感知的差异点。"),
+        ("平台种草", "小红书 / 抖音 / 账号矩阵 / 内容 SOP", "理解平台语境，把品牌卖点翻译成场景化内容。"),
+        ("GEO & AI", "AI 搜索引用 / Prompt / 结构化内容 / AIGC 工具", "让品牌信息成为 AI 可以理解、调用和推荐的知识。"),
+        ("视觉表达", "Photoshop / Illustrator / 剪映 / Premiere", "设计训练带来的审美判断与执行能力。"),
+        ("数据复盘", "曝光 / CTR / 进店 / 成交 / 投放 ROI / 品牌提及率", "用数据验证判断，再决定下一轮做什么。"),
     ]
     caps_html = "".join(f'''
         <article class="capability">
@@ -1314,7 +1334,7 @@ def about_page():
     ]
     awards_html = "".join(f'''<li><span>{year}</span><p>{name}</p><b>{award}</b></li>''' for year, name, award in awards)
 
-    jsonld = '''<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"钟菲","alternateName":"ZHONG FEI","jobTitle":"内容运营 / GEO 内容运营","email":"mailto:zf13732218682@163.com","url":"https://feizhong278-ui.github.io/personal-web/","alumniOf":{"@type":"CollegeOrUniversity","name":"中国计量大学"},"knowsAbout":["内容运营","GEO","AI 搜索","小红书","抖音","视觉设计","IP 设计"]}</script>'''
+    jsonld = '''<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"钟菲","alternateName":"ZHONG FEI","jobTitle":"品牌策划 / 品牌内容","email":"mailto:zf13732218682@163.com","url":"https://feizhong278-ui.github.io/personal-web/","alumniOf":{"@type":"CollegeOrUniversity","name":"中国计量大学"},"knowsAbout":["品牌策划","品牌定位","小红书","抖音","GEO","AI 搜索","视觉设计","IP 设计"]}</script>'''
 
     content = f'''
     <section class="about-hero-page" aria-labelledby="about-page-title">
@@ -1324,18 +1344,18 @@ def about_page():
             <p class="micro-label">ABOUT / ZHONG FEI</p>
             <p class="micro-label">HANGZHOU / 2027</p>
           </div>
-          <h1 id="about-page-title">用设计的眼睛，<br>看内容的问题。</h1>
-          <p class="about-hero-page__lead">我是钟菲，设计学硕士，2027 届。正在寻找内容运营、GEO 内容运营与 AI 内容运营的机会。</p>
+          <h1 id="about-page-title">用品牌的眼睛，<br>看内容的问题。</h1>
+          <p class="about-hero-page__lead">我是钟菲，设计（品牌方向）硕士，2027 届。正在寻找品牌策划、品牌内容与 GEO 内容运营的机会。</p>
           <div class="about-hero-page__actions">
             {cta_link('mailto:zf13732218682@163.com', '发一封邮件', 'btn btn--dark', '↗')}
-            <a class="text-link" href="assets/docs/zhongfei-resume.pdf?v=20261023h" download>下载简历 PDF <span>↓</span></a>
+            <a class="text-link" href="assets/docs/zhongfei-resume.pdf?v=20261110" download>下载简历 PDF <span>↓</span></a>
           </div>
           <div class="about-now">
             <p class="micro-label">NOW / 现在</p>
             <dl>
               <div><dt>状态</dt><dd><i></i> 2027 届 · 求职中</dd></div>
               <div><dt>地点</dt><dd>杭州 · 可接受江浙沪机会</dd></div>
-              <div><dt>方向</dt><dd>内容运营 / GEO / AI 内容</dd></div>
+              <div><dt>方向</dt><dd>品牌策划 / 品牌内容 / GEO 内容运营</dd></div>
             </dl>
           </div>
         </div>
@@ -1354,10 +1374,10 @@ def about_page():
         <h2 class="visually-hidden">关于我</h2>
         <p class="micro-label">01 / THE SHORT VERSION</p>
         <div>
-          <p class="about-statement__lead">我在中国计量大学读了七年设计，从视觉传达走到设计学。设计训练给我的，不只是软件和审美，更是一套观察、拆解、表达、验证问题的方法。</p>
+          <p class="about-statement__lead">我在中国计量大学读了七年设计，从视觉传达走到设计（品牌方向）。设计训练给我的，不只是软件和审美，更是一套观察、拆解、表达、验证问题的方法。</p>
           <div class="about-statement__cols">
-            <p>真正进入内容运营后，我发现这套方法同样适用：看用户的问题、拆内容的变量、做可复用的系统、用数据验证判断。设计让我对细节敏感，运营让我对结果负责。</p>
-            <p>我喜欢把模糊的问题变成清晰的结构，也喜欢把结构做得好看。比起「发更多」，我更在意每一次发布是否留下了可复用的资产。</p>
+            <p>真正进入品牌与内容工作后，我发现这套方法同样适用：看用户的场景、拆品牌的变量、做可复用的系统、用数据验证判断。设计让我对细节敏感，运营让我对结果负责。</p>
+            <p>我喜欢把模糊的问题变成清晰的结构，也喜欢把结构做得好看。比起「发更多」，我更在意每一次传播是否留下了可复用的资产。</p>
           </div>
         </div>
       </div>
@@ -1365,19 +1385,26 @@ def about_page():
 
     <section class="experience-section" aria-labelledby="experience-title">
       <div class="container">
-        {section_head('02', 'EXPERIENCE', '做过的事，<br>都留下了数字。', '从 AI 搜索到电商内容，两段实习经历都同时包含策略、执行与复盘。')}
+        {section_head('02', 'EXPERIENCE', '做过的事，<br>都留下了数字。', '从 3C 品牌内容到 AI 搜索 GEO，两段经历都同时包含策略、执行与复盘。')}
         <div class="timeline">{exp_html}</div>
+      </div>
+    </section>
+
+    <section class="experience-section" aria-label="项目经历">
+      <div class="container">
+        {section_head('03', 'PROJECTS', '两个自己发起的项目，<br>都是从 0 到 1。', 'TikTok Shop 与小红书账号：一个是品牌出海链路，一个是设计内容。')}
+        <div class="timeline">{projects_html}</div>
       </div>
     </section>
 
     <section class="education-section" aria-labelledby="education-title">
       <div class="container education-grid">
         <div>
-          <p class="micro-label">03 / EDUCATION</p>
-          <h2 id="education-title">设计学硕士，<br>视觉传达本科。</h2>
+          <p class="micro-label">04 / EDUCATION</p>
+          <h2 id="education-title">品牌方向硕士，<br>视觉传达本科。</h2>
           <div class="edu-list">
-            <article><span>2024.09—2027.06</span><h3>中国计量大学 · 设计学硕士</h3><p>全日制 / GPA 3.93 / 4.0 / 专业前 3%</p></article>
-            <article><span>2020.09—2024.06</span><h3>中国计量大学 · 视觉传达本科</h3><p>全日制 / GPA 3.9 / 4.0 / 专业前 3%</p></article>
+            <article><span>2024.09—2027.06</span><h3>中国计量大学 · 设计（品牌方向）硕士</h3><p>全日制 / GPA 3.9 / 4.0 / 校级一、二等奖学金 / 主修：品牌策划、信息传播设计研究</p></article>
+            <article><span>2020.09—2024.06</span><h3>中国计量大学 · 视觉传达（数媒方向）本科</h3><p>全日制 / GPA 3.83 / 4.0 / 主修：品牌形象设计、商业广告创意</p></article>
           </div>
         </div>
         <div class="awards-block">
@@ -1389,14 +1416,14 @@ def about_page():
 
     <section class="capabilities-section" aria-labelledby="capabilities-title">
       <div class="container">
-        {section_head('04', 'CAPABILITIES', '内容、AI 与设计，<br>交叉的地方。', '不是工具清单，而是我能把一件事从想法推进到结果的能力范围。')}
+        {section_head('05', 'CAPABILITIES', '品牌、内容与设计，<br>交叉的地方。', '不是工具清单，而是我能把一件事从想法推进到结果的能力范围。')}
         <div class="capability-grid">{caps_html}</div>
       </div>
     </section>
 
     <section class="principles" aria-labelledby="principles-title">
       <div class="container">
-        <p class="micro-label">05 / PRINCIPLES</p>
+        <p class="micro-label">06 / PRINCIPLES</p>
         <h2 id="principles-title">我带着这三句话<br>做内容。</h2>
         <div class="principle-grid">
           <div><span>01</span><p>先问对问题，<br>再开始生产。</p><small>洞察先于执行</small></div>
@@ -1408,14 +1435,14 @@ def about_page():
 
     <section class="contact contact--about" id="contact" aria-labelledby="contact-title">
       <div class="container contact__inner">
-        <div class="contact__meta"><p class="micro-label">06 / CONTACT</p><p>OPEN FOR CONVERSATION</p></div>
+        <div class="contact__meta"><p class="micro-label">07 / CONTACT</p><p>OPEN FOR CONVERSATION</p></div>
         <h2 id="contact-title">下一段好内容，<br><em>一起做。</em></h2>
         <div class="contact__bottom">
-          <p>如果你正在找一位懂内容、也懂视觉的内容运营，欢迎直接把机会发给我。</p>
+          <p>如果你正在找一位既懂品牌策略、也懂内容与视觉的品牌策划，欢迎直接把机会发给我。</p>
           <div class="contact__actions">
             <button class="email-copy" type="button" data-copy-email="zf13732218682@163.com"><span>zf13732218682@163.com</span><span class="email-copy__action">复制邮箱</span></button>
             <a class="contact__mailto" href="mailto:zf13732218682@163.com">或直接写信 ↗</a>
-            <a class="contact__resume" href="assets/docs/zhongfei-resume.pdf?v=20261023h" download>下载简历 PDF <span>↓</span></a>
+            <a class="contact__resume" href="assets/docs/zhongfei-resume.pdf?v=20261110" download>下载简历 PDF <span>↓</span></a>
           </div>
         </div>
         <div class="contact__stamp" aria-hidden="true"><span>AVAILABLE FOR WORK</span><b>2027</b><span>HANGZHOU · CN</span></div>
@@ -1423,8 +1450,8 @@ def about_page():
     </section>
 '''
     return page(
-        "关于我｜钟菲 · 内容运营 / GEO",
-        "钟菲，设计学硕士，2027 届。内容运营 / GEO 内容运营 / AI 内容运营求职者，具备小红书、抖音、AI 搜索与视觉设计经验。",
+        "关于我｜钟菲 · 品牌策划 / 内容",
+        "钟菲，设计（品牌方向）硕士，2027 届。品牌策划 / 品牌内容 / GEO 内容运营求职者，具备小红书、抖音、AI 搜索与视觉设计经验。",
         content,
         active="about",
         body_class="page-about",
@@ -1500,7 +1527,7 @@ def not_found_page():
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#fbf8f4">
   <title>页面不存在｜钟菲作品集</title>
-  <meta name="description" content="这个页面不存在。回到钟菲的作品集首页，浏览内容运营、GEO 与设计作品。">
+  <meta name="description" content="这个页面不存在。回到钟菲的作品集首页，浏览品牌策划、品牌内容与设计作品。">
   <meta name="robots" content="noindex">
   <link rel="canonical" href="{site}404.html">
   <link rel="icon" href="{site}assets/favicon.png" type="image/png" sizes="64x64">
@@ -1546,7 +1573,7 @@ def not_found_page():
       </div>
     </main>
     <footer>
-      <span>© 2026 钟菲 / CONTENT OPERATIONS</span>
+      <span>© 2026 钟菲 / BRAND PLANNING</span>
       <span>杭州 · 中国 <b>HANGZHOU / CN</b></span>
     </footer>
   </div>
@@ -1559,8 +1586,8 @@ def not_found_page():
 # ---------------------------------------------------------------------------
 
 CASE_META = {
-    "geo": {"num": "01", "title": "GEO 内容增长", "date": "2026.07—至今", "next": "selfie"},
-    "selfie": {"num": "02", "title": "自拍杆小圆子", "date": "2024.12—2026.06", "next": "lazy"},
+    "geo": {"num": "01", "title": "GEO 内容增长", "date": "2026.05—2026.11", "next": "selfie"},
+    "selfie": {"num": "02", "title": "自拍杆小圆子", "date": "2024.12—2026.04", "next": "lazy"},
     "lazy": {"num": "03", "title": "懒羊羊素材库", "date": "2023.05—2024.05", "next": "geo"},
 }
 
@@ -1630,13 +1657,13 @@ def operations_overview_page():
     geo_card = '''
       <a class="ops-teaser ops-teaser--geo" href="case-geo.html" data-cursor="OPEN CASE">
         <div class="ops-teaser__copy">
-          <div class="ops-teaser__top"><span>CASE 01 / GEO</span><span>2026.07—至今</span></div>
+          <div class="ops-teaser__top"><span>CASE 01 / GEO</span><span>2026.05—2026.11</span></div>
           <h2>让品牌，<br>进入 AI 的答案。</h2>
-          <p>从 36 个核心提示词出发，搭建 50+ 账号内容矩阵，让品牌在生成式搜索中被看见、被引用、被推荐。</p>
+          <p>从 36 个核心提示词出发，搭建 60+ 账号内容矩阵，让品牌在生成式搜索中被看见、被引用、被推荐。</p>
           <div class="ops-teaser__stats">
-            <div><strong>50<sup>+</sup></strong><span>矩阵账号</span></div>
+            <div><strong>60<sup>+</sup></strong><span>矩阵账号</span></div>
             <div><strong>800<sup>+</sup></strong><span>结构化内容</span></div>
-            <div><strong>2,000<sup>+</sup></strong><span>AI 召回</span></div>
+            <div><strong>1,400<sup>+</sup></strong><span>日均 AI 召回</span></div>
           </div>
           <span class="ops-teaser__cta">查看完整案例 <b>↗</b></span>
         </div>
@@ -1651,7 +1678,7 @@ def operations_overview_page():
               <div><span>品牌推荐率</span><b>25.36 <em>→</em> 46.15<small>%</small></b></div>
               <div class="mini-bars mini-bars--lime"><i style="--w:25.36%"></i><i style="--w:46.15%"></i></div>
             </div>
-            <div class="mini-console__foot"><span>90% COVERAGE</span><span>260+ RECALLED</span></div>
+            <div class="mini-console__foot"><span>90% COVERAGE</span><span>300+ RECALLED</span></div>
           </div>
         </div>
       </a>'''
@@ -1664,13 +1691,13 @@ def operations_overview_page():
           <img src="assets/img/ops/selfie/note-10-600.webp" alt="" width="600" height="460" loading="lazy" decoding="async">
           </div>
         <div class="ops-teaser__copy">
-          <div class="ops-teaser__top"><span>CASE 02 / COMMERCE</span><span>2024.12—2026.06</span></div>
+          <div class="ops-teaser__top"><span>CASE 02 / BRAND SEEDING</span><span>2024.12—2026.04</span></div>
           <h2>把种草，<br>做成生意。</h2>
-          <p>从账号定位、拍剪、标题封面，到商品页与成交复盘，跑通一条内容到生意的完整链路。</p>
+          <p>从竞品调研、卖点提炼、拍剪，到商品页与成交复盘，跑通一条品牌内容到生意的完整链路。</p>
           <div class="ops-teaser__stats">
             <div><strong>30<sup>+</sup></strong><span>爆文笔记</span></div>
             <div><strong>3<sup>万+</sup></strong><span>累计订单</span></div>
-            <div><strong>27.4<sup>万</sup></strong><span>最高月 GMV</span></div>
+            <div><strong>27<sup>万</sup></strong><span>最高月 GMV</span></div>
           </div>
           <span class="ops-teaser__cta">查看完整案例 <b>↗</b></span>
         </div>
@@ -1703,9 +1730,9 @@ def operations_overview_page():
         </div>
         <h1 id="ops-title">把注意力，<br><span class="accent">变成结果。</span></h1>
         <div class="intro-bottom">
-          <p>三个项目，三种内容能力：在 AI 搜索里建立品牌可见度，在电商场景里完成内容到成交，在设计分享里从 0 到 1 建立账号。</p>
+          <p>三个项目，三种内容能力：在 AI 搜索里建立品牌可见度，在电商场景里完成品牌种草到成交，在设计分享里从 0 到 1 建立账号。</p>
           <div class="ops-index">
-            <a href="case-geo.html"><span>01</span><strong>GEO 内容增长</strong><small>AI 搜索 / 50+ 内容矩阵</small><b>↗</b></a>
+            <a href="case-geo.html"><span>01</span><strong>GEO 内容增长</strong><small>AI 搜索 / 60+ 内容矩阵</small><b>↗</b></a>
             <a href="case-selfie.html"><span>02</span><strong>自拍杆小圆子</strong><small>小红书 × 抖音 / 店铺转化</small><b>↗</b></a>
             <a href="case-lazy.html"><span>03</span><strong>懒羊羊素材库</strong><small>设计内容 / 0 到 1</small><b>↗</b></a>
           </div>
@@ -1742,8 +1769,8 @@ def operations_overview_page():
     </div>
 '''
     return page(
-        "运营案例｜钟菲 · 内容运营 / GEO",
-        "钟菲的运营案例：GEO 内容增长、小红书 × 抖音电商内容、设计素材账号从 0 到 1。包含数据、方法与完整素材。",
+        "运营案例｜钟菲 · 品牌内容与 GEO",
+        "钟菲的运营案例：GEO 内容增长、小红书 × 抖音品牌种草、设计素材账号从 0 到 1。包含数据、方法与完整素材。",
         content,
         active="operations",
         body_class="page-operations",
