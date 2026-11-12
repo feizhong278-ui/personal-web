@@ -1746,5 +1746,294 @@
     "w": 1200,
     "h": 576,
     "bytes": 112662
+  },
+  "assets/img/design/qingtian/board-01-640.webp": {
+    "w": 640,
+    "h": 360,
+    "bytes": 38168
+  },
+  "assets/img/design/qingtian/board-01-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 175564
+  },
+  "assets/img/design/qingtian/board-02-640.webp": {
+    "w": 640,
+    "h": 360,
+    "bytes": 8434
+  },
+  "assets/img/design/qingtian/board-02-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 28036
+  },
+  "assets/img/design/qingtian/board-03-640.webp": {
+    "w": 640,
+    "h": 360,
+    "bytes": 26850
+  },
+  "assets/img/design/qingtian/board-03-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 110016
+  },
+  "assets/img/design/qingtian/board-04-640.webp": {
+    "w": 640,
+    "h": 360,
+    "bytes": 24254
+  },
+  "assets/img/design/qingtian/board-04-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 79662
+  },
+  "assets/img/design/qingtian/board-05-640.webp": {
+    "w": 640,
+    "h": 360,
+    "bytes": 20328
+  },
+  "assets/img/design/qingtian/board-05-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 68040
+  },
+  "assets/img/design/qingtian/board-06-640.webp": {
+    "w": 640,
+    "h": 360,
+    "bytes": 12584
+  },
+  "assets/img/design/qingtian/board-06-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 44338
+  },
+  "assets/img/design/qingtian/board-07-640.webp": {
+    "w": 640,
+    "h": 360,
+    "bytes": 29006
+  },
+  "assets/img/design/qingtian/board-07-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 109806
+  },
+  "assets/img/design/qingtian/board-08-640.webp": {
+    "w": 640,
+    "h": 360,
+    "bytes": 34132
+  },
+  "assets/img/design/qingtian/board-08-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 131560
+  },
+  "assets/img/design/qingtian/board-09-640.webp": {
+    "w": 640,
+    "h": 360,
+    "bytes": 14388
+  },
+  "assets/img/design/qingtian/board-09-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 55896
+  },
+  "assets/img/design/qingtian/board-10-640.webp": {
+    "w": 640,
+    "h": 360,
+    "bytes": 22318
+  },
+  "assets/img/design/qingtian/board-10-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 82552
+  },
+  "assets/img/design/qingtian/board-11-640.webp": {
+    "w": 640,
+    "h": 360,
+    "bytes": 16730
+  },
+  "assets/img/design/qingtian/board-11-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 59896
+  },
+  "assets/img/design/qingtian/board-12-640.webp": {
+    "w": 640,
+    "h": 360,
+    "bytes": 16622
+  },
+  "assets/img/design/qingtian/board-12-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 64492
+  },
+  "assets/img/design/qingtian/board-13-640.webp": {
+    "w": 640,
+    "h": 360,
+    "bytes": 11964
+  },
+  "assets/img/design/qingtian/board-13-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 46482
+  },
+  "assets/img/design/qingtian/board-14-640.webp": {
+    "w": 640,
+    "h": 360,
+    "bytes": 18146
+  },
+  "assets/img/design/qingtian/board-14-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 63848
+  },
+  "assets/img/design/qingtian/board-15-640.webp": {
+    "w": 640,
+    "h": 360,
+    "bytes": 22156
+  },
+  "assets/img/design/qingtian/board-15-1600.webp": {
+    "w": 1600,
+    "h": 900,
+    "bytes": 75622
+  },
+  "project:qingtian": {
+    "boards": [
+      {
+        "source": "青田农产品品牌调研与设计策略- 01.jpg",
+        "w": 8000,
+        "h": 4500,
+        "variants": {
+          "640": "assets/img/design/qingtian/board-01-640.webp",
+          "1600": "assets/img/design/qingtian/board-01-1600.webp"
+        }
+      },
+      {
+        "source": "青田农产品品牌调研与设计策略- 02.jpg",
+        "w": 8000,
+        "h": 4500,
+        "variants": {
+          "640": "assets/img/design/qingtian/board-02-640.webp",
+          "1600": "assets/img/design/qingtian/board-02-1600.webp"
+        }
+      },
+      {
+        "source": "青田农产品品牌调研与设计策略- 03.jpg",
+        "w": 8000,
+        "h": 4500,
+        "variants": {
+          "640": "assets/img/design/qingtian/board-03-640.webp",
+          "1600": "assets/img/design/qingtian/board-03-1600.webp"
+        }
+      },
+      {
+        "source": "青田农产品品牌调研与设计策略- 04.jpg",
+        "w": 8000,
+        "h": 4500,
+        "variants": {
+          "640": "assets/img/design/qingtian/board-04-640.webp",
+          "1600": "assets/img/design/qingtian/board-04-1600.webp"
+        }
+      },
+      {
+        "source": "青田农产品品牌调研与设计策略- 05.jpg",
+        "w": 8000,
+        "h": 4500,
+        "variants": {
+          "640": "assets/img/design/qingtian/board-05-640.webp",
+          "1600": "assets/img/design/qingtian/board-05-1600.webp"
+        }
+      },
+      {
+        "source": "青田农产品品牌调研与设计策略- 06.jpg",
+        "w": 8000,
+        "h": 4500,
+        "variants": {
+          "640": "assets/img/design/qingtian/board-06-640.webp",
+          "1600": "assets/img/design/qingtian/board-06-1600.webp"
+        }
+      },
+      {
+        "source": "青田农产品品牌调研与设计策略- 07.jpg",
+        "w": 8000,
+        "h": 4500,
+        "variants": {
+          "640": "assets/img/design/qingtian/board-07-640.webp",
+          "1600": "assets/img/design/qingtian/board-07-1600.webp"
+        }
+      },
+      {
+        "source": "青田农产品品牌调研与设计策略- 08.jpg",
+        "w": 8000,
+        "h": 4500,
+        "variants": {
+          "640": "assets/img/design/qingtian/board-08-640.webp",
+          "1600": "assets/img/design/qingtian/board-08-1600.webp"
+        }
+      },
+      {
+        "source": "青田农产品品牌调研与设计策略- 09.jpg",
+        "w": 8000,
+        "h": 4500,
+        "variants": {
+          "640": "assets/img/design/qingtian/board-09-640.webp",
+          "1600": "assets/img/design/qingtian/board-09-1600.webp"
+        }
+      },
+      {
+        "source": "青田农产品品牌调研与设计策略- 10.jpg",
+        "w": 8000,
+        "h": 4500,
+        "variants": {
+          "640": "assets/img/design/qingtian/board-10-640.webp",
+          "1600": "assets/img/design/qingtian/board-10-1600.webp"
+        }
+      },
+      {
+        "source": "青田农产品品牌调研与设计策略- 11.jpg",
+        "w": 8000,
+        "h": 4500,
+        "variants": {
+          "640": "assets/img/design/qingtian/board-11-640.webp",
+          "1600": "assets/img/design/qingtian/board-11-1600.webp"
+        }
+      },
+      {
+        "source": "青田农产品品牌调研与设计策略- 12.jpg",
+        "w": 8000,
+        "h": 4500,
+        "variants": {
+          "640": "assets/img/design/qingtian/board-12-640.webp",
+          "1600": "assets/img/design/qingtian/board-12-1600.webp"
+        }
+      },
+      {
+        "source": "青田农产品品牌调研与设计策略- 13.jpg",
+        "w": 8000,
+        "h": 4500,
+        "variants": {
+          "640": "assets/img/design/qingtian/board-13-640.webp",
+          "1600": "assets/img/design/qingtian/board-13-1600.webp"
+        }
+      },
+      {
+        "source": "青田农产品品牌调研与设计策略- 14.jpg",
+        "w": 8000,
+        "h": 4500,
+        "variants": {
+          "640": "assets/img/design/qingtian/board-14-640.webp",
+          "1600": "assets/img/design/qingtian/board-14-1600.webp"
+        }
+      },
+      {
+        "source": "青田农产品品牌调研与设计策略- 15.jpg",
+        "w": 8000,
+        "h": 4500,
+        "variants": {
+          "640": "assets/img/design/qingtian/board-15-640.webp",
+          "1600": "assets/img/design/qingtian/board-15-1600.webp"
+        }
+      }
+    ]
   }
 }

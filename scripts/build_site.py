@@ -13,7 +13,7 @@ from layout import page, section_head, stat, cta_link, image, design_picture, li
     MANIFEST, SITE_URL
 
 # Display order for the four design cards and project reader navigation.
-DISPLAY_ORDER = ["gengong", "lingyin", "liangzhu", "harbin"]
+DISPLAY_ORDER = ["qingtian", "gengong", "lingyin", "liangzhu", "harbin"]
 PROJECTS.sort(key=lambda project: DISPLAY_ORDER.index(project["slug"]))
 for _i, _project in enumerate(PROJECTS, 1):
     _project["index"] = f"{_i:02d}"
@@ -372,6 +372,28 @@ def _project_row(project, tone, number, label, title, desc, tags, metrics, visua
       </a>'''
 
 
+def feature_card(project, base="", count=5):
+    chips = "".join(f'<span class="p-chip p-chip--soft">{part}</span>' for part in project["discipline"].split(" / "))
+    stats = "".join(f'<span><b>{value}</b>{label}</span>' for value, label in project.get("feature_stats", []))
+    cover = card_cover_picture(project, project["title"] + "项目封面", sizes="(max-width: 900px) 100vw, 55vw", base=base, loading="lazy")
+    return f'''
+      <a class="p-feature" href="{base}design/{project['slug']}.html" data-cursor="OPEN">
+        <div class="p-feature__media">
+          {cover}
+          <span class="p-feature__badge">{project.get('feature_badge', 'FEATURED')}</span>
+          <span class="p-feature__index">{project['index']} / {count:02d}</span>
+        </div>
+        <div class="p-feature__body">
+          <p class="p-kicker">{project.get('feature_kicker', 'FEATURED PROJECT')}</p>
+          <h3>{project['title']}</h3>
+          <p>{project['summary']}</p>
+          <div class="p-chip-row">{chips}</div>
+          <div class="p-feature__stats">{stats}</div>
+          <span class="p-feature__cta">{project.get('feature_cta', '查看项目')} <b>↗</b></span>
+        </div>
+      </a>'''
+
+
 def new_index_page():
     g = PROJECT_BY_SLUG["gengong"]
     l = PROJECT_BY_SLUG["liangzhu"]
@@ -413,13 +435,14 @@ def new_index_page():
         ),
     ])
 
+    design_feature = feature_card(PROJECTS[0], count=len(PROJECTS))
     design_cards = ""
-    for p in PROJECTS:
+    for p in PROJECTS[1:]:
         design_cards += f'''
         <a class="p-design-card" href="design/{p['slug']}.html" data-cursor="OPEN">
           <div class="p-design-card__img">
             {card_cover_picture(p, p['title'] + "项目封面", sizes="(max-width: 700px) 100vw, 28vw", loading="lazy")}
-            <span>{p['index']} / 04</span>
+            <span>{p['index']} / {len(PROJECTS):02d}</span>
           </div>
           <div class="p-design-card__body">
             <div class="p-chip-row"><span class="p-chip p-chip--soft">{p['discipline'].split(" / ")[0]}</span><span class="p-chip p-chip--soft">{p['year']}</span>{f'<span class="p-chip p-chip--soft">{p["award_short"]}</span>' if p['award_short'] and p['award_short'] != p['discipline'].split(" / ")[0] else ''}</div>
@@ -538,15 +561,16 @@ def new_index_page():
         <div class="p-section-head">
           <p class="p-kicker">02 / SELECTED WORK</p>
           <h2 id="projects-title">我把内容，<br>做成了什么。</h2>
-          <p>三个运营项目，四组设计作品。每一个都从真实问题出发，也都有可以被查看的过程与结果。</p>
+          <p>三个运营项目，五组设计作品。每一个都从真实问题出发，也都有可以被查看的过程与结果。</p>
         </div>
         <div class="p-project-list">{project_rows}</div>
         <div class="p-project-more"><a class="p-btn p-btn--ghost" href="operations.html">查看全部运营案例 <span>↗</span></a></div>
 
         <div class="p-design-head">
-          <div><p class="p-kicker">DESIGN ARCHIVE / 04</p><h2>设计，是另一种表达。</h2></div>
-          <p>45 张项目板，从城市 IP、景区文创、寺院视觉到博物馆角色设计。</p>
+          <div><p class="p-kicker">DESIGN ARCHIVE / 05</p><h2>设计，是另一种表达。</h2></div>
+          <p>60 张项目板，从农产品区域品牌、城市 IP、景区文创到博物馆角色设计。</p>
         </div>
+        <div class="p-design-feature">{design_feature}</div>
         <div class="p-design-grid">{design_cards}</div>
         <div class="p-project-more"><a class="p-btn p-btn--ghost" href="design.html">打开完整设计档案 <span>↗</span></a></div>
       </div>
@@ -1034,7 +1058,7 @@ def operations_page():
       <div class="container">
         <p class="micro-label">NEXT / DESIGN ARCHIVE</p>
         <a href="design.html">去看设计作品 <span>↗</span></a>
-        <p>四组 IP 与文创项目，45 张完整项目板。</p>
+        <p>五组设计项目，60 张完整项目板。</p>
       </div>
     </div>
     <div hidden>{slide_triggers}</div>
@@ -1054,13 +1078,14 @@ def operations_page():
 # ---------------------------------------------------------------------------
 
 def design_page():
+    feature_html = feature_card(PROJECTS[0], count=len(PROJECTS))
     cards = ""
-    for project in PROJECTS:
+    for project in PROJECTS[1:]:
         cards += f'''
         <a class="design-card" href="design/{project['slug']}.html" data-cursor="OPEN">
           <div class="design-card__media">
             {card_cover_picture(project, project['title'] + "项目封面", sizes="(max-width: 800px) 90vw, 48vw", loading="lazy")}
-            <span class="design-card__index">{project['index']} / 04</span>
+            <span class="design-card__index">{project['index']} / {len(PROJECTS):02d}</span>
             <span class="design-card__open">打开项目档案 <b>↗</b></span>
           </div>
           <div class="design-card__body">
@@ -1095,14 +1120,14 @@ def design_page():
       <div class="container">
         <div class="intro-topline">
           <p class="micro-label">DESIGN / SELECTED WORKS</p>
-          <p class="micro-label">2024—2025 / 04 PROJECTS</p>
+          <p class="micro-label">2024—2025 / 05 PROJECTS</p>
         </div>
         <h1 id="design-page-title">文化，<br><span class="accent">可以被带走。</span></h1>
         <div class="design-intro__bottom">
-          <p>四组 IP 与文创项目，从城市文化、景区、寺院到博物馆。用调研找到文化母题，用视觉把它变成角色、产品和场景。</p>
+          <p>五组项目，从农产品区域品牌、城市文化、景区、寺院到博物馆。用调研找到品牌母题，用策略与视觉把它变成产品、角色和场景。</p>
           <div class="design-counts">
-            <div><strong>04</strong><span>组项目</span></div>
-            <div><strong>45</strong><span>张项目板</span></div>
+            <div><strong>05</strong><span>组项目</span></div>
+            <div><strong>60</strong><span>张项目板</span></div>
             <div><strong>02</strong><span>项全国奖项</span></div>
           </div>
         </div>
@@ -1111,6 +1136,7 @@ def design_page():
 
     <section class="design-grid-section" aria-label="设计项目列表">
       <div class="container">
+        <div class="p-design-feature">{feature_html}</div>
         <div class="design-grid">{cards}</div>
       </div>
     </section>
@@ -1147,8 +1173,8 @@ def design_page():
     </div>
 '''
     return page(
-        "设计作品｜钟菲 · IP 文创与视觉设计",
-        "钟菲的设计作品：哈尔滨城市 IP、根宫佛国文创、灵隐万象集、良渚博物院 IP。45 张完整项目板。",
+        "设计作品｜钟菲 · 品牌策划与视觉设计",
+        "钟菲的设计作品：青田农产品品牌策略、哈尔滨城市 IP、根宫佛国文创、灵隐万象集、良渚博物院 IP。60 张完整项目板。",
         content,
         active="design",
         body_class="page-design",
@@ -1207,13 +1233,28 @@ def project_page(project):
         award_label = "PROJECT / 类型"
         award_value = f'<span class="project-award project-award--type">{project["type"]}</span>'
 
+    highlights_html = ""
+    if project.get("highlights"):
+        highlight_cards = "".join(f'''
+          <article class="project-highlight">
+            <b>{item['num']}</b>
+            <h3>{item['title']}</h3>
+            <p>{item['desc']}</p>
+          </article>''' for item in project["highlights"])
+        highlights_html = f'''
+      <section class="project-highlights" aria-label="项目要点">
+        <div class="container">
+          <div class="project-highlights__grid">{highlight_cards}</div>
+        </div>
+      </section>'''
+
     content = f'''
     <article class="project-page">
       <header class="project-hero">
         <div class="container">
           <div class="project-topline">
             <a href="../design.html">← 设计档案</a>
-            <span>PROJECT {project['index']} / 04</span>
+            <span>PROJECT {project['index']} / {len(PROJECTS):02d}</span>
             <span>{project['year']}</span>
           </div>
           <div class="project-heading">
@@ -1234,6 +1275,7 @@ def project_page(project):
           </div>
         </div>
       </header>
+      {highlights_html}
 
       <section class="project-reader" aria-label="完整项目板">
         <div class="container">
@@ -1764,7 +1806,7 @@ def operations_overview_page():
       <div class="container">
         <p class="micro-label">NEXT / DESIGN ARCHIVE</p>
         <a href="design.html">去看设计作品 <span>↗</span></a>
-        <p>四组 IP 与文创项目，45 张完整项目板。</p>
+        <p>五组设计项目，60 张完整项目板。</p>
       </div>
     </div>
 '''
@@ -1795,7 +1837,7 @@ def write_site():
 
     urls = [
         "", "operations.html", "case-geo.html", "case-selfie.html", "case-lazy.html",
-        "design.html", "about.html", "design/harbin.html", "design/gengong.html", "design/lingyin.html", "design/liangzhu.html",
+        "design.html", "about.html", "design/qingtian.html", "design/harbin.html", "design/gengong.html", "design/lingyin.html", "design/liangzhu.html",
     ]
     sitemap = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     for url in urls:
